@@ -1,0 +1,5 @@
+= docking
+
+Generate this with
+    docking rdoc
+After you have described your command line interface
