@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 require 'gli'
 begin # XXX: Remove this begin/rescue before distributing your app
-require 'docking'
-rescue LoadError
-  STDERR.puts "In development, you need to use `bundle exec bin/docking` to run your app"
-  STDERR.puts "At install-time, RubyGems will make sure lib, etc. are in the load path"
-  STDERR.puts "Feel free to remove this message from bin/docking now"
-  exit 64
+  require 'docking'
+  rescue LoadError
+    STDERR.puts 'In development, you need to use `bundle exec bin/docking` to run your app'
+    STDERR.puts 'At install-time, RubyGems will make sure lib, etc. are in the load path'
+    STDERR.puts 'Feel free to remove this message from bin/docking now'
+    exit 64
 end
 
 include GLI::App
@@ -19,14 +19,14 @@ subcommand_option_handling :normal
 arguments :strict
 
 desc 'Describe some switch here'
-switch [:s,:switch]
+switch [:s, :switch]
 
 desc 'Describe some flag here'
 default_value 'the default'
 arg_name 'The name of the argument'
-flag [:f,:flagname]
+flag [:f, :flagname]
 
-pre do |global,command,options,args|
+pre do |_global, _command, _options, _args|
   # Pre logic here
   # Return true to proceed; false to abort and not call the
   # chosen command
@@ -35,13 +35,13 @@ pre do |global,command,options,args|
   true
 end
 
-post do |global,command,options,args|
+post do |_global, _command, _options, _args|
   # Post logic here
   # Use skips_post before a command to skip this
   # block on that command only
 end
 
-on_error do |exception|
+on_error do |_exception|
   # Error logic here
   # return false to skip default error handling
   true
