@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('pry')
 
   s.add_runtime_dependency('gli', '2.12.2')
+  s.add_runtime_dependency('docker-api', '1.17.0')
 end
