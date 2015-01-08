@@ -18,7 +18,9 @@ Gem::Specification.new do |s|
   s.executables << 'docking'
   s.add_development_dependency('rake')
   s.add_development_dependency('rspec')
+  s.add_development_dependency('rspec-its')
   s.add_development_dependency('rubocop')
+  s.add_development_dependency('pry')
 
   s.add_runtime_dependency('gli', '2.12.2')
 end

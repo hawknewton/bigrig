@@ -1,13 +1,5 @@
 #!/usr/bin/env ruby
 require 'gli'
-begin # XXX: Remove this begin/rescue before distributing your app
-  require 'docking'
-  rescue LoadError
-    STDERR.puts 'In development, you need to use `bundle exec bin/docking` to run your app'
-    STDERR.puts 'At install-time, RubyGems will make sure lib, etc. are in the load path'
-    STDERR.puts 'Feel free to remove this message from bin/docking now'
-    exit 64
-end
 
 include GLI::App
 
@@ -18,13 +10,21 @@ version Docking::VERSION
 subcommand_option_handling :normal
 arguments :strict
 
-desc 'Describe some switch here'
-switch [:s, :switch]
+# desc 'Describe some switch here'
+# switch [:s, :switch]
 
-desc 'Describe some flag here'
-default_value 'the default'
-arg_name 'The name of the argument'
-flag [:f, :flagname]
+# desc 'Describe some flag here'
+# default_value 'the default'
+# arg_name 'The name of the argument'
+# flag [:f, :flagname]
+#
+desc 'spin up a docking application'
+arg_name '<docking file>'
+command :run do
+  c.action do |_global_options, _options, args|
+    RunAction.new(args[0]).perform
+  end
+end
 
 pre do |_global, _command, _options, _args|
   # Pre logic here

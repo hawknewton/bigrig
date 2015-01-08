@@ -1,4 +1,5 @@
-require 'docking/version.rb'
-
-# Add requires for other files you add to your project here, so
-# you just need to require this one file in your bin file
+require 'docking/actions'
+require 'docking/dependency_graph'
+require 'docking/docker_adapter'
+require 'docking/models'
+require 'docking/version'
