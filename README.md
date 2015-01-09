@@ -22,32 +22,37 @@ We want to make three things easier:
     {
       "name": "web",
       "ports": ["80:80"],
-      "tag": "hawknewton/show-env"
+      "image": "hawknewton/show-env",
+      "version": "2.0.1",
+      "development_path": "path/to/web/Dockerfile"
     },
     {
       "name": "logger",
+      "image": "hawknewton/logger:1.2.3",
+      "version": "1.2.3",
       "volumes-from": ["web"]
     }
   ],
 
-  "development": {
-    "web": "path/to/web/Dockerfile"
-  },
-
   "environments": {
     "development": {
-      "use_ssl": false,
-      "service_url": "http://localhost:8080/my-microservice"
+      "USE_SSL": false,
+      "SERVICE_URL": "http://localhost:8080/my-microservice"
     },
 
-    "qa": {
-      "use_ssl": true,
-      "service_url": "http://qa.hawknewton.com/my-microservice"
+    "qa-1": {
+      "USE_SSL": true,
+      "SERVICE_URL": "http://qa-1.hawknewton.com/my-microservice"
+    },
+
+    "qa-2": {
+      "USE_SSL": true,
+      "SERVICE_URL": "http://qa-2.hawknewton.com/my-microservice"
     },
 
     "production": {
-      "use_ssl": true,
-      "service_url": "https://service.hawknewton.com/"
+      "USE_SSL": true,
+      "SERVICE_URL": "https://service.hawknewton.com/"
     }
   }
 }
@@ -56,8 +61,8 @@ We want to make three things easier:
 ## Development
 
 We strive to bring the developer's environment as close to production as
-possible.  The developer uses the same `shipper.json` in development
-that eventually pushes their code to production.
+possible (as well as the other way around).  The developer uses the same
+`shipper.json` in development that eventually pushes their code to production.
 
 ## Environment-specific configuration
 
@@ -67,7 +72,7 @@ environments and you'll need the ability to configure the application in an
 environment-specific way.
 
 Shipper lets you specify environment-specific configuration for all your
-environments in one place.  Having a single source-of-record for all your
+environments in one place.  Having a single source-of-record for all
 environemnt details means it's easier to configure a new environemnt and it's
 easier to see the differences between environments.
 
@@ -75,7 +80,7 @@ easier to see the differences between environments.
 
 There' this thing called **Seperatrion of operational concerns** and it's one
 of the core princpals that makes Docker attractive in the first place.  I
-don't care about the operating system outside beyone what's immediately
+don't care about the operating system beyond what's immediately
 required to make my app go, and in many cases this might be all you need.
 
 That being said, when the scope of your app grows beyond a single process
