@@ -35,5 +35,36 @@ describe Container do
         expect(subject.path).to eq '/path/to/Dockerfile'
       end
     end
+
+    context 'given json with env params' do
+      let(:json) { { 'env' => ['NAME1=VALUE1', 'NAME2=VALUE2'] } }
+
+      it 'parses the environment variables' do
+        expect(subject.env).to include(
+          'NAME1' => 'VALUE1',
+          'NAME2' => 'VALUE2'
+        )
+      end
+
+      context 'that reference environment variables' do
+        let(:json) { { 'env' => ['NAME1'] } }
+
+        before { ENV['NAME1'] = 'ENV1' }
+        after { ENV['NAME1'] = nil }
+
+        it 'retrieves the variable from the environemnt' do
+          expect(subject.env).to include('NAME1' => 'ENV1')
+        end
+      end
+    end
+
+    context 'given json without env params' do
+      let(:json) { {} }
+
+      it 'should have empty env' do
+        puts subject.env.inspect
+        expect(subject.env).to be_empty
+      end
+    end
   end
 end

@@ -4,7 +4,7 @@ describe DependencyGraph do
     context 'given two containers, one depending on the other' do
       let(:containers) do
         [
-          Container.new(name: 'test2', volumes_from: 'test1'),
+          Container.new(name: 'test2', volumes_from: ['test1']),
           Container.new(name: 'test1')
         ]
       end
