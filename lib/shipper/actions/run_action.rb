@@ -9,24 +9,11 @@ class RunAction
     steps.each { |s| perform_step s }
   end
 
-  def steps
-    current_step = []
-    steps = [current_step]
-    ordered_containers.each do |container|
-      if depends_on_containers(container, current_step)
-        current_step = []
-        steps << current_step
-      end
-      current_step << container
-    end
-    steps
-  end
+  private
 
   def containers
     application.containers
   end
-
-  private
 
   def depends_on_containers(container, containers)
     (containers.map(&:name) & container.dependencies).any?
@@ -61,5 +48,18 @@ class RunAction
     end
 
     threads.each(&:join)
+  end
+
+  def steps
+    current_step = []
+    steps = [current_step]
+    ordered_containers.each do |container|
+      if depends_on_containers(container, current_step)
+        current_step = []
+        steps << current_step
+      end
+      current_step << container
+    end
+    steps
   end
 end

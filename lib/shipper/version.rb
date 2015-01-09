@@ -1,3 +1,3 @@
-module Docking
+module Shipper
   VERSION = '0.0.1'
 end

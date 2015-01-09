@@ -6,7 +6,7 @@ include GLI::App
 
 program_desc 'Describe your application here'
 
-version Docking::VERSION
+version Shipper::VERSION
 
 subcommand_option_handling :normal
 arguments :strict

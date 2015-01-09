@@ -2,7 +2,7 @@
 require File.join([File.dirname(__FILE__), 'lib', 'shipper', 'version.rb'])
 Gem::Specification.new do |s|
   s.name = 'shipper'
-  s.version = Docking::VERSION
+  s.version = Shipper::VERSION
   s.author = 'Your Name Here'
   s.email = 'your@email.address.com'
   s.homepage = 'http://your.website.com'
