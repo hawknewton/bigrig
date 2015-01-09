@@ -1,46 +1,39 @@
 class Container < BaseModel
-  attr_accessor :name, :path, :tag
+  attr_accessor :env, :name, :path, :ports, :tag, :volumes_from
 
-  def self.from_json(json)
-    opts = [:env, :name, :path, :tag, :volumes_from].each_with_object({}) do |e, o|
-      o[e] = json.send :[], e.to_s
+  class << self
+    def from_json(json)
+      opts = [:env, :name, :path, :ports, :tag].each_with_object({}) do |e, o|
+        o[e] = json.send :[], e.to_s
+      end
+      opts[:env] = parse_env json['env'] if json['env']
+      opts[:volumes_from] = [json['volumes_from']].flatten.compact if json['volumes_from']
+
+      Container.new opts
     end
 
-    Container.new opts
+    private
+
+    def parse_env(list)
+      pairs = list.map do |var|
+        if var.include? '='
+          var.split('=', 2).flatten
+        else
+          [var, ENV[var]]
+        end
+      end
+      Hash[*pairs.flatten]
+    end
+  end
+
+  def initialize(*opts)
+    super
+    @env = {} unless @env
+    @ports = [] unless @ports
+    @volumes_from = [] unless @volumes_from
   end
 
   def dependencies
     volumes_from
-  end
-
-  def env=(list)
-    if list.nil?
-      @env = nil
-    else
-      pairs = list.map { |i| parse_env i }
-      @env = Hash[*pairs.flatten]
-    end
-  end
-
-  def env
-    @env || {}
-  end
-
-  def volumes_from=(list)
-    @volumes_from = [list].flatten.compact
-  end
-
-  def volumes_from
-    @volumes_from || []
-  end
-
-  private
-
-  def parse_env(var)
-    if var.include? '='
-      var.split('=', 2).flatten
-    else
-      [var, ENV[var]]
-    end
   end
 end

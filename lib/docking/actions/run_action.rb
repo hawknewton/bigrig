@@ -33,7 +33,10 @@ class RunAction
   end
 
   def docker_opts(container)
-    { name: container.name, volumes_from: container.volumes_from }
+    { env: container.env,
+      name: container.name,
+      ports: container.ports,
+      volumes_from: container.volumes_from }
   end
 
   def image_id(container)

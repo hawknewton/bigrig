@@ -3,6 +3,8 @@ describe Container do
   it { is_expected.to respond_to :name= }
   it { is_expected.to respond_to :path }
   it { is_expected.to respond_to :path= }
+  it { is_expected.to respond_to :ports }
+  it { is_expected.to respond_to :ports= }
   it { is_expected.to respond_to :tag }
   it { is_expected.to respond_to :tag= }
   it { is_expected.to respond_to :volumes_from }
@@ -28,6 +30,21 @@ describe Container do
 
   describe '::from_json' do
     subject { Container.from_json json }
+
+    context 'with an empty json document' do
+      let(:json) { {} }
+
+      its(:env) { is_expected.to be_empty }
+      its(:env) { is_expected.to be_a Hash }
+
+      its(:volumes_from) { is_expected.to be_empty }
+      its(:volumes_from) { is_expected.to be_a Array }
+
+      its(:ports) { is_expected.to be_a Array }
+      its(:ports) { is_expected.to be_empty }
+
+    end
+
     context 'given json with a path' do
       let(:json) { { 'path' => '/path/to/Dockerfile' } }
 
@@ -58,12 +75,11 @@ describe Container do
       end
     end
 
-    context 'given json without env params' do
-      let(:json) { {} }
+    context 'given json with ports' do
+      let(:json) { { 'ports' => ['80:8080', '12345'] } }
 
-      it 'should have empty env' do
-        puts subject.env.inspect
-        expect(subject.env).to be_empty
+      it 'has ports' do
+        expect(subject.ports).to eq ['80:8080', '12345']
       end
     end
   end

@@ -94,5 +94,35 @@ describe RunAction do
         subject
       end
     end
+
+    context 'givne a file with env variables' do
+      let(:file) { 'env.json' }
+
+      it 'passes the environemnt variables to docker' do
+        allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env').
+          and_return 'env-testid'
+        expect(DockerAdapter).to receive(:run).with hash_including(
+          image_id: 'env-testid',
+          env: { 'NAME1' => 'VALUE1', 'NAME2' => 'VALUE2' }
+        )
+
+        subject
+      end
+    end
+
+    context 'given a file with ports' do
+      let(:file) { 'ports.json' }
+
+      it 'passes ports to docker' do
+        allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env').
+          and_return 'env-testid'
+        expect(DockerAdapter).to receive(:run).with hash_including(
+          image_id: 'env-testid',
+          ports: ['80:8080', '12345']
+        )
+
+        subject
+      end
+    end
   end
 end

@@ -37,15 +37,26 @@ describe DockerAdapter do
     subject { DockerAdapter.run opts }
 
     context 'given an image_id and a name' do
-      let(:opts) { { image_id: 'testid', name: 'testname' } }
+      let(:opts) do
+        { env: { 'NAME1' => 'VALUE1' },
+          image_id: 'testid',
+          name: 'testname',
+          ports: ['80:8080', '12345'],
+          volumes_from: ['exports_volumes'] }
+      end
       let(:mock_container) { double Docker::Container }
 
       it 'should run the image' do
         expect(Docker::Container).to receive(:create).with(hash_including(
+          'Env'   => ['NAME1=VALUE1'],
           'Image' => 'testid',
-          'name'  => 'testname'
+          'name'  => 'testname',
+          'ExposedPorts' => { '8080/tcp' => {}, '12345/tcp' => {} }
         )).and_return mock_container
-        expect(mock_container).to receive :start
+        expect(mock_container).to receive(:start).with(hash_including(
+          'PortBindings' => { '8080/tcp' => [{ 'HostPort' => '80' }], '12345/tcp' => [{}] },
+          'VolumesFrom'  => ['exports_volumes']
+        ))
         allow(mock_container).to receive :id
         subject
       end
