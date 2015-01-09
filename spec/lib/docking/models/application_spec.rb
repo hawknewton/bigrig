@@ -18,7 +18,7 @@ describe Application do
       end
 
       it 'should set the container tag' do
-        expect(subject.containers[0].tag).to eq 'hnewton/env'
+        expect(subject.containers[0].tag).to eq 'hawknewton/show-env'
       end
     end
   end

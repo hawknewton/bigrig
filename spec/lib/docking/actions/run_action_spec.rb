@@ -6,7 +6,10 @@ describe RunAction do
       let(:file) { 'single.json' }
 
       it 'should spin up a single container' do
-        expect(DockerAdapter).to receive(:run).with hash_including tag: 'hnewton/env'
+        expect(DockerAdapter).to receive(:run).with hash_including(
+          tag: 'hawknewton/show-env',
+          name: 'env'
+        )
         subject
       end
     end

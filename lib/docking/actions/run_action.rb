@@ -32,19 +32,17 @@ class RunAction
     (containers.map(&:name) & container.dependencies).any?
   end
 
+  def docker_opts(container)
+    { name: container.name, tag: container.tag, volumes_from: container.volumes_from }
+  end
+
   def ordered_containers
     DependencyGraph.new(containers).resolve
   end
 
   def perform_step(step)
     threads = step.map do |container|
-      Thread.new do
-        opts = {
-          tag: container.tag,
-          volumes_from: container.volumes_from
-        }
-        DockerAdapter.run opts
-      end
+      Thread.new { DockerAdapter.run docker_opts container }
     end
 
     threads.each(&:join)
