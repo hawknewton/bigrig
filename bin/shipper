@@ -28,6 +28,15 @@ command :run do |c|
   end
 end
 
+desc 'Stop and destroy a shipper application'
+arg_name '<shipper_file>'
+command :destroy do |c|
+  c.action do |_global_options, _options, args|
+    args[0] || fail('shipper file is required')
+    DestroyAction.new(args[0]).perform
+  end
+end
+
 pre do |_global, _command, _options, _args|
   # Pre logic here
   # Return true to proceed; false to abort and not call the

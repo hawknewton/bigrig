@@ -11,6 +11,19 @@ describe DockerAdapter do
     end
   end
 
+  describe '::container_exists?' do
+    subject { described_class.container_exists?('testname') }
+
+    context 'when the container exists' do
+      before do
+        allow(Docker::Container).to receive(:get).with('testname').
+          and_return double Docker::Container
+      end
+
+      it { is_expected.to be true }
+    end
+  end
+
   describe '::image_id' do
     subject { DockerAdapter.image_id_by_tag('testtag') }
 
@@ -30,6 +43,52 @@ describe DockerAdapter do
           and_return double id: 'testid'
         is_expected.to eq 'testid'
       end
+    end
+  end
+
+  describe '::kill' do
+    subject { described_class.kill 'testname' }
+
+    context 'given the container is running' do
+      let(:mock_container) { double Docker::Container }
+
+      before do
+        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
+      end
+
+      it 'should kill the container' do
+        expect(mock_container).to receive(:kill)
+        subject
+      end
+    end
+  end
+
+  describe 'remove_container' do
+    subject { described_class.remove_container 'testname' }
+
+    context 'when the container exists' do
+      let(:mock_container) { double Docker::Container }
+
+      before do
+        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
+        allow(mock_container).to receive :delete
+      end
+
+      it 'should remove the container' do
+        expect(mock_container).to receive :delete
+        subject
+      end
+
+      it { is_expected.to be true }
+    end
+
+    context 'when the container does not exist' do
+      before do
+        allow(Docker::Container).to receive(:get).with('testname').
+          and_raise Docker::Error::NotFoundError
+      end
+
+      it { is_expected.to be false }
     end
   end
 
@@ -60,6 +119,30 @@ describe DockerAdapter do
         allow(mock_container).to receive :id
         subject
       end
+    end
+  end
+
+  describe '::running?' do
+    subject { described_class.running? 'testname' }
+    let(:mock_container) { double Docker::Container }
+
+    context 'when the container is running' do
+      before do
+        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
+        allow(mock_container).to receive(:info).
+          and_return('State' => { 'Running' => true })
+      end
+
+      it { is_expected.to be true }
+    end
+
+    context 'when the container does not exist' do
+      before do
+        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
+        allow(mock_container).to receive(:info).and_raise Docker::Error::NotFoundError
+      end
+
+      it { is_expected.to be false }
     end
   end
 end
