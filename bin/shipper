@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'gli'
-require 'docking'
+require 'shipper'
 
 include GLI::App
 
@@ -19,11 +19,11 @@ arguments :strict
 # arg_name 'The name of the argument'
 # flag [:f, :flagname]
 #
-desc 'Spin up a docking application'
-arg_name '<docking file>'
+desc 'Spin up a shipper application'
+arg_name '<shipper file>'
 command :run do |c|
   c.action do |_global_options, _options, args|
-    args[0] || fail('docking file is required')
+    args[0] || fail('shipper file is required')
     RunAction.new(args[0]).perform
   end
 end

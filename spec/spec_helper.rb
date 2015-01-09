@@ -1,4 +1,4 @@
-require 'docking'
+require 'shipper'
 require 'rspec/its'
 
 RSpec.configure do |config|
