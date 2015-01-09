@@ -33,7 +33,15 @@ class RunAction
   end
 
   def docker_opts(container)
-    { name: container.name, tag: container.tag, volumes_from: container.volumes_from }
+    { name: container.name, volumes_from: container.volumes_from }
+  end
+
+  def image_id(container)
+    if container.path
+      DockerAdapter.build container.path
+    else
+      DockerAdapter.image_id_by_tag container.tag
+    end
   end
 
   def ordered_containers
@@ -41,8 +49,12 @@ class RunAction
   end
 
   def perform_step(step)
-    threads = step.map do |container|
-      Thread.new { DockerAdapter.run docker_opts container }
+    containers = step.map do |container|
+      docker_opts(container).merge image_id: image_id(container)
+    end
+
+    threads = containers.map do |container|
+      Thread.new { DockerAdapter.run container }
     end
 
     threads.each(&:join)

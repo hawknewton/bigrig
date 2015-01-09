@@ -1,6 +1,8 @@
 describe Container do
   it { is_expected.to respond_to :name }
   it { is_expected.to respond_to :name= }
+  it { is_expected.to respond_to :path }
+  it { is_expected.to respond_to :path= }
   it { is_expected.to respond_to :tag }
   it { is_expected.to respond_to :tag= }
   it { is_expected.to respond_to :volumes_from }
@@ -21,6 +23,17 @@ describe Container do
   describe '#dependencies' do
     it 'returns an empty array when no dependencies are present' do
       expect(Container.from_json({}).dependencies).to eq []
+    end
+  end
+
+  describe '::from_json' do
+    subject { Container.from_json json }
+    context 'given json with a path' do
+      let(:json) { { 'path' => '/path/to/Dockerfile' } }
+
+      it 'sets the path' do
+        expect(subject.path).to eq '/path/to/Dockerfile'
+      end
     end
   end
 end

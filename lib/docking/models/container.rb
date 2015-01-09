@@ -1,9 +1,13 @@
 class Container < BaseModel
-  attr_accessor :name, :tag
+  attr_accessor :name, :path, :tag
   attr_writer :volumes_from
 
   def self.from_json(json)
-    Container.new name: json['name'], tag: json['tag'], volumes_from: json['volumes_from']
+    opts = [:name, :path, :tag, :volumes_from].each_with_object({}) do |e, o|
+      o[e] = json.send :[], e.to_s
+    end
+
+    Container.new opts
   end
 
   def dependencies
