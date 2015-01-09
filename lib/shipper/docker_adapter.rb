@@ -9,11 +9,26 @@ class DockerAdapter
       Docker::Image.build_from_dir(path).id
     end
 
+    def container_exists?(name)
+      !Docker::Container.get(name).nil?
+    end
+
     def image_id_by_tag(tag)
       Docker::Image.get(tag).id
     rescue Docker::Error::NotFoundError
       puts "An image with the tag #{tag} doesn't exist, I'm going to try to pull it"
       Docker::Image.create('fromImage' => tag).id
+    end
+
+    def kill(name)
+      Docker::Container.get(name).kill
+    end
+
+    def remove_container(name)
+      Docker::Container.get(name).delete
+      true
+    rescue Docker::Error::NotFoundError
+      false
     end
 
     def run(args)
@@ -24,6 +39,12 @@ class DockerAdapter
         'VolumesFrom' => args[:volumes_from]
       )
       puts container.id
+    end
+
+    def running?(name)
+      Docker::Container.get(name).info['State']['Running']
+    rescue Docker::Error::NotFoundError
+      false
     end
 
     private
