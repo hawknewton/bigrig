@@ -28,7 +28,9 @@ class RunAction
 
   def image_id(container)
     if container.path
-      DockerAdapter.build container.path
+      DockerAdapter.build container.path do |chunk|
+        puts JSON.parse(chunk)['stream']
+      end
     else
       DockerAdapter.image_id_by_tag container.tag
     end
