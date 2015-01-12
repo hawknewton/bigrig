@@ -4,9 +4,9 @@ Excon.defaults[:ssl_verify_peer] = false
 
 class DockerAdapter
   class << self
-    def build(path)
+    def build(path, &block)
       puts "Building #{path}"
-      Docker::Image.build_from_dir(path).id
+      Docker::Image.build_from_dir(path, &block).id
     end
 
     def container_exists?(name)
