@@ -5,7 +5,6 @@ Excon.defaults[:ssl_verify_peer] = false
 class DockerAdapter
   class << self
     def build(path, &block)
-      puts "Building #{path}"
       Docker::Image.build_from_dir(path, &block).id
     end
 
@@ -13,11 +12,11 @@ class DockerAdapter
       !Docker::Container.get(name).nil?
     end
 
-    def image_id_by_tag(tag)
+    def image_id_by_tag(tag, &block)
       Docker::Image.get(tag).id
     rescue Docker::Error::NotFoundError
       puts "An image with the tag #{tag} doesn't exist, I'm going to try to pull it"
-      Docker::Image.create('fromImage' => tag).id
+      Docker::Image.create('fromImage' => tag, &block).id
     end
 
     def kill(name)
@@ -33,12 +32,11 @@ class DockerAdapter
 
     def run(args)
       container = create_container args
-      puts "Starting #{args[:name]}"
       container.start(
         'PortBindings' => port_bindings(args[:ports]),
         'VolumesFrom' => args[:volumes_from]
       )
-      puts container.id
+      container.id
     end
 
     def running?(name)

@@ -2,8 +2,15 @@ PATH
   remote: .
   specs:
     shipper (0.0.1)
-      docker-api (= 1.17.0)
       gli (= 2.12.2)
+
+PATH
+  remote: /Users/hnewton/Projects/docker-api
+  specs:
+    docker-api (1.17.0)
+      archive-tar-minitar
+      excon (>= 0.38.0)
+      json
 
 GEM
   remote: https://rubygems.org/
@@ -14,10 +21,6 @@ GEM
       parser (>= 2.2.0.pre.3, < 3.0)
     coderay (1.1.0)
     diff-lcs (1.2.5)
-    docker-api (1.17.0)
-      archive-tar-minitar
-      excon (>= 0.38.0)
-      json
     excon (0.42.1)
     gli (2.12.2)
     json (1.8.2)
@@ -60,6 +63,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  docker-api!
   pry
   rake
   rspec
