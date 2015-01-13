@@ -52,9 +52,10 @@ post do |_global, _command, _options, _args|
   # block on that command only
 end
 
-on_error do |_exception|
+on_error do |e|
   # Error logic here
   # return false to skip default error handling
+  puts e.backtrace
   true
 end
 

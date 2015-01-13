@@ -27,12 +27,13 @@ class RunAction
   end
 
   def image_id(container)
+    parser = OutputParser.new
+    parser_proc = proc { |chunk| print parser.parse chunk }
     if container.path
-      DockerAdapter.build container.path do |chunk|
-        puts JSON.parse(chunk)['stream']
-      end
+      puts "Building #{container.path}"
+      DockerAdapter.build container.path, &parser_proc
     else
-      DockerAdapter.image_id_by_tag container.tag
+      DockerAdapter.image_id_by_tag container.tag, &parser_proc
     end
   end
 
@@ -46,7 +47,10 @@ class RunAction
     end
 
     threads = containers.map do |container|
-      Thread.new { DockerAdapter.run container }
+      Thread.new do
+        puts "Starting #{container[:name]}"
+        puts DockerAdapter.run(container)
+      end
     end
 
     threads.each(&:join)
