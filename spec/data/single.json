@@ -1,5 +1,5 @@
 {
   "containers": [
-    { "name": "env", "tag": "hawknewton/show-env" }
+    { "name": "single-test", "tag": "hawknewton/show-env" }
   ]
 }

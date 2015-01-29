@@ -1,5 +1,5 @@
 {
   "containers": [
-    { "name": "env", "path": "path/to/Dockerfile" }
+    { "name": "build_me", "path": "spec/data/build" }
   ]
 }

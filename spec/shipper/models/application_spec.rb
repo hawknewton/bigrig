@@ -14,7 +14,7 @@ describe Application do
       its('containers.size') { is_expected.to eq 1 }
 
       it 'should set the container name' do
-        expect(subject.containers[0].name).to eq 'env'
+        expect(subject.containers[0].name).to eq 'single-test'
       end
 
       it 'should set the container tag' do
