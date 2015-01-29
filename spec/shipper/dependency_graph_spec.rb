@@ -11,7 +11,6 @@ describe DependencyGraph do
 
       it 'resolves in the correct order' do
         expect(subject.map(&:name)).to match_array %w(test1 test2)
-        puts subject
       end
     end
   end

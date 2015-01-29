@@ -6,7 +6,7 @@ class DestroyAction
   def perform
     @application.containers.each do |container|
       if DockerAdapter.running? container.name
-        puts "Killing #{container.name}"
+        puts "Killing container #{container.name}"
         DockerAdapter.kill container.name
       end
 

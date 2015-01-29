@@ -2,147 +2,271 @@ describe DockerAdapter do
 
   describe '::build' do
     subject { described_class.build path }
-    let(:path) { 'path/to/Dockerfile' }
+    let(:path) { test_file 'build' }
+    let(:image_id) { subject }
 
-    it 'should build the given directory' do
-      expect(Docker::Image).to receive(:build_from_dir).with(path).
-        and_return double id: 'imageid'
-      is_expected.to eq 'imageid'
+    it 'builds the given directory', :vcr do
+      expect { Docker::Image.get(image_id) }.to_not raise_error
+    end
+
+    it 'passes build input to a block', :vcr do
+      described_class.build path do |chunk|
+        puts "chunk: #{chunk}"
+      end
     end
   end
 
   describe '::container_exists?' do
-    subject { described_class.container_exists?('testname') }
+    subject { described_class.container_exists?(name) }
 
     context 'when the container exists' do
-      before do
-        allow(Docker::Container).to receive(:get).with('testname').
-          and_return double Docker::Container
-      end
+      let!(:container) { Docker::Container.create 'name' => name, 'Image' => 'hawknewton/true' }
+      let(:name) { 'container_exists' }
 
-      it { is_expected.to be true }
+      after { container.remove }
+
+      it 'is true', :vcr do
+        is_expected.to be true
+      end
+    end
+
+    context 'when the container does not exist' do
+      let(:name) { 'container_does_not_exist' }
+
+      it 'is false', :vcr do
+        is_expected.to be false
+      end
     end
   end
 
-  describe '::image_id' do
-    subject { DockerAdapter.image_id_by_tag('testtag') }
+  describe '::image_id_by_tag' do
+    subject { DockerAdapter.image_id_by_tag(tag) }
 
     context 'when the image exists' do
-      it 'returns the image id' do
-        expect(Docker::Image).to receive(:get).with('testtag').
-          and_return double id: 'testid'
-        is_expected.to eq 'testid'
+      let(:tag) { 'image_exists' }
+      let!(:image) { Docker::Image.create 'fromImage' => 'hawknewton/true' }
+
+      # Get the long id
+      let(:image_id) { Docker::Image.get(image.id).id }
+
+      before { image.tag 'repo' => tag }
+      after { image.remove name: tag }
+
+      it 'returns the image id', :vcr do
+        is_expected.to eq image_id
       end
     end
 
     context 'when the image does not exist' do
-      it 'pulls the image from the registry' do
-        expect(Docker::Image).to receive(:get).with('testtag').
-          and_raise Docker::Error::NotFoundError
-        expect(Docker::Image).to receive(:create).with('fromImage' => 'testtag').
-          and_return double id: 'testid'
-        is_expected.to eq 'testid'
+      let(:tag) { 'hawknewton/true:not_exist' }
+
+      before do
+        begin
+          image = Docker::Image.get tag
+          image.remove name: tag
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
+      end
+
+      it 'raise a ImageNotFoundError', :vcr do
+        expect { subject }.to raise_error ImageNotFoundError
       end
     end
   end
 
   describe '::kill' do
-    subject { described_class.kill 'testname' }
+    subject { described_class.kill container_id }
 
     context 'given the container is running' do
-      let(:mock_container) { double Docker::Container }
+      let(:container) { Docker::Container.create('Image' => image.id).tap(&:start) }
+      let(:container_id) { container.id }
+      let(:image) { Docker::Image.create 'fromImage' => 'hawknewton/show-env' }
+      let(:running?) { container.json['State']['Running'] }
+      let!(:kill) { subject }
 
-      before do
-        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
+      after { container.delete force: true }
+
+      it 'should kill the container', :vcr do
+        expect(running?).to be false
       end
+    end
 
-      it 'should kill the container' do
-        expect(mock_container).to receive(:kill)
-        subject
+    context 'given the container does not exist' do
+      let(:container_id) { 'doesnotexist' }
+
+      it 'should raise an error', :vcr do
+        expect { subject }.to raise_error ContainerNotFoundError
       end
     end
   end
 
-  describe 'remove_container' do
-    subject { described_class.remove_container 'testname' }
+  describe '::pull' do
+    subject { described_class.pull repo }
+
+    context 'given the repo exists' do
+      let(:repo) { 'hawknewton/true:latest' }
+      let(:image_id) { Docker::Image.get(repo).id }
+
+      it 'returns the image id', :vcr do
+        is_expected.to eq image_id
+      end
+    end
+
+    context 'given the repo does not exist' do
+      let(:repo) { 'hawknewton/doesnotexist' }
+
+      it 'raises a RepoNotFoundError', :vcr do
+        expect { subject }.to raise_error RepoNotFoundError
+      end
+    end
+
+    context 'given a block to capture output' do
+      let(:repo) { 'hawknewton/true' }
+      let(:output) { '' }
+      let(:block) { proc { |chunk| output << chunk } }
+      let!(:image_id) { described_class.pull repo, &block }
+
+      it 'should capture output', :vcr do
+        expect(output).to match(/Pulling repository hawknewton\/true/)
+      end
+    end
+  end
+
+  describe '::remove_container' do
+    subject { described_class.remove_container container_id }
 
     context 'when the container exists' do
-      let(:mock_container) { double Docker::Container }
+      let(:container_id) { Docker::Container.create('Image' => 'hawknewton/true').id }
+      let!(:remove) { subject }
 
-      before do
-        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
-        allow(mock_container).to receive :delete
+      it 'should remove the container', :vcr do
+        expect { Docker::Container.get container_id }.
+          to raise_error { Docker::Error::NotFoundError }
       end
-
-      it 'should remove the container' do
-        expect(mock_container).to receive :delete
-        subject
-      end
-
-      it { is_expected.to be true }
     end
 
     context 'when the container does not exist' do
-      before do
-        allow(Docker::Container).to receive(:get).with('testname').
-          and_raise Docker::Error::NotFoundError
+      let(:container_id) { 'doesnotexist' }
+
+      it 'raises a ContainerNotFoundError', :vcr do
+        expect { subject }.to raise_error ContainerNotFoundError
+      end
+    end
+
+    context 'when the container is running' do
+      let(:container_id) do
+        Docker::Container.create('Image' => 'hawknewton/true').tap(&:start).id
       end
 
-      it { is_expected.to be false }
+      it 'raises a ContainerRunningError', :vcr do
+        expect { subject }.to raise_error ContainerRunningError
+      end
     end
   end
 
   describe '::run' do
-    subject { DockerAdapter.run opts }
+    subject { DockerAdapter.run({ image_id: image_id }.merge opts) }
 
-    context 'given an image_id and a name' do
-      let(:opts) do
-        { env: { 'NAME1' => 'VALUE1' },
-          image_id: 'testid',
-          name: 'testname',
-          ports: ['80:8080', '12345'],
-          volumes_from: ['exports_volumes'] }
+    context 'given an image_id that exists' do
+      let(:image_id) { 'hawknewton/show-env' }
+      let(:container_id) { subject }
+      let(:container) { Docker::Container.get container_id }
+      let(:running?) { container.json['State']['Running'] }
+
+      context 'and a name' do
+        let(:opts) { { name: name } }
+        let(:name) { 'and_a_name' }
+
+        # strip the leading '/' from the json name
+        let(:container_name) { container.json['Name'][1..-1] }
+
+        after { Docker::Container.get(name).kill!.delete }
+
+        it 'starts the container with the right name', :vcr do
+          expect(running?).to be true
+          expect(container_name).to eq name
+        end
       end
-      let(:mock_container) { double Docker::Container }
 
-      it 'should run the image' do
-        expect(Docker::Container).to receive(:create).with(hash_including(
-          'Env'   => ['NAME1=VALUE1'],
-          'Image' => 'testid',
-          'name'  => 'testname',
-          'ExposedPorts' => { '8080/tcp' => {}, '12345/tcp' => {} }
-        )).and_return mock_container
-        expect(mock_container).to receive(:start).with(hash_including(
-          'PortBindings' => { '8080/tcp' => [{ 'HostPort' => '80' }], '12345/tcp' => [{}] },
-          'VolumesFrom'  => ['exports_volumes']
-        ))
-        allow(mock_container).to receive :id
-        subject
+      context 'and a name and ports' do
+        let(:free_port) { TCPServer.new('0.0.0.0', 0).addr[1] }
+        let(:opts) { { name: name, ports: ["#{free_port}:80", '70'] } }
+        let(:name) { 'with_ports' }
+        let(:exposed_ports) { container.json['Config']['ExposedPorts'].map { |k, _| k } }
+        let(:mapped_ports) do
+          container.json['NetworkSettings']['Ports'].each_with_object({}) do |arr, hash|
+            hash[arr[0]] = arr[1][0]['HostPort']
+          end
+        end
+
+        after { Docker::Container.get(name).kill!.delete }
+
+        it 'starts the container with ports exposed', :vcr do
+          expect(running?).to be true
+          expect(exposed_ports).to eq ['70/tcp', '80/tcp']
+          expect(mapped_ports).to include '80/tcp'
+          expect(mapped_ports).to include '70/tcp'
+
+          # Because the free port will move around under VCR we can't actually
+          # assert anything
+          expect(mapped_ports['80/tcp'].to_i).to be_a Fixnum
+          expect(mapped_ports['70/tcp'].to_i).to be_a Fixnum
+        end
+      end
+
+      context 'and a name and env variables' do
+        let(:name) { 'with_env' }
+        let(:opts) { { name: name, env: { 'NAME1' => 'VALUE1', 'NAME2' => 'VALUE2' } } }
+        let(:envs) { container.json['Config']['Env'] }
+
+        after { Docker::Container.get(name).kill!.delete }
+
+        it 'starts the container with env set', :vcr do
+          expect(running?).to be true
+          expect(envs).to include 'NAME1=VALUE1'
+          expect(envs).to include 'NAME2=VALUE2'
+        end
       end
     end
   end
 
   describe '::running?' do
-    subject { described_class.running? 'testname' }
-    let(:mock_container) { double Docker::Container }
+    subject { described_class.running? container_id }
+    let(:result) { subject }
 
     context 'when the container is running' do
-      before do
-        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
-        allow(mock_container).to receive(:info).
-          and_return('State' => { 'Running' => true })
+      let(:container) do
+        Docker::Container.create('Image' => 'hawknewton/show-env')
       end
+      let(:container_id) { container.id }
 
-      it { is_expected.to be true }
+      before { container.start }
+      after { container.delete force: true }
+
+      it 'returns true', :vcr do
+        expect(result).to be true
+      end
     end
 
-    context 'when the container does not exist' do
-      before do
-        allow(Docker::Container).to receive(:get).with('testname').and_return mock_container
-        allow(mock_container).to receive(:info).and_raise Docker::Error::NotFoundError
+    context 'when the container is not running' do
+      let(:container) do
+        Docker::Container.create('Image' => 'hawknewton/show-env')
       end
+      let(:container_id) { container.id }
 
-      it { is_expected.to be false }
+      after { container.delete force: true }
+
+      it 'returns false', :vcr do
+        expect(result).to be false
+      end
+    end
+
+    context 'when the container does not exist', :vcr do
+      let(:container_id) { 'doesnotexist' }
+
+      it 'returns false' do
+        expect(result).to be false
+      end
     end
   end
 end

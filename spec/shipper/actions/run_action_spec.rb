@@ -4,98 +4,121 @@ describe RunAction do
 
     context 'given a file with one container' do
       let(:file) { 'single.json' }
+      let!(:perform) { subject }
+      let(:running?) { DockerAdapter.running? 'single-test' }
 
-      it 'should spin up a single container' do
-        expect(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env').
-          and_return 'showenv-testid'
-        expect(DockerAdapter).to receive(:run).with hash_including(
-          image_id: 'showenv-testid',
-          name: 'env'
-        )
-        subject
+      after do
+        begin
+          container = Docker::Container.get 'single-test'
+          container.kill.delete
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
+      end
+
+      it 'should spin up a single container', :vcr do
+        expect(running?).to be true
       end
     end
 
     context 'given a file with multiple containers' do
       let(:file) { 'multiple.json' }
+      let(:running?) do
+        DockerAdapter.running?('multiple-test1') && DockerAdapter.running?('multiple-test2')
+      end
+      let(:perform) { subject }
 
-      before do
-        allow(DockerAdapter).to receive(:image_id_by_tag).with('hnewton/env').
-          and_return 'env-testid'
-        allow(DockerAdapter).to receive(:image_id_by_tag).with('hnewton/test').
-          and_return 'test-testid'
+      after do
+        begin
+          c1 = Docker::Container.get 'multiple-test1'
+          c1.kill.delete
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
+        begin
+          c1 = Docker::Container.get 'multiple-test2'
+          c1.kill.delete
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
       end
 
-      it 'spins up multiple containers' do
-        expect(DockerAdapter).to receive(:run).with hash_including image_id: 'env-testid'
-        expect(DockerAdapter).to receive(:run).with hash_including image_id: 'test-testid'
-        subject
+      it 'spins up multiple containers', :vcr do
+        perform
+        expect(running?).to be true
       end
 
-      it 'launches both containers in parallel' do
+      it 'launches both containers in parallel', :vcr do
         running = 0
-        expect(DockerAdapter).to receive(:run).with hash_including(image_id: 'env-testid') do
+        expect(DockerAdapter).to receive(:run).with hash_including(name: 'multiple-test1') do
           running += 1
           sleep 1
           running -= 1
         end
 
-        expect(DockerAdapter).to receive(:run).with hash_including(image_id: 'test-testid') do
+        expect(DockerAdapter).to receive(:run).with hash_including(name: 'multiple-test2') do
           sleep 0.5
           expect(running).to eq 1
         end
-        subject
+        perform
       end
     end
 
-    context 'given a file with voles_from' do
+    context 'given a file with volumes_from' do
       let(:file) { 'volumes.json' }
+      let(:container) { Docker::Container.get 'mounts_volumes' }
+      let(:volumes_from) { container.json['HostConfig']['VolumesFrom'] }
+      let(:perform) { subject }
 
-      before do
-        allow(DockerAdapter).to receive(:image_id_by_tag).with('hnewton/env').
-          and_return 'env-testid'
-        allow(DockerAdapter).to receive(:image_id_by_tag).with('hnewton/test').
-          and_return 'test-testid'
+      after do
+        begin
+          c1 = Docker::Container.get 'mounts_volumes'
+          c1.kill.delete
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
+        begin
+          c1 = Docker::Container.get 'exports_volumes'
+          c1.kill.delete
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
       end
 
-      it 'should pass volumes_from to the right container' do
-        allow(DockerAdapter).to receive(:run).with hash_including image_id: 'env-testid'
-        expect(DockerAdapter).to receive(:run).with hash_including(
-          image_id: 'test-testid',
-          volumes_from: ['env']
-        )
-        subject
+      it 'should pass volumes_from to the right container', :vcr do
+        perform
+        expect(volumes_from).to eq ['exports_volumes']
       end
 
-      it 'starts the dependant container last' do
+      it 'starts the dependant container last', :vcr do
         running = 0
-        allow(DockerAdapter).to receive(:run).with hash_including(image_id: 'env-testid') do
+        allow(DockerAdapter).to receive(:run).with hash_including(name: 'exports_volumes') do
           running += 1
           sleep 1
           running -= 1
         end
 
-        expect(DockerAdapter).to receive(:run).with hash_including(image_id: 'test-testid') do
+        expect(DockerAdapter).to receive(:run).with hash_including(name: 'mounts_volumes') do
           sleep 0.5
           expect(running).to eq 0
         end
-        subject
+        perform
       end
     end
 
     context 'given a file with a path' do
       let(:file) { 'path.json' }
+      let(:container) { Docker::Container.get subject }
 
-      it 'builds the image before starting it' do
+      after do
+        container.kill.delete
+      end
+
+      it 'builds the image before starting it', :vcr do
+        skip 'VCR freaks out'
         expect(DockerAdapter).to receive(:build).
-          with('path/to/Dockerfile').and_return('containerid')
-        expect(DockerAdapter).to receive(:run).with hash_including image_id: 'containerid'
+          with('spec/data/build').and_call_original
 
         subject
       end
     end
 
-    context 'givne a file with env variables' do
+    context 'given a file with env variables' do
       let(:file) { 'env.json' }
 
       it 'passes the environemnt variables to docker' do
