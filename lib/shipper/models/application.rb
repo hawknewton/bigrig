@@ -18,6 +18,11 @@ class Application < BaseModel
         Container.from_json container
       end
 
+      containers.each do |container|
+        matches = containers.select { |c| c.name == container.name }
+        fail "Two containers may not have the same name: #{container.name}" if matches.size > 1
+      end
+
       Application.new containers: containers
     end
   end
