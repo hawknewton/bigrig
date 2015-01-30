@@ -1,9 +1,8 @@
 {
-  "containers": [
-    {
-      "name": "env",
+  "containers": {
+    "env": {
       "ports": ["80:8080", "12345"],
       "tag": "hawknewton/show-env"
     }
-  ]
+  }
 }

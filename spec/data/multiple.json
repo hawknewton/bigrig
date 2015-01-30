@@ -1,6 +1,6 @@
 {
-  "containers": [
-    { "name": "multiple-test1", "tag": "hawknewton/show-env" },
-    { "name": "multiple-test2", "tag": "hawknewton/show-env" }
-  ]
+  "containers": {
+    "multiple-test1": { "tag": "hawknewton/show-env" },
+    "multiple-test2": { "tag": "hawknewton/show-env" }
+  }
 }

@@ -21,11 +21,5 @@ describe Application do
         expect(subject.containers[0].tag).to eq 'hawknewton/show-env'
       end
     end
-
-    context 'given two containers with the same name' do
-      let(:file) { 'duplicate.json' }
-
-      example { expect { subject }.to raise_error(/have the same name: duplicate/) }
-    end
   end
 end

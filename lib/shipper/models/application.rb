@@ -14,13 +14,8 @@ class Application < BaseModel
     end
 
     def from_json(json)
-      containers = json['containers'].map do |container|
-        Container.from_json container
-      end
-
-      containers.each do |container|
-        matches = containers.select { |c| c.name == container.name }
-        fail "Two containers may not have the same name: #{container.name}" if matches.size > 1
+      containers = json['containers'].map do |name, value|
+        Container.from_json name, value
       end
 
       Application.new containers: containers
