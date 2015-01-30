@@ -1,0 +1,6 @@
+{
+  "containers": [
+    { "name": "duplicate", "tag": "hawknewton/show-env" },
+    { "name": "duplicate", "tag": "hawknewton/show-env" }
+  ]
+}
