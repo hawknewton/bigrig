@@ -1,6 +1,6 @@
 {
-  "containers": [
-    { "name": "duplicate", "tag": "hawknewton/show-env" },
-    { "name": "duplicate", "tag": "hawknewton/show-env" }
-  ]
+  "containers": {
+    "duplicate": { "tag": "hawknewton/show-env" },
+    "duplocate": { "tag": "hawknewton/show-env" }
+  }
 }

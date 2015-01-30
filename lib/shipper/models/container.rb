@@ -2,8 +2,8 @@ class Container < BaseModel
   attr_accessor :env, :name, :path, :ports, :tag, :volumes_from
 
   class << self
-    def from_json(json)
-      opts = [:env, :name, :path, :ports, :tag].each_with_object({}) do |e, o|
+    def from_json(name, json)
+      opts = [:env, :path, :ports, :tag].each_with_object(name: name) do |e, o|
         o[e] = json.send :[], e.to_s
       end
       opts[:env] = parse_env json['env'] if json['env']

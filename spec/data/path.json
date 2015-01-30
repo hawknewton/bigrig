@@ -1,5 +1,5 @@
 {
-  "containers": [
-    { "name": "build_me", "path": "spec/data/build" }
-  ]
+  "containers": {
+    "build_me": { "path": "spec/data/build" }
+  }
 }
