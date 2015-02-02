@@ -1,4 +1,5 @@
 require 'shipper/actions'
+require 'shipper/descriptor'
 require 'shipper/dependency_graph'
 require 'shipper/docker_adapter'
 require 'shipper/models'

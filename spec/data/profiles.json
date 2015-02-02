@@ -7,5 +7,16 @@
         "NAME2": "VALUE2"
       }
     }
+  },
+
+  "profiles": {
+    "qa": {
+      "env_vars": {
+        "tag": "hawknewton/new-tag",
+        "env": {
+          "NAME1": "VALUE1A"
+        }
+      }
+    }
   }
 }

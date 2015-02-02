@@ -55,7 +55,7 @@ describe Container do
     end
 
     context 'given json with env params' do
-      let(:json) { { 'env' => ['NAME1=VALUE1', 'NAME2=VALUE2'] } }
+      let(:json) { { 'env' => { 'NAME1' => 'VALUE1', 'NAME2' => 'VALUE2' } } }
 
       it 'parses the environment variables' do
         expect(subject.env).to include(
@@ -65,7 +65,7 @@ describe Container do
       end
 
       context 'that reference environment variables' do
-        let(:json) { { 'env' => ['NAME1'] } }
+        let(:json) { { 'env' => { 'NAME1' => "\#{ENV['NAME1']}" } } }
 
         before { ENV['NAME1'] = 'ENV1' }
         after { ENV['NAME1'] = nil }
