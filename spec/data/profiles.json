@@ -1,7 +1,7 @@
 {
   "containers": {
-    "env_vars": {
-      "tag": "hawknewton/show-env",
+    "profiles": {
+      "tag": "hawknewton/true",
       "env": {
         "NAME1": "VALUE1",
         "NAME2": "VALUE2"
@@ -11,8 +11,8 @@
 
   "profiles": {
     "qa": {
-      "env_vars": {
-        "tag": "hawknewton/new-tag",
+      "profiles": {
+        "tag": "hawknewton/show-env",
         "env": {
           "NAME1": "VALUE1A"
         }

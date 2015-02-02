@@ -1,8 +1,8 @@
 class RunAction
   attr_accessor :application
 
-  def initialize(file)
-    @application = Application.read file
+  def initialize(file, active_profiles)
+    @application = Application.read file, active_profiles
   end
 
   def perform

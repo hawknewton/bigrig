@@ -14,8 +14,8 @@ describe Descriptor do
   context 'given a descriptor with active profiles ' do
     let(:file) { 'profiles.json' }
     let(:profiles) { ['qa'] }
-    let(:env_vars) { subject.as_json['env_vars']['env'] }
-    let(:tag) { subject.as_json['env_vars']['tag'] }
+    let(:env_vars) { subject.as_json['profiles']['env'] }
+    let(:tag) { subject.as_json['profiles']['tag'] }
 
     it 'overrides present ENV values' do
       expect(env_vars).to include 'NAME1' => 'VALUE1A'
@@ -26,7 +26,7 @@ describe Descriptor do
     end
 
     it 'also overrides the tag' do
-      expect(tag).to eq 'hawknewton/new-tag'
+      expect(tag).to eq 'hawknewton/show-env'
     end
   end
 end
