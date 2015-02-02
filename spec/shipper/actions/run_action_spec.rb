@@ -1,6 +1,7 @@
 describe RunAction do
   describe '::perform' do
-    subject { described_class.new(test_file file).perform }
+    subject { described_class.new(test_file(file), active_profiles).perform }
+    let(:active_profiles) { [] }
 
     context 'given a file with one container' do
       let(:file) { 'single.json' }
@@ -145,6 +146,23 @@ describe RunAction do
         )
 
         subject
+      end
+    end
+
+    context 'with a file with active profiles' do
+      let(:file) { 'profiles.json' }
+      let(:active_profiles) { ['qa'] }
+
+      after do
+        container = Docker::Container.get 'profiles'
+        container.kill.delete
+      end
+
+      it 'uses the overridden image', :vcr do
+        subject
+        container = Docker::Container.get 'profiles'
+        image = Docker::Image.get 'hawknewton/show-env'
+        expect(container.info['Image']).to eq image.id
       end
     end
   end

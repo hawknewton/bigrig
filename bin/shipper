@@ -22,9 +22,14 @@ arguments :strict
 desc 'Spin up a shipper application'
 arg_name '<shipper file>'
 command :run do |c|
-  c.action do |_global_options, _options, args|
+  c.desc 'profiles to activate'
+  c.flag [:p, :profiles]
+
+  c.action do |_global_options, options, args|
     args[0] || fail('shipper file is required')
-    RunAction.new(args[0]).perform
+    profiles = options[:profiles] && options[:profiles].split(',') || []
+
+    RunAction.new(args[0], profiles).perform
   end
 end
 

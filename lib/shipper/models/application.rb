@@ -9,12 +9,12 @@ class Application < BaseModel
   end
 
   class << self
-    def read(file)
-      from_json JSON.load File.read file
+    def read(file, active_profiles = [])
+      from_json Descriptor.read(file, active_profiles).as_json
     end
 
     def from_json(json)
-      containers = json['containers'].map do |name, value|
+      containers = json.map do |name, value|
         Container.from_json name, value
       end
 
