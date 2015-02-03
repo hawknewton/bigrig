@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require_relative 'vcr'
+
+VCR.use_cassette ARGV.shift do
+  load File.expand_path('../../../bin/shipper', __FILE__)
+end

@@ -5,7 +5,8 @@
       "env": {
         "NAME1": "VALUE1",
         "NAME2": "VALUE2"
-      }
+      },
+      "ports": ["4567:80"]
     }
   },
 
