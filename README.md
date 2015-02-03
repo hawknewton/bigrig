@@ -18,41 +18,37 @@ We want to make three things easier:
 
 ```json
 {
-  "containers": [
-    {
-      "name": "web",
+  "containers": {
+    "web": {
       "ports": ["80:80"],
-      "image": "hawknewton/show-env",
-      "version": "2.0.1",
-      "development_path": "path/to/web/Dockerfile"
+      "tag": "hawknewton/show-env:1.1.0",
+      "env": {
+        "USE_SSL": true,
+        "CACHE_TIMEOUT": "3600"
+      }
     },
-    {
-      "name": "logger",
-      "image": "hawknewton/logger:1.2.3",
-      "version": "1.2.3",
+
+    "logger": {
+      "tag": "hawknewton/logger:1.2.3",
       "volumes-from": ["web"]
     }
-  ],
+  },
 
-  "environments": {
+  "profiles": {
+    "qa": {
+      "web": {
+        "CACHE_TIMEOUT": "10"
+      }
+    },
+
     "development": {
-      "USE_SSL": false,
-      "SERVICE_URL": "http://localhost:8080/my-microservice"
-    },
-
-    "qa-1": {
-      "USE_SSL": true,
-      "SERVICE_URL": "http://qa-1.hawknewton.com/my-microservice"
-    },
-
-    "qa-2": {
-      "USE_SSL": true,
-      "SERVICE_URL": "http://qa-2.hawknewton.com/my-microservice"
-    },
-
-    "production": {
-      "USE_SSL": true,
-      "SERVICE_URL": "https://service.hawknewton.com/"
+      "web": {
+        "path": ".",
+        "env": {
+          "USE_SSL": false,
+          "CACHE_TIMEOUT": "1"
+        }
+      }
     }
   }
 }
