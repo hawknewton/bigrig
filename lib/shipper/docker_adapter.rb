@@ -31,6 +31,11 @@ class DockerAdapter
       raise ContainerNotFoundError
     end
 
+    def logs(name, &block)
+      container = Docker::Container.get name
+      container.streaming_logs follow: true, stdout: true, stderr: true, &block
+    end
+
     def pull(tag, &block)
       Docker::Image.get(Docker::Image.create('fromImage' => tag, &block).id).id
     rescue Docker::Error::ArgumentError => e
