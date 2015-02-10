@@ -19,6 +19,14 @@ arguments :strict
 # arg_name 'The name of the argument'
 # flag [:f, :flagname]
 #
+desc 'Prints logs from the application'
+arg_name '<shipper_file>'
+command :logs do |c|
+  c.action do |_global_options, _options, args|
+    LogAction.new(args[0]).perform
+  end
+end
+
 desc 'Spin up a shipper application'
 arg_name '<shipper file>'
 command :run do |c|

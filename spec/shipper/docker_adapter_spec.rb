@@ -100,6 +100,31 @@ describe DockerAdapter do
     end
   end
 
+  describe '::logs' do
+    subject { described_class.logs(container.id) { |s, c| logs << [s, c] } }
+    let(:logs) { [] }
+    let(:image) { Docker::Image.create 'fromImage' => 'hawknewton/log-test:0.0.1' }
+    let(:container) { Docker::Container.get 'log-test' }
+
+    before  do
+      Docker::Container.create('Image' => image.id, 'name' => 'log-test').start
+    end
+
+    after { container.kill.delete }
+
+    it 'streams logs to a block', :vcr do
+      allow(Docker::Container).to receive(:get).with(container.id).and_return container
+      expect(container).to receive(:streaming_logs).
+        with(follow: true, stdout: true, stderr: true).
+        and_yield('stream #1', 'I am log message #1').
+        and_yield('stream #2', 'I am log message #2')
+
+      subject
+      expect(logs).to include ['stream #1', 'I am log message #1']
+      expect(logs).to include ['stream #2', 'I am log message #2']
+    end
+  end
+
   describe '::pull' do
     subject { described_class.pull repo }
 
