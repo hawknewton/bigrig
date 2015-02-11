@@ -9,6 +9,11 @@ class Runner
 
   private
 
+  def build(path)
+    puts "Building #{path}"
+    DockerAdapter.build path, &parser_proc
+  end
+
   def containers
     @application.containers
   end
@@ -25,13 +30,15 @@ class Runner
   end
 
   def image_id(container)
-    parser = OutputParser.new
-    parser_proc = proc { |chunk| print parser.parse chunk }
+    parser_proc = proc { |chunk| print OutputParser.new.parse chunk }
     if container.path
-      puts "Building #{container.path}"
-      DockerAdapter.build container.path, &parser_proc
+      build container.path
     else
-      DockerAdapter.image_id_by_tag container.tag, &parser_proc
+      begin
+        DockerAdapter.image_id_by_tag container.tag, &parser_proc
+      rescue ImageNotFoundError
+        DockerAdapter.pull container.tag, &parser_proc
+      end
     end
   end
 

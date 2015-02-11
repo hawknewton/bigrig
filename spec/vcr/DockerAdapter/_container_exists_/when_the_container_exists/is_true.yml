@@ -8,7 +8,7 @@ http_interactions:
       string: '{"Image":"hawknewton/true"}'
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.17.0
+      - Swipely/Docker-API 1.18.0
       Content-Type:
       - application/json
   response:
@@ -19,15 +19,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Jan 2015 23:48:36 GMT
+      - Wed, 11 Feb 2015 23:43:24 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"ab30b91c2f9728a831faadcc5d4c10a3372e4272159dc7addd2b15fb81574a55","Warnings":null}
+        {"Id":"7eca378136f075e9656f864206ce0eff9194c64e050fe5aa6f95f36215e22650","Warnings":null}
     http_version: 
-  recorded_at: Thu, 29 Jan 2015 23:48:35 GMT
+  recorded_at: Wed, 11 Feb 2015 23:43:24 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/container_exists/json"
@@ -36,7 +36,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.17.0
+      - Swipely/Docker-API 1.18.0
       Content-Type:
       - text/plain
   response:
@@ -47,24 +47,24 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 29 Jan 2015 23:48:36 GMT
+      - Wed, 11 Feb 2015 23:43:24 GMT
       Content-Length:
       - '1482'
     body:
       encoding: UTF-8
       string: |
-        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"ab30b91c2f97","Image":"hawknewton/true","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-01-29T23:48:36.641903375Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"ab30b91c2f9728a831faadcc5d4c10a3372e4272159dc7addd2b15fb81574a55","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/container_exists","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":null,"VolumesRW":null}
+        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"7eca378136f0","Image":"hawknewton/true","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-11T23:43:24.834665302Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"7eca378136f075e9656f864206ce0eff9194c64e050fe5aa6f95f36215e22650","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/container_exists","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":null,"VolumesRW":null}
     http_version: 
-  recorded_at: Thu, 29 Jan 2015 23:48:35 GMT
+  recorded_at: Wed, 11 Feb 2015 23:43:24 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.15/containers/ab30b91c2f9728a831faadcc5d4c10a3372e4272159dc7addd2b15fb81574a55"
+    uri: "<DOCKER_HOST>/v1.15/containers/7eca378136f075e9656f864206ce0eff9194c64e050fe5aa6f95f36215e22650"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.17.0
+      - Swipely/Docker-API 1.18.0
       Content-Type:
       - text/plain
   response:
@@ -73,10 +73,10 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Thu, 29 Jan 2015 23:48:36 GMT
+      - Wed, 11 Feb 2015 23:43:24 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 29 Jan 2015 23:48:35 GMT
+  recorded_at: Wed, 11 Feb 2015 23:43:24 GMT
 recorded_with: VCR 2.9.3

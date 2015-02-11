@@ -19,47 +19,44 @@ arguments :strict
 # arg_name 'The name of the argument'
 # flag [:f, :flagname]
 #
-desc 'Start the applicaiton in dev mode'
-arg_name '<shipper_file>'
+desc 'shipper file'
+default_value 'shipper.json'
+flag [:f, :file]
 
+desc 'Start the applicaiton in dev mode'
 command :dev do |c|
   c.desc 'profiles to activate'
   c.flag [:p, :profiles]
 
-  c.action do |_global_options, options, args|
+  c.action do |global_options, options, _args|
     profiles = options[:profiles] && options[:profiles].split(',') || []
-    DevAction.new(args[0], profiles).perform
+    DevAction.new(global_options[:file], profiles).perform
   end
 end
 
 desc 'Prints logs from the application'
-arg_name '<shipper_file>'
 command :logs do |c|
-  c.action do |_global_options, _options, args|
-    LogAction.new(args[0]).perform
+  c.action do |global_options, _options, _args|
+    LogAction.new(global_options[:file]).perform
   end
 end
 
 desc 'Spin up a shipper application'
-arg_name '<shipper file>'
 command :run do |c|
   c.desc 'profiles to activate'
   c.flag [:p, :profiles]
 
-  c.action do |_global_options, options, args|
-    args[0] || fail('shipper file is required')
+  c.action do |global_options, options, _args|
     profiles = options[:profiles] && options[:profiles].split(',') || []
 
-    RunAction.new(args[0], profiles).perform
+    RunAction.new(global_options[:file], profiles).perform
   end
 end
 
 desc 'Stop and destroy a shipper application'
-arg_name '<shipper_file>'
 command :destroy do |c|
-  c.action do |_global_options, _options, args|
-    args[0] || fail('shipper file is required')
-    DestroyAction.new(args[0]).perform
+  c.action do |global_options, _options, _args|
+    DestroyAction.new(global_options[:file]).perform
   end
 end
 
@@ -81,6 +78,7 @@ end
 on_error do |e|
   # Error logic here
   # return false to skip default error handling
+  puts e
   puts e.backtrace
   true
 end

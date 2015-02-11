@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.17.0
+      - Swipely/Docker-API 1.18.0
       Content-Type:
       - text/plain
   response:
@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Thu, 29 Jan 2015 23:48:36 GMT
+      - Wed, 11 Feb 2015 23:43:24 GMT
       Content-Length:
       - '44'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Thu, 29 Jan 2015 23:48:35 GMT
+  recorded_at: Wed, 11 Feb 2015 23:43:24 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/container_does_not_exist/json"
@@ -36,7 +36,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.17.0
+      - Swipely/Docker-API 1.18.0
       Content-Type:
       - text/plain
   response:
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Thu, 29 Jan 2015 23:48:36 GMT
+      - Wed, 11 Feb 2015 23:43:25 GMT
       Content-Length:
       - '44'
     body:
@@ -55,7 +55,7 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Thu, 29 Jan 2015 23:48:35 GMT
+  recorded_at: Wed, 11 Feb 2015 23:43:24 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/container_does_not_exist/json"
@@ -64,7 +64,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.17.0
+      - Swipely/Docker-API 1.18.0
       Content-Type:
       - text/plain
   response:
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Thu, 29 Jan 2015 23:48:36 GMT
+      - Wed, 11 Feb 2015 23:43:25 GMT
       Content-Length:
       - '44'
     body:
@@ -83,7 +83,7 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Thu, 29 Jan 2015 23:48:35 GMT
+  recorded_at: Wed, 11 Feb 2015 23:43:24 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/container_does_not_exist/json"
@@ -92,7 +92,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.17.0
+      - Swipely/Docker-API 1.18.0
       Content-Type:
       - text/plain
   response:
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Thu, 29 Jan 2015 23:48:36 GMT
+      - Wed, 11 Feb 2015 23:43:25 GMT
       Content-Length:
       - '44'
     body:
@@ -111,5 +111,5 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Thu, 29 Jan 2015 23:48:35 GMT
+  recorded_at: Wed, 11 Feb 2015 23:43:24 GMT
 recorded_with: VCR 2.9.3
