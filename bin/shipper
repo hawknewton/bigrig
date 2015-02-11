@@ -19,6 +19,19 @@ arguments :strict
 # arg_name 'The name of the argument'
 # flag [:f, :flagname]
 #
+desc 'Start the applicaiton in dev mode'
+arg_name '<shipper_file>'
+
+command :dev do |c|
+  c.desc 'profiles to activate'
+  c.flag [:p, :profiles]
+
+  c.action do |_global_options, options, args|
+    profiles = options[:profiles] && options[:profiles].split(',') || []
+    DevAction.new(args[0], profiles).perform
+  end
+end
+
 desc 'Prints logs from the application'
 arg_name '<shipper_file>'
 command :logs do |c|
