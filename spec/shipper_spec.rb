@@ -3,7 +3,7 @@ require 'colorize'
 require 'sys/proctable'
 
 describe 'shipper' do
-  subject { `spec/support/shipper_vcr "#{casette_name}" #{args.join ' '}` }
+  subject { `spec/support/shipper_vcr "#{casette_name}" -f #{file} #{args.join ' '}` }
   let(:output) { system }
   let(:casette_name) do |example|
     "shipper bin #{example.metadata[:full_description].gsub('"', '\\"')}"
@@ -11,7 +11,7 @@ describe 'shipper' do
 
   describe 'dev' do
     context 'spec/data/dev.json' do
-      let(:args) { ['dev', 'spec/data/dev.json'] }
+      let(:args) { ['-f', 'spec/data/dev.json', 'dev'] }
       let(:env) do
         url = URI.parse Docker.connection.url
         text = Net::HTTP.get URI.parse("http://#{url.host}:4568")
@@ -66,7 +66,7 @@ describe 'shipper' do
 
   describe 'logs' do
     context 'spec/data/log.json' do
-      let(:args) { ['log', 'spec/data/log.json'] }
+      let(:args) { ['-f spec/data/log.json', 'log'] }
       let(:container) { Docker::Container.get 'log-test' }
       let(:image) { Docker::Image.create 'fromImage' => 'hawknewton/log-test:0.0.1' }
 
@@ -94,10 +94,11 @@ describe 'shipper' do
 
   describe 'run' do
     context 'spec/data/single.json' do
-      let(:args) { ['run', 'spec/data/single.json'] }
+      let(:args) { ['run'] }
       let(:output) { subject }
       let(:container) { Docker::Container.get 'single-test' }
       let(:running?) { container.json['State']['Running'] }
+      let(:file) { 'spec/data/single.json' }
 
       after { container.kill.delete }
 
@@ -111,10 +112,11 @@ describe 'shipper' do
       end
     end
 
-    context '-p qa spec/data/profiles.json' do
-      let(:args) { ['run', '-p qa', 'spec/data/profiles.json'] }
+    context 'spec/data/profiles.json -p qa' do
+      let(:args) { ['run', '-p qa'] }
       let(:container) { Docker::Container.get('profiles') }
       let(:image) { Docker::Image.get 'hawknewton/show-env' }
+      let(:file) { 'spec/data/profiles.json' }
       let(:env) do
         url = URI.parse Docker.connection.url
         text = Net::HTTP.get URI.parse("http://#{url.host}:4567")
@@ -144,7 +146,8 @@ describe 'shipper' do
 
   describe 'destroy' do
     context 'spec/data/single.json' do
-      let(:args) { ['destroy', 'spec/data/single.json'] }
+      let(:args) { ['destroy'] }
+      let(:file) { 'spec/data/single.json' }
       before do
         c = Docker::Container.create 'name' => 'single-test', 'Image' => 'hawknewton/show-env'
         c.start
