@@ -3,7 +3,7 @@ PATH
   specs:
     shipper (0.0.1)
       colorize
-      docker-api (= 1.17.0)
+      docker-api (= 1.18.0)
       gli (= 2.12.2)
 
 GEM
@@ -19,11 +19,11 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
-    docker-api (1.17.0)
+    docker-api (1.18.0)
       archive-tar-minitar
       excon (>= 0.38.0)
       json
-    excon (0.42.1)
+    excon (0.44.2)
     gli (2.12.2)
     json (1.8.2)
     method_source (0.8.2)
