@@ -5,8 +5,10 @@ require 'sys/proctable'
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
-  # Suppress stdout
-  # config.before { allow($stdout).to receive(:puts) }
+  # Suppress stdout if we're not focused on asingle file
+  unless config.files_to_run.one?
+    config.before { allow($stdout).to receive(:puts) }
+  end
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
