@@ -25,5 +25,5 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency('gli', '2.12.2')
   s.add_runtime_dependency('colorize')
-  s.add_runtime_dependency('docker-api', '1.17.0')
+  s.add_runtime_dependency('docker-api', '1.18.0')
 end
