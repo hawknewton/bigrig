@@ -165,5 +165,22 @@ describe RunAction do
         expect(container.info['Image']).to eq image.id
       end
     end
+
+    context 'when activating profiles that do not exist' do
+      let(:file) { 'profiles.json' }
+      let(:active_profiles) { ['notreallyathing'] }
+
+      after do
+        container = Docker::Container.get 'profiles'
+        container.kill.delete
+      end
+
+      it 'ignores the missing profile', :vcr do
+        subject
+        container = Docker::Container.get 'profiles'
+        image = Docker::Image.get 'hawknewton/true'
+        expect(container.info['Image']).to eq image.id
+      end
+    end
   end
 end

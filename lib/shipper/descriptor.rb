@@ -17,7 +17,8 @@ class Descriptor
     profiles = active_profiles.map do |profile|
       [profile, json['profiles'][profile]]
     end
-    Descriptor.new json['containers'], Hash[*profiles.flatten]
+    profile_map = Hash[*profiles.flatten].select { |_n, v| !v.nil? }
+    Descriptor.new json['containers'], profile_map
   end
 
   private
