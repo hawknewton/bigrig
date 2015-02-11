@@ -1,11 +1,12 @@
 require 'shipper'
 require 'rspec/its'
+require 'sys/proctable'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
   # Suppress stdout
-  config.before { allow($stdout).to receive(:puts) }
+  # config.before { allow($stdout).to receive(:puts) }
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -80,4 +81,10 @@ end
 
 def test_file(name)
   File.expand_path "../data/#{name}", __FILE__
+end
+
+def kill_with_children(pid)
+  children = Sys::ProcTable.ps.select { |p| p.ppid == pid }.map(&:pid)
+  (children + [pid]).each { |p| Process.kill :SIGINT, p }
+  Timeout.timeout(5) { Process.waitpid pid }
 end

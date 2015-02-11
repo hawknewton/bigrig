@@ -2,5 +2,11 @@
   "containers": {
     "container1": { "path": "container1" },
     "container2": { "path": "container2" }
+  },
+
+  "profiles": {
+    "dev": {
+      "container1": { "path": "balls" }
+    }
   }
 }

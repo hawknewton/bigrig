@@ -1,0 +1,24 @@
+{
+  "containers": {
+    "dev-test": {
+      "tag": "hawknewton/show-env:0.0.1",
+      "env": {
+        "PROFILE": "default"
+      },
+      "ports": ["4568:80"]
+    },
+    "dev-logs": {
+      "tag": "hawknewton/log-test:0.0.1"
+    }
+  },
+
+  "profiles": {
+    "dev": {
+      "dev-test": {
+        "env": {
+          "PROFILE": "dev"
+        }
+      }
+    }
+  }
+}

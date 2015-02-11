@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('pry')
   s.add_development_dependency('vcr', '~> 2.9.3')
   s.add_development_dependency('webmock', '~> 1.20.4')
+  s.add_development_dependency('sys-proctable')
 
   s.add_runtime_dependency('gli', '2.12.2')
   s.add_runtime_dependency('colorize')
