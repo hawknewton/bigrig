@@ -1,4 +1,5 @@
 require 'docker'
+require 'colorize'
 
 describe 'shipper' do
   subject { `spec/support/shipper_vcr "#{casette_name}" #{args.join ' '}` }
@@ -29,8 +30,8 @@ describe 'shipper' do
         Process.waitpid pid
         output = File.read outfile
 
-        expect(output).to match(/^stdout: .+ container 1 stdout/)
-        expect(output).to match(/^stderr: .+ container 1 stderr/)
+        expect(output).to match(/^\e\[0;32;49mlog-test\e\[0m: .+ container 1 stdout/)
+        expect(output).to match(/^\e\[0;32;49mlog-test\e\[0m: .+ container 1 stderr/)
       end
     end
   end

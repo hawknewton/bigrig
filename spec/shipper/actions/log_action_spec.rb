@@ -16,10 +16,11 @@ describe LogAction do
     it 'follows the log', :vcr do
       allow(Docker::Container).to receive(:get).with('log-test').and_return container
       allow(container).to receive(:streaming_logs).
-        and_yield('stdout', 'stdout message').
-        and_yield('stderr', 'stderr message')
-      expect($stdout).to receive(:puts).with 'stdout: stdout message'
-      expect($stdout).to receive(:puts).with 'stderr: stderr message'
+        and_yield(:stdout, 'stdout message').
+        and_yield(:stderr, 'stderr message')
+      expect($stdout).to receive(:puts).with "\e[0;32;49mlog-test\e[0m: stdout message"
+      expect($stdout).to receive(:puts).
+        with "\e[0;32;49mlog-test\e[0m: \e[0;91;49mstderr message\e[0m"
       subject
     end
   end
