@@ -6,3 +6,5 @@ require 'shipper/models'
 require 'shipper/output_parser'
 require 'shipper/runner'
 require 'shipper/version'
+
+module Shipper; end

@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.15/images/create?fromImage=hawknewton%2Flog-test%3A0.0.1"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Feb 2015 04:47:49 GMT
+    body:
+      encoding: UTF-8
+      string: "{\"status\":\"Pulling repository hawknewton/log-test\"}\r\n{\"status\":\"Pulling
+        image (0.0.1) from hawknewton/log-test\",\"progressDetail\":{},\"id\":\"bf0f8a45f956\"}{\"status\":\"Pulling
+        image (0.0.1) from hawknewton/log-test, endpoint: https://registry-1.docker.io/v1/\",\"progressDetail\":{},\"id\":\"bf0f8a45f956\"}{\"status\":\"Pulling
+        dependent layers\",\"progressDetail\":{},\"id\":\"bf0f8a45f956\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"511136ea3c5a\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"ac5159eeb0a3\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"d96760d4a0ed\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"100a1992ec48\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"76ca2fd90787\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"c507982f836d\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"bf0f8a45f956\"}{\"status\":\"Download
+        complete\",\"progressDetail\":{},\"id\":\"bf0f8a45f956\"}{\"status\":\"Status:
+        Image is up to date for hawknewton/log-test:0.0.1\"}\r\n"
+    http_version: 
+  recorded_at: Wed, 18 Feb 2015 04:50:36 GMT
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.15/containers/create?name=log-test"
+    body:
+      encoding: UTF-8
+      string: '{"Image":"bf0f8a45f956"}'
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Feb 2015 04:47:51 GMT
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: |
+        {"Id":"c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff","Warnings":null}
+    http_version: 
+  recorded_at: Wed, 18 Feb 2015 04:50:36 GMT
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.15/containers/c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff/start"
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      Date:
+      - Wed, 18 Feb 2015 04:47:51 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 18 Feb 2015 04:50:36 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/log-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 18 Feb 2015 04:47:51 GMT
+      Content-Length:
+      - '1857'
+    body:
+      encoding: UTF-8
+      string: |
+        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"c501414d27ac","Image":"bf0f8a45f956","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-18T04:47:51.307170249Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff/hosts","Id":"c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/log-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.0.78","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:4e","PortMapping":null,"Ports":{}},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":3841,"Restarting":false,"Running":true,"StartedAt":"2015-02-18T04:47:51.560837558Z"},"Volumes":{},"VolumesRW":{}}
+    http_version: 
+  recorded_at: Wed, 18 Feb 2015 04:50:36 GMT
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.15/containers/c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff/kill"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      Date:
+      - Wed, 18 Feb 2015 04:47:51 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 18 Feb 2015 04:50:37 GMT
+- request:
+    method: delete
+    uri: "<DOCKER_HOST>/v1.15/containers/c501414d27ac44ce64411a615335478e9ff603e0068ce8615a8ccff4288cb6ff"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      Date:
+      - Wed, 18 Feb 2015 04:47:51 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 18 Feb 2015 04:50:37 GMT
+recorded_with: VCR 2.9.3
