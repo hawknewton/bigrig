@@ -30,14 +30,14 @@ command :dev do |c|
 
   c.action do |global_options, options, _args|
     profiles = options[:profiles] && options[:profiles].split(',') || []
-    DevAction.new(global_options[:file], profiles).perform
+    Shipper::DevAction.new(global_options[:file], profiles).perform
   end
 end
 
 desc 'Prints logs from the application'
 command :logs do |c|
   c.action do |global_options, _options, _args|
-    LogAction.new(global_options[:file]).perform
+    Shipper::LogAction.new(global_options[:file]).perform
   end
 end
 
@@ -49,14 +49,14 @@ command :run do |c|
   c.action do |global_options, options, _args|
     profiles = options[:profiles] && options[:profiles].split(',') || []
 
-    RunAction.new(global_options[:file], profiles).perform
+    Shipper::RunAction.new(global_options[:file], profiles).perform
   end
 end
 
 desc 'Stop and destroy a shipper application'
 command :destroy do |c|
   c.action do |global_options, _options, _args|
-    DestroyAction.new(global_options[:file]).perform
+    Shipper::DestroyAction.new(global_options[:file]).perform
   end
 end
 

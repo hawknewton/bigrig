@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -55,7 +55,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -83,7 +83,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -111,7 +111,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
@@ -131,7 +131,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -139,7 +139,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
@@ -159,7 +159,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -167,7 +167,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
@@ -187,7 +187,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -195,7 +195,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
@@ -215,7 +215,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 11 Feb 2015 23:43:52 GMT
+      - Wed, 18 Feb 2015 04:48:24 GMT
       Content-Length:
       - '28'
     body:
@@ -223,5 +223,5 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Wed, 11 Feb 2015 23:43:52 GMT
+  recorded_at: Wed, 18 Feb 2015 04:51:09 GMT
 recorded_with: VCR 2.9.3
