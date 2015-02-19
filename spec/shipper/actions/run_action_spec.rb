@@ -6,7 +6,6 @@ module Shipper
 
       context 'given a file with one container' do
         let(:file) { 'single.json' }
-        let!(:perform) { subject }
         let(:running?) { DockerAdapter.running? 'single-test' }
 
         after do
@@ -18,7 +17,21 @@ module Shipper
         end
 
         it 'should spin up a single container', :vcr do
+          subject
           expect(running?).to be true
+        end
+
+        context 'when a dead container exists' do
+          before do
+            container = Docker::Container.create 'Image' => 'hawknewton/show-env',
+                                                 'name' => 'single-test'
+            container.start.kill
+          end
+
+          it 'should remove existing containers', :vcr do
+            subject
+            expect(running?).to be true
+          end
         end
       end
 
@@ -124,6 +137,7 @@ module Shipper
         let(:file) { 'env.json' }
 
         it 'passes the environemnt variables to docker' do
+          allow(DockerAdapter).to receive(:remove_container)
           allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env').
             and_return 'env-testid'
           expect(DockerAdapter).to receive(:run).with hash_including(
@@ -139,6 +153,7 @@ module Shipper
         let(:file) { 'ports.json' }
 
         it 'passes ports to docker' do
+          allow(DockerAdapter).to receive(:remove_container)
           allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env').
             and_return 'env-testid'
           expect(DockerAdapter).to receive(:run).with hash_including(
