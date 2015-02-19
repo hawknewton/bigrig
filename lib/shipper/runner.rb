@@ -23,7 +23,22 @@ module Shipper
       (containers.map(&:name) & container.dependencies).any?
     end
 
-    def docker_opts(container)
+    def destroy_existing(containers)
+      containers.each do |container|
+        begin
+          DockerAdapter.remove_container container[:name]
+        rescue Shipper::ContainerNotFoundError
+        end
+      end
+    end
+
+    def docker_opts(step)
+      step.map do |container|
+        docker_opts_for(container).merge image_id: image_id(container)
+      end
+    end
+
+    def docker_opts_for(container)
       { env: container.env,
         name: container.name,
         ports: container.ports,
@@ -51,9 +66,8 @@ module Shipper
     end
 
     def perform_step(step)
-      containers = step.map do |container|
-        docker_opts(container).merge image_id: image_id(container)
-      end
+      containers = docker_opts step
+      destroy_existing containers
 
       threads = containers.map do |container|
         Thread.new do
