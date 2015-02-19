@@ -31,7 +31,6 @@ module Shipper
     end
 
     def image_id(container)
-      parser_proc = proc { |chunk| print OutputParser.new.parse chunk }
       if container.path
         build container.path
       else
@@ -45,6 +44,10 @@ module Shipper
 
     def ordered_containers
       DependencyGraph.new(containers).resolve
+    end
+
+    def parser_proc
+      proc { |chunk| print OutputParser.new.parse chunk }
     end
 
     def perform_step(step)
