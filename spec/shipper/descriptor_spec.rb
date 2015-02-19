@@ -12,6 +12,16 @@ module Shipper
       end
     end
 
+    context 'given a simple descriptor and an active profile' do
+      let(:file) { 'single.json' }
+      let(:tag) { subject.as_json['single-test']['tag'] }
+      let(:profiles) { ['dev'] }
+
+      it 'returns JSON' do
+        expect(tag).to eq 'hawknewton/show-env'
+      end
+    end
+
     context 'given a descriptor with active profiles ' do
       let(:file) { 'profiles.json' }
       let(:profiles) { ['qa'] }
