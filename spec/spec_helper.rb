@@ -1,6 +1,5 @@
 require 'shipper'
 require 'rspec/its'
-require 'sys/proctable'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
@@ -85,8 +84,21 @@ def test_file(name)
   File.expand_path "../data/#{name}", __FILE__
 end
 
-def kill_with_children(pid)
-  children = Sys::ProcTable.ps.select { |p| p.ppid == pid }.map(&:pid)
-  (children + [pid]).each { |p| Process.kill :SIGINT, p }
-  Timeout.timeout(5) { Process.waitpid pid }
+def capture_stdout(command)
+  pid, _stdin, stdout, _stderr = Open4.popen4 command
+  output = read_stdout stdout
+  [pid, output]
+end
+
+def read_stdout(stdout)
+  output = ''
+  5.times do
+    begin
+      output << stdout.read_nonblock(512_000)
+    rescue => e
+      e.is_a?(EOFError) && break # The things I do for method length...
+    end
+    sleep 1
+  end
+  output
 end
