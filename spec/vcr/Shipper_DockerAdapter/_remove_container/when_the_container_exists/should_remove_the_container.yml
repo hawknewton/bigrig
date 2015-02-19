@@ -19,18 +19,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 Feb 2015 04:48:13 GMT
+      - Thu, 19 Feb 2015 09:00:22 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4","Warnings":null}
+        {"Id":"e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75","Warnings":null}
     http_version: 
-  recorded_at: Wed, 18 Feb 2015 04:50:58 GMT
+  recorded_at: Thu, 19 Feb 2015 20:12:04 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4/json"
+    uri: "<DOCKER_HOST>/v1.15/containers/e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -47,18 +47,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 18 Feb 2015 04:48:13 GMT
+      - Thu, 19 Feb 2015 09:00:22 GMT
       Content-Length:
-      - '1482'
+      - '1480'
     body:
       encoding: UTF-8
       string: |
-        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"d30ef7fbf112","Image":"hawknewton/true","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-18T04:48:13.267889735Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/elegant_stallman","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":null,"VolumesRW":null}
+        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"e6f32ac29463","Image":"hawknewton/true","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-19T09:00:22.33158826Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/berserk_lumiere","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":null,"VolumesRW":null}
     http_version: 
-  recorded_at: Wed, 18 Feb 2015 04:50:58 GMT
+  recorded_at: Thu, 19 Feb 2015 20:12:05 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.15/containers/d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4"
+    uri: "<DOCKER_HOST>/v1.15/containers/e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75"
     body:
       encoding: US-ASCII
       string: ''
@@ -73,15 +73,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Wed, 18 Feb 2015 04:48:13 GMT
+      - Thu, 19 Feb 2015 09:00:22 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Wed, 18 Feb 2015 04:50:58 GMT
+  recorded_at: Thu, 19 Feb 2015 20:12:05 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4/json"
+    uri: "<DOCKER_HOST>/v1.15/containers/e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -98,18 +98,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 18 Feb 2015 04:48:13 GMT
+      - Thu, 19 Feb 2015 09:00:22 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4
+        No such container: e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75
     http_version: 
-  recorded_at: Wed, 18 Feb 2015 04:50:58 GMT
+  recorded_at: Thu, 19 Feb 2015 20:12:05 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4/json"
+    uri: "<DOCKER_HOST>/v1.15/containers/e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -126,18 +126,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 18 Feb 2015 04:48:13 GMT
+      - Thu, 19 Feb 2015 09:00:22 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4
+        No such container: e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75
     http_version: 
-  recorded_at: Wed, 18 Feb 2015 04:50:58 GMT
+  recorded_at: Thu, 19 Feb 2015 20:12:05 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4/json"
+    uri: "<DOCKER_HOST>/v1.15/containers/e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -154,18 +154,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 18 Feb 2015 04:48:13 GMT
+      - Thu, 19 Feb 2015 09:00:22 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4
+        No such container: e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75
     http_version: 
-  recorded_at: Wed, 18 Feb 2015 04:50:58 GMT
+  recorded_at: Thu, 19 Feb 2015 20:12:05 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4/json"
+    uri: "<DOCKER_HOST>/v1.15/containers/e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -182,13 +182,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Wed, 18 Feb 2015 04:48:13 GMT
+      - Thu, 19 Feb 2015 09:00:22 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: d30ef7fbf1120e99b1db124526e4681fa4121550374d6dc31d10775ee785cdd4
+        No such container: e6f32ac29463a54f11918c268efdf9d0400b4175333cc86141433a1ade7f3a75
     http_version: 
-  recorded_at: Wed, 18 Feb 2015 04:50:58 GMT
+  recorded_at: Thu, 19 Feb 2015 20:12:05 GMT
 recorded_with: VCR 2.9.3
