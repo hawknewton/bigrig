@@ -14,6 +14,33 @@ We want to make three things easier:
 * Environemnt-specific configuration
 * Separation of Operational Concerns
 
+## Environment-specific configuration
+
+Unless your ecosystem consists of the simplest possible deployment strategy,
+you're likely going to need to be able to deploy your application to different
+environments and you'll need the ability to configure the application in an
+environment-specific way.
+
+Shipper lets you specify environment-specific configuration for all your
+environments in one place.  Having a single source-of-record for all
+environment details means it's easier to configure a new environment and it's
+easier to see the differences between environments.
+
+## Separation of Operational Concerns
+
+There's this thing called **Separation of operational concerns** and it's one
+of the core principles that makes Docker attractive in the first place.  I
+don't care about the operating system beyond what's immediately
+required to make my app go, and in many cases this might be all you need.
+
+That being said, when the scope of your app grows beyond a single process
+you've got two choices:
+* Add more processes to your Docker-ized application
+* Spin up more than one container and each one with a distinct job
+
+There are those that might argue you shouldn't run more than one process
+per container and if you count yourself among them Shipper might be for you.
+
 ## shipper.json
 
 The below Shipper metadata would be part of the project
@@ -145,30 +172,3 @@ Becomes this:
   }
 }
 ```
-
-## Environment-specific configuration
-
-Unless your ecosystem consists of the simplest possible deployment strategy,
-you're likely going to need to be able to deploy your application to different
-environments and you'll need the ability to configure the application in an
-environment-specific way.
-
-Shipper lets you specify environment-specific configuration for all your
-environments in one place.  Having a single source-of-record for all
-environment details means it's easier to configure a new environment and it's
-easier to see the differences between environments.
-
-## Separation of Operational Concerns
-
-There's this thing called **Separation of operational concerns** and it's one
-of the core principles that makes Docker attractive in the first place.  I
-don't care about the operating system beyond what's immediately
-required to make my app go, and in many cases this might be all you need.
-
-That being said, when the scope of your app grows beyond a single process
-you've got two choices:
-* Add more processes to your Docker-ized application
-* Spin up more than one container and each one with a distinct job
-
-There are those that might argue you shouldn't run more than one process
-per container and if you count yourself among them Shipper might be for you.
