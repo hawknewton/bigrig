@@ -33,7 +33,8 @@ module Shipper
       end
 
       def logs(name, &block)
-        options = Docker.env_options.merge read_timeout: 31536000
+        # one year
+        options = Docker.env_options.merge read_timeout: 31_536_000
         connection = Docker::Connection.new Docker.url, options
         container = Docker::Container.get name, {}, connection
         container.streaming_logs follow: true, stdout: true, stderr: true, &block
