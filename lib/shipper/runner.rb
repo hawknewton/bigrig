@@ -42,7 +42,8 @@ module Shipper
       { env: container.env,
         name: container.name,
         ports: container.ports,
-        volumes_from: container.volumes_from }
+        volumes_from: container.volumes_from,
+        links: container.links }
     end
 
     def image_id(container)

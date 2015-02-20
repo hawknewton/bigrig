@@ -76,6 +76,31 @@ module Shipper
         end
       end
 
+      context 'given a file with links' do
+        let(:file) { 'links.json' }
+        let(:container) { Docker::Container.get 'uses_service' }
+        let(:links) { container.json['HostConfig']['Links'] }
+        let(:perform) { subject }
+
+        after do
+          begin
+            c1 = Docker::Container.get 'provides_service'
+            c1.kill.delete
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
+          begin
+            c1 = Docker::Container.get 'uses_service'
+            c1.kill.delete
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
+        end
+
+        it 'should pass links to the right container', :vcr do
+          perform
+          expect(links).to eq ['/provides_service:/uses_service/service']
+        end
+      end
+
       context 'given a file with volumes_from' do
         let(:file) { 'volumes.json' }
         let(:container) { Docker::Container.get 'mounts_volumes' }
