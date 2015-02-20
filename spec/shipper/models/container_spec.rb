@@ -12,6 +12,8 @@ module Shipper
     it { is_expected.to respond_to :volumes_from= }
     it { is_expected.to respond_to :links= }
     it { is_expected.to respond_to :links }
+    it { is_expected.to respond_to :hosts= }
+    it { is_expected.to respond_to :hosts }
 
     it 'accepts volumes_from as an array' do
       expect(Container.from_json(nil, 'volumes_from' => ['test']).volumes_from).to be_kind_of Array
@@ -27,6 +29,14 @@ module Shipper
 
     it 'wraps a single links in an array' do
       expect(Container.from_json(nil, 'links' => 'machine:alias').links).to be_kind_of Array
+    end
+
+    it 'accepts hosts as an array' do
+      expect(Container.from_json(nil, 'links' => ['host:alias']).links).to be_kind_of Array
+    end
+
+    it 'wraps a single links in an array' do
+      expect(Container.from_json(nil, 'hosts' => 'host:alias').links).to be_kind_of Array
     end
 
     it 'depends on containers it mounts volumes from' do

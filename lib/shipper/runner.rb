@@ -43,7 +43,8 @@ module Shipper
         name: container.name,
         ports: container.ports,
         volumes_from: container.volumes_from,
-        links: container.links }
+        links: container.links,
+        hosts: container.hosts }
     end
 
     def image_id(container)

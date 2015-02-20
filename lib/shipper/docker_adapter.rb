@@ -20,6 +20,17 @@ module Shipper
         false
       end
 
+      def hosts(arr)
+        (arr || []).map do |line|
+          if line =~ /^[0-9\.]+:/
+            line
+          else
+            parts = line.split ':'
+            "#{Resolv.getaddress parts.first}:#{parts[1]}"
+          end
+        end
+      end
+
       def image_id_by_tag(tag)
         Docker::Image.get(tag).id
       rescue Docker::Error::NotFoundError
@@ -61,6 +72,7 @@ module Shipper
         container = create_container args
         container.start(
           'Links' => args[:links],
+          'ExtraHosts' => hosts(args[:hosts]),
           'PortBindings' => port_bindings(args[:ports]),
           'VolumesFrom' => args[:volumes_from]
         )
