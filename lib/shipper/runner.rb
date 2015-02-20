@@ -27,7 +27,7 @@ module Shipper
       containers.each do |container|
         begin
           DockerAdapter.remove_container container[:name]
-        rescue Shipper::ContainerNotFoundError
+        rescue Shipper::ContainerNotFoundError # rubocop:disable Lint/HandleExceptions
         end
       end
     end
