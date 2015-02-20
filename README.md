@@ -16,12 +16,16 @@ We want to make three things easier:
 
 ## shipper.json
 
+The below shipper metadata would be part of the project
+"hawknewton/my-awesome-app", sitting next to a Dockerfile that knows how to
+generaete a docker image.
+
 ```json
 {
   "containers": {
-    "web": {
+    "hawknewton/my-awesome-app": {
       "ports": ["80:80"],
-      "tag": "hawknewton/show-env:1.1.0",
+      "path": ".",
       "env": {
         "USE_SSL": true,
         "CACHE_TIMEOUT": "3600"
@@ -41,12 +45,22 @@ We want to make three things easier:
       }
     },
 
-    "development": {
+    "dev": {
       "web": {
-        "path": ".",
         "env": {
           "USE_SSL": false,
           "CACHE_TIMEOUT": "1"
+        },
+        "links": [ "awesome-app-db:database" ]
+      },
+
+      "awesome-app-db": {
+        "tag": "mysql:5.5",
+        "env": {
+          "MYSQL_ROOT_PASSWORD": "rootpasswordhere",
+          "MYSQL_USER": "awesomeuser",
+          "MYSQL_PASSWORD": "awesomespassword",
+          "MYSQL_DATABASE": "awesome_db"
         }
       }
     }
