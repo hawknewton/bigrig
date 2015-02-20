@@ -15,7 +15,8 @@ module Shipper
       end
 
       it 'follows the log', :vcr do
-        allow(Docker::Container).to receive(:get).with('log-test').and_return container
+        allow(Docker::Container).to receive(:get).
+          with('log-test', {}, anything).and_return container
         allow(container).to receive(:streaming_logs).
           and_yield(:stdout, 'stdout message').
           and_yield(:stderr, 'stderr message')

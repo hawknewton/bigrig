@@ -114,7 +114,8 @@ module Shipper
       after { container.kill.delete }
 
       it 'streams logs to a block', :vcr do
-        allow(Docker::Container).to receive(:get).with(container.id).and_return container
+        allow(Docker::Container).to receive(:get).with(container.id, {}, anything).
+          and_return container
         expect(container).to receive(:streaming_logs).
           with(follow: true, stdout: true, stderr: true).
           and_yield('stream #1', 'I am log message #1').
