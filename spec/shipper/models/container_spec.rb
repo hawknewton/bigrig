@@ -10,6 +10,8 @@ module Shipper
     it { is_expected.to respond_to :tag= }
     it { is_expected.to respond_to :volumes_from }
     it { is_expected.to respond_to :volumes_from= }
+    it { is_expected.to respond_to :links= }
+    it { is_expected.to respond_to :links }
 
     it 'accepts volumes_from as an array' do
       expect(Container.from_json(nil, 'volumes_from' => ['test']).volumes_from).to be_kind_of Array
@@ -19,8 +21,20 @@ module Shipper
       expect(Container.from_json(nil, 'volumes_from' => 'test').volumes_from).to be_kind_of Array
     end
 
+    it 'accepts links as an array' do
+      expect(Container.from_json(nil, 'links' => ['machine:alias']).links).to be_kind_of Array
+    end
+
+    it 'wraps a single links in an array' do
+      expect(Container.from_json(nil, 'links' => 'machine:alias').links).to be_kind_of Array
+    end
+
     it 'depends on containers it mounts volumes from' do
       expect(Container.from_json(nil, 'volumes_from' => 'test').dependencies).to eq ['test']
+    end
+
+    it 'depends on containers it links to' do
+      expect(Container.from_json(nil, 'links' => 'machine:alias').dependencies).to eq ['machine']
     end
 
     describe '#dependencies' do

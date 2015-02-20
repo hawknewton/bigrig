@@ -60,6 +60,7 @@ module Shipper
       def run(args)
         container = create_container args
         container.start(
+          'Links' => args[:links],
           'PortBindings' => port_bindings(args[:ports]),
           'VolumesFrom' => args[:volumes_from]
         )

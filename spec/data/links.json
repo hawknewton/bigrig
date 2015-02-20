@@ -1,0 +1,11 @@
+{
+  "containers": {
+    "provides_service": {
+      "tag": "hawknewton/show-env"
+    },
+    "uses_service": {
+      "tag": "hawknewton/show-env",
+      "links": "provides_service:service"
+    }
+  }
+}

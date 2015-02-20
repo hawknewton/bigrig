@@ -1,7 +1,6 @@
 require 'docker'
 require 'colorize'
 require 'open4'
-require 'pry-byebug'
 
 describe 'shipper' do
   subject { `spec/support/shipper_vcr "#{casette_name}" -f #{file} #{args.join ' '}` }
