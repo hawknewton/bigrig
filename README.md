@@ -3,7 +3,7 @@
 Shipper manages and coordinates the lifecycle of multiple Docker containers
 in a composite deployment strategy so you don't have to.
 
-In it's simplist form, docker looks super-easy to use.  Whip up a Dockerfile,
+In its simplist form, docker looks super-easy to use.  Whip up a Dockerfile,
 fire that badboy up, and you're all done, right?  Well, unfortunately
 in reality it's rarely that straightforward.
 
@@ -34,16 +34,34 @@ generaete a docker image.
 
     "logger": {
       "tag": "hawknewton/logger:1.2.3",
-      "volumes-from": ["web"]
+      "volumes-from": ["hawknewton/my-awesome-app"]
     }
   },
 
   "profiles": {
     "qa": {
-      "web": {
+      "hawknewton/my-awesome-app": {
         "CACHE_TIMEOUT": "10"
       }
     },
+
+    "qa-1": {
+      "hawknewton/my-awesome-app": {
+        "hosts": [ "qa-1-database.company.com:database" ]
+      }
+    },
+
+    "qa-2": {
+      "hawknewton/my-awesome-app": {
+        "hosts": [ "qa-2-database.company.com:database" ]
+      }
+    },
+
+    "production": {
+      "hawknewton/my-awesome-app": {
+        "hosts": [ "proddb12.company.com:database" ]
+      }
+    }
 
     "dev": {
       "web": {
@@ -68,11 +86,65 @@ generaete a docker image.
 }
 ```
 
+A few things:
+* You can start shipper with more than one active profile, in the example
+  above you'd probably start the individual QA environments with a specific
+  specific profile ("qa-1", for example) and the broader **environment class**
+  "qa".
+* I've included the hostname "database" for illustrative purposes, but I'd
+  advocate using something more sophisticated like a service registry to avoid
+  needing environemnt-specific profile entries for anything but the simpliest
+  deployments.
+* If two profiles override the same value the profile declared later in
+  shipper.json wins.
+
 ## Development
 
 We strive to bring the developer's environment as close to production as
-possible (as well as the other way around).  The developer uses the same
-`shipper.json` in development that eventually pushes their code to production.
+possible (as well as the other way around).  The developer uses
+`shipper.json` to develop their code and production uses shipper.json
+to start the application.
+
+## QA/Production
+
+When building your application shipper will create an **immutable** version of
+your shipper.json that will always have the same **deterministic** behavior when
+run. Additionally, it'll build, push, and tag all containers that contain a
+**path** entry.
+
+For example:
+
+```json
+{
+  "containers": {
+    "hawknewton/my-awesome-app": {
+      "ports": ["80:80"],
+      "path": ".",
+      "env": {
+        "USE_SSL": true,
+        "CACHE_TIMEOUT": "3600"
+      }
+    }
+  }
+}
+```
+
+Becomes this:
+
+```json
+{
+  "containers": {
+    "hawknewton/my-awesome-app": {
+      "ports": ["80:80"],
+      "tag": "hawknewton/my-awesome-app:1.2.3",
+      "env": {
+        "USE_SSL": true,
+        "CACHE_TIMEOUT": "3600"
+      }
+    }
+  }
+}
+```
 
 ## Environment-specific configuration
 
