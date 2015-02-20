@@ -101,6 +101,47 @@ module Shipper
         end
       end
 
+      context 'given a file with hosts by ip' do
+        let(:file) { 'hosts_ip.json' }
+        let(:container) { Docker::Container.get 'uses_host' }
+        let(:hosts) { container.json['HostConfig']['ExtraHosts'] }
+        let(:perform) { subject }
+
+        after do
+          begin
+            c1 = Docker::Container.get 'uses_host'
+            c1.kill.delete
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
+        end
+
+        it 'should pass hosts to container', :vcr do
+          perform
+          expect(hosts).to include '1.2.3.4:host1'
+          expect(hosts).to include '5.6.7.8:host2'
+        end
+      end
+
+      context 'given a file with hosts by name' do
+        let(:file) { 'hosts_name.json' }
+        let(:container) { Docker::Container.get 'uses_host' }
+        let(:hosts) { container.json['HostConfig']['ExtraHosts'] }
+        let(:perform) { subject }
+
+        after do
+          begin
+            c1 = Docker::Container.get 'uses_host'
+            c1.kill.delete
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
+        end
+
+        it 'should lookup ips for hosts with a hostname', :vcr do
+          perform
+          expect(hosts[0]).to match(/^[0-9\.]+:host1$/)
+        end
+      end
+
       context 'given a file with volumes_from' do
         let(:file) { 'volumes.json' }
         let(:container) { Docker::Container.get 'mounts_volumes' }

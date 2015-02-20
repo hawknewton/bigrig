@@ -1,6 +1,6 @@
 module Shipper
   class Container < BaseModel
-    attr_accessor :env, :name, :path, :ports, :tag, :volumes_from, :links
+    attr_accessor :env, :name, :path, :ports, :tag, :volumes_from, :links, :hosts
 
     class << self
       def from_json(name, json)
@@ -9,6 +9,7 @@ module Shipper
         end
         opts[:volumes_from] = as_array json['volumes_from']
         opts[:links] = as_array json['links']
+        opts[:hosts] = as_array json['hosts']
 
         Container.new opts
       end
@@ -22,10 +23,11 @@ module Shipper
 
     def initialize(*opts)
       super
-      @env = {} unless @env
-      @ports = [] unless @ports
-      @volumes_from = [] unless @volumes_from
-      @links = [] unless @links
+      @env ||= {}
+      @ports ||= []
+      @volumes_from ||= []
+      @links ||= []
+      @hosts ||= []
 
       # Yes rubocop, I know this is a very stupid thing to do
       @env = Hash[*@env.map { |k, v| [k, eval("\"#{v}\"")] }.flatten] # rubocop:disable Lint/Eval
