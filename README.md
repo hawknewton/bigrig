@@ -136,7 +136,7 @@ to start the application.
 
 When building your application shipper will create an **immutable** version of
 your `shipper.json` that will always have the same **deterministic** behavior when
-run. Additionally, it'll build, push, and tag all containers that contain a
+run. Additionally, it'll build, tag, and push all containers that contain a
 `path` entry.
 
 For example:
