@@ -1,4 +1,4 @@
-require 'shipper'
+require 'bigrig'
 require 'rspec/its'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
