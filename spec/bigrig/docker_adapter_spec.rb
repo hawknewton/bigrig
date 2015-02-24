@@ -127,6 +127,44 @@ module Bigrig
       end
     end
 
+    describe '::push' do
+      subject { described_class.push tag }
+      let(:host) { URI.parse(Docker.connection.url).host }
+      let(:image) { Docker::Image.import test_file 'tiny-image.tar' }
+      let(:repo) { "#{host}:5000/test/push-me" }
+      let(:version) { '1.2.3' }
+      let(:tag) { "#{repo}:#{version}" }
+      let(:registry) do
+        Docker::Container.create(
+          'name' => 'registry',
+          'Image' => 'registry',
+          'Env' => ['GUNICORN_OPTS=[--preload]'],
+          'ExposedPorts' => {
+            '5000/tcp' => {}
+          },
+          'HostConfig' => {
+            'PortBindings' => { '5000/tcp' => [{ 'HostPort' => '5000' }] }
+          }
+        )
+      end
+
+      before do
+        registry.start
+        image.tag 'repo' => repo, 'tag' => version
+      end
+
+      after do
+        registry.kill.delete
+        image.remove 'force' => true
+      end
+
+      it 'should push the image', :vcr do
+        subject
+        Docker::Image.get(tag).remove 'force' => true
+        expect { Docker::Image.create 'fromImage' => tag }.to_not raise_error
+      end
+    end
+
     describe '::pull' do
       subject { described_class.pull repo }
 
@@ -294,6 +332,21 @@ module Bigrig
         it 'returns false' do
           expect(result).to be false
         end
+      end
+    end
+
+    describe '::tag' do
+      subject { described_class.tag id, tag }
+      let(:id) { Docker::Image.create('fromImage' => 'hawknewton/true').id }
+      let(:tag) { 'test/tag:1.2.3' }
+
+      after do
+        Docker::Image.get(tag).remove 'force' => true
+      end
+
+      it 'should tag the image', :vcr do
+        subject
+        expect { Docker::Image.get 'test/tag:1.2.3' }.to_not raise_error
       end
     end
   end
