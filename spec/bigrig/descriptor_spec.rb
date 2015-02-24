@@ -5,20 +5,22 @@ module Bigrig
     context 'given a simple descriptor' do
       let(:file) { 'single.json' }
       let(:tag) { subject.as_json['single-test']['tag'] }
+      let(:repo) { subject.as_json['single-test']['repo'] }
       let(:profiles) { [] }
 
       it 'returns JSON' do
-        expect(tag).to eq 'hawknewton/show-env'
+        expect(repo).to eq 'hawknewton/show-env'
+        expect(tag).to eq '0.0.1'
       end
     end
 
-    context 'given a simple descriptor and an active profile' do
+    context 'given a descriptor and an active but missing profile' do
       let(:file) { 'single.json' }
-      let(:tag) { subject.as_json['single-test']['tag'] }
+      let(:repo) { subject.as_json['single-test']['repo'] }
       let(:profiles) { ['dev'] }
 
       it 'returns JSON' do
-        expect(tag).to eq 'hawknewton/show-env'
+        expect(repo).to eq 'hawknewton/show-env'
       end
     end
 
@@ -26,7 +28,7 @@ module Bigrig
       let(:file) { 'profiles.json' }
       let(:profiles) { ['qa'] }
       let(:env_vars) { subject.as_json['profiles']['env'] }
-      let(:tag) { subject.as_json['profiles']['tag'] }
+      let(:repo) { subject.as_json['profiles']['repo'] }
 
       it 'overrides present ENV values' do
         expect(env_vars).to include 'NAME1' => 'VALUE1A'
@@ -36,8 +38,8 @@ module Bigrig
         expect(env_vars).to include 'NAME2' => 'VALUE2'
       end
 
-      it 'also overrides the tag' do
-        expect(tag).to eq 'hawknewton/show-env'
+      it 'also overrides the repo' do
+        expect(repo).to eq 'hawknewton/show-env'
       end
     end
   end

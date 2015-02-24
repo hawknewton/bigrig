@@ -1,10 +1,10 @@
 module Bigrig
   class Container < BaseModel
-    attr_accessor :env, :name, :path, :ports, :tag, :volumes_from, :links, :hosts
+    attr_accessor :env, :name, :path, :ports, :tag, :volumes_from, :links, :hosts, :repo
 
     class << self
       def from_json(name, json)
-        opts = [:env, :path, :ports, :tag].each_with_object(name: name) do |e, o|
+        opts = [:env, :path, :ports, :tag, :repo].each_with_object(name: name) do |e, o|
           o[e] = json.send :[], e.to_s
         end
         opts[:volumes_from] = as_array json['volumes_from']

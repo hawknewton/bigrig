@@ -204,7 +204,7 @@ module Bigrig
 
         it 'passes the environemnt variables to docker' do
           allow(DockerAdapter).to receive(:remove_container)
-          allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env').
+          allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env:0.0.1').
             and_return 'env-testid'
           expect(DockerAdapter).to receive(:run).with hash_including(
             image_id: 'env-testid',
@@ -220,7 +220,7 @@ module Bigrig
 
         it 'passes ports to docker' do
           allow(DockerAdapter).to receive(:remove_container)
-          allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env').
+          allow(DockerAdapter).to receive(:image_id_by_tag).with('hawknewton/show-env:0.0.1').
             and_return 'env-testid'
           expect(DockerAdapter).to receive(:run).with hash_including(
             image_id: 'env-testid',

@@ -19,7 +19,11 @@ module Bigrig
         end
 
         it 'should set the container tag' do
-          expect(subject.containers[0].tag).to eq 'hawknewton/show-env'
+          expect(subject.containers[0].tag).to eq '0.0.1'
+        end
+
+        it 'should set the container repo' do
+          expect(subject.containers[0].repo).to eq 'hawknewton/show-env'
         end
       end
     end

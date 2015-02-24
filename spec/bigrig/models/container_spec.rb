@@ -1,19 +1,21 @@
 module Bigrig
   describe Container do
+    it { is_expected.to respond_to :hosts= }
+    it { is_expected.to respond_to :hosts }
+    it { is_expected.to respond_to :links= }
+    it { is_expected.to respond_to :links }
     it { is_expected.to respond_to :name }
     it { is_expected.to respond_to :name= }
     it { is_expected.to respond_to :path }
     it { is_expected.to respond_to :path= }
     it { is_expected.to respond_to :ports }
     it { is_expected.to respond_to :ports= }
+    it { is_expected.to respond_to :repo }
+    it { is_expected.to respond_to :repo= }
     it { is_expected.to respond_to :tag }
     it { is_expected.to respond_to :tag= }
     it { is_expected.to respond_to :volumes_from }
     it { is_expected.to respond_to :volumes_from= }
-    it { is_expected.to respond_to :links= }
-    it { is_expected.to respond_to :links }
-    it { is_expected.to respond_to :hosts= }
-    it { is_expected.to respond_to :hosts }
 
     it 'accepts volumes_from as an array' do
       expect(Container.from_json(nil, 'volumes_from' => ['test']).volumes_from).to be_kind_of Array

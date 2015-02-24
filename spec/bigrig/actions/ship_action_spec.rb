@@ -34,7 +34,7 @@ module Bigrig
 
       it 'adds a tag' do
         subject
-        expect(tag).to eq 'ship-me:1.2.3'
+        expect(tag).to eq '1.2.3'
       end
 
       it 'removes the path' do

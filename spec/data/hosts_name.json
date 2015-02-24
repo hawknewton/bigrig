@@ -1,7 +1,8 @@
 {
   "containers": {
     "uses_host": {
-      "tag": "hawknewton/show-env:0.0.1",
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1",
       "hosts": [
         "google.com:host1"
       ]
