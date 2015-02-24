@@ -65,6 +65,7 @@ arg_name 'version'
 command :ship do |c|
 
   c.action do |global_options, _options, args|
+    args[0] || fail('version is required')
     Bigrig::ShipAction.new(global_options[:file], args[0]).perform
   end
 end
