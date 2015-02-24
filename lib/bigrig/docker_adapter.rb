@@ -58,6 +58,17 @@ module Bigrig
         raise
       end
 
+      def push(tag, &block)
+        puts "Pushing #{tag}"
+        Docker::Image.get(tag).push nil, {}, &block
+      end
+
+      def tag(id, tag)
+        i = tag.rindex ':'
+        repo, version = [tag[0...i], tag[i + 1..-1]]
+        Docker::Image.get(id).tag 'repo' => repo, 'tag' => version
+      end
+
       def remove_container(name)
         Docker::Container.get(name).delete
         true

@@ -60,6 +60,15 @@ command :destroy do |c|
   end
 end
 
+desc 'Build, push, and tag docker images'
+arg_name 'version'
+command :ship do |c|
+
+  c.action do |global_options, _options, args|
+    Bigrig::ShipAction.new(global_options[:file], args[0]).perform
+  end
+end
+
 pre do |_global, _command, _options, _args|
   # Pre logic here
   # Return true to proceed; false to abort and not call the

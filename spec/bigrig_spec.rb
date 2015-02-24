@@ -3,7 +3,8 @@ require 'colorize'
 require 'open4'
 
 describe 'bigrig' do
-  subject { `spec/support/bigrig_vcr "#{casette_name}" -f #{file} #{args.join ' '}` }
+  subject { `#{here}spec/support/bigrig_vcr "#{casette_name}" -f #{file} #{args.join ' '}` }
+  let(:here) { '' }
   let(:output) { system }
   let(:casette_name) do |example|
     "bigrig bin #{example.metadata[:full_description].gsub('"', '\\"')}"
@@ -165,6 +166,62 @@ describe 'bigrig' do
           fail 'Container still exists!'
         rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
         end
+      end
+    end
+  end
+
+  describe 'ship' do
+    context 'spec/data/ship.json' do
+      let(:args) { ['ship', version] }
+      let(:dir) { Dir.mktmpdir }
+      let(:file) do
+        descriptor = {
+          containers: {
+            "#{repo}:5000/test/ship-me" => {
+              path: 'build'
+            }
+          }
+        }
+        file = Tempfile.new('bigrig').path
+        File.write file, JSON.dump(descriptor)
+        file
+      end
+      let(:here) { "#{File.expand_path '../..', __FILE__}/" }
+      let(:registry) do
+        Docker::Container.create(
+          'name' => 'registry',
+          'Image' => 'registry',
+          'Env' => ['GUNICORN_OPTS=[--preload]'],
+          'ExposedPorts' => {
+            '5000/tcp' => {}
+          },
+          'HostConfig' => {
+            'PortBindings' => { '5000/tcp' => [{ 'HostPort' => '5000' }] }
+          }
+        )
+      end
+      let(:version) { '1.2.3' }
+      let(:repo) { URI.parse(Docker.connection.url).host }
+
+      before do
+        registry.start
+      end
+
+      after do
+        registry.kill.delete
+      end
+
+      around do |example|
+        FileUtils.copy_file file, File.join(dir, 'bigrig.json')
+        FileUtils.cp_r "#{test_file('.')}/build", dir
+        Dir.chdir dir do
+          example.run
+        end
+      end
+
+      it 'builds and pushes the image', :vcr do
+        subject
+        expect { Docker::Image.get "#{repo}:5000/test/ship-me:#{version}" }.to_not raise_error
       end
     end
   end
