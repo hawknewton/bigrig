@@ -5,7 +5,7 @@ require 'open4'
 describe 'bigrig' do
   subject { `#{here}spec/support/bigrig_vcr "#{casette_name}" -f #{file} #{args.join ' '}` }
   let(:here) { '' }
-  let(:output) { system }
+  let(:output) { subject }
   let(:casette_name) do |example|
     "bigrig bin #{example.metadata[:full_description].gsub('"', '\\"')}"
   end
@@ -172,56 +172,66 @@ describe 'bigrig' do
 
   describe 'ship' do
     context 'spec/data/ship.json' do
-      let(:args) { ['ship', version] }
-      let(:dir) { Dir.mktmpdir }
-      let(:file) do
-        descriptor = {
-          containers: {
-            "#{repo}:5000/test/ship-me" => {
-              path: 'build'
+      context 'with a version' do
+        let(:args) { ['ship', version] }
+        let(:dir) { Dir.mktmpdir }
+        let(:file) do
+          descriptor = {
+            containers: {
+              "#{repo}:5000/test/ship-me" => {
+                path: 'build'
+              }
             }
           }
-        }
-        file = Tempfile.new('bigrig').path
-        File.write file, JSON.dump(descriptor)
-        file
-      end
-      let(:here) { "#{File.expand_path '../..', __FILE__}/" }
-      let(:registry) do
-        Docker::Container.create(
-          'name' => 'registry',
-          'Image' => 'registry',
-          'Env' => ['GUNICORN_OPTS=[--preload]'],
-          'ExposedPorts' => {
-            '5000/tcp' => {}
-          },
-          'HostConfig' => {
-            'PortBindings' => { '5000/tcp' => [{ 'HostPort' => '5000' }] }
-          }
-        )
-      end
-      let(:version) { '1.2.3' }
-      let(:repo) { URI.parse(Docker.connection.url).host }
+          file = Tempfile.new('bigrig').path
+          File.write file, JSON.dump(descriptor)
+          file
+        end
+        let(:here) { "#{File.expand_path '../..', __FILE__}/" }
+        let(:registry) do
+          Docker::Container.create(
+            'name' => 'registry',
+            'Image' => 'registry',
+            'Env' => ['GUNICORN_OPTS=[--preload]'],
+            'ExposedPorts' => {
+              '5000/tcp' => {}
+            },
+            'HostConfig' => {
+              'PortBindings' => { '5000/tcp' => [{ 'HostPort' => '5000' }] }
+            }
+          )
+        end
+        let(:version) { '1.2.3' }
+        let(:repo) { URI.parse(Docker.connection.url).host }
 
-      before do
-        registry.start
-      end
+        before do
+          registry.start
+        end
 
-      after do
-        registry.kill.delete
-      end
+        after do
+          registry.kill.delete
+        end
 
-      around do |example|
-        FileUtils.copy_file file, File.join(dir, 'bigrig.json')
-        FileUtils.cp_r "#{test_file('.')}/build", dir
-        Dir.chdir dir do
-          example.run
+        around do |example|
+          FileUtils.copy_file file, File.join(dir, 'bigrig.json')
+          FileUtils.cp_r "#{test_file('.')}/build", dir
+          Dir.chdir dir do
+            example.run
+          end
+        end
+
+        it 'builds and pushes the image', :vcr do
+          subject
+          expect { Docker::Image.get "#{repo}:5000/test/ship-me:#{version}" }.to_not raise_error
         end
       end
+      context 'with no version' do
+        let(:args) { ['ship'] }
+        let(:file) { test_file 'ship.json' }
 
-      it 'builds and pushes the image', :vcr do
-        subject
-        expect { Docker::Image.get "#{repo}:5000/test/ship-me:#{version}" }.to_not raise_error
+        it 'raises an error' do
+          expect(output).to match(/version is required/)
+        end
       end
     end
   end
