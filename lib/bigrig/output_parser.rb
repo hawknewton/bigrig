@@ -1,5 +1,9 @@
 module Bigrig
   class OutputParser
+    def self.parser_proc
+      proc { |chunk| print OutputParser.new.parse chunk }
+    end
+
     def initialize
       @last_line = ''
     end

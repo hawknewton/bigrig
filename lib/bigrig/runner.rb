@@ -12,7 +12,7 @@ module Bigrig
 
     def build(path)
       puts "Building #{path}"
-      DockerAdapter.build path, &parser_proc
+      DockerAdapter.build path, &OutputParser.parser_proc
     end
 
     def containers
@@ -51,20 +51,17 @@ module Bigrig
       if container.path
         build container.path
       else
+        tag = "#{container.repo}:#{container.tag}"
         begin
-          DockerAdapter.image_id_by_tag container.tag, &parser_proc
+          DockerAdapter.image_id_by_tag tag, &OutputParser.parser_proc
         rescue ImageNotFoundError
-          DockerAdapter.pull container.tag, &parser_proc
+          DockerAdapter.pull tag, &OutputParser.parser_proc
         end
       end
     end
 
     def ordered_containers
       DependencyGraph.new(containers).resolve
-    end
-
-    def parser_proc
-      proc { |chunk| print OutputParser.new.parse chunk }
     end
 
     def perform_step(step)

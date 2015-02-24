@@ -1,10 +1,12 @@
 {
   "containers": {
     "provides_service": {
-      "tag": "hawknewton/show-env"
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1"
     },
     "uses_service": {
-      "tag": "hawknewton/show-env",
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1",
       "links": "provides_service:service"
     }
   }

@@ -1,5 +1,8 @@
 {
   "containers": {
-    "log-test": { "tag": "hawknewton/log-test:0.0.1" }
+    "log-test": {
+      "repo": "hawknewton/log-test",
+      "tag": "0.0.1"
+    }
   }
 }

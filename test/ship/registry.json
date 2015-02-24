@@ -1,0 +1,11 @@
+{
+  "containers": {
+    "registry": {
+      "env": {
+        "GUNICORN_OPTS": "[--preload]"
+      },
+      "ports": ["5000:5000"],
+      "tag": "registry"
+    }
+  }
+}

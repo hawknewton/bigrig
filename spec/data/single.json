@@ -1,5 +1,8 @@
 {
   "containers": {
-    "single-test": { "tag": "hawknewton/show-env" }
+    "single-test": {
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1"
+    }
   }
 }

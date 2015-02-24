@@ -6,9 +6,8 @@ module Bigrig
     end
 
     def perform
-      json = JSON.parse File.read @file
-      json['containers'].each do |name, container|
-        container['path'] && build_and_push!(name, container)
+      containers.each do |_name, container|
+        container['path'] && build_and_push!(container)
       end
 
       File.write outfile, JSON.dump(json)
@@ -16,13 +15,21 @@ module Bigrig
 
     private
 
-    def build_and_push!(name, container)
+    def build_and_push!(container)
       path = container.delete 'path'
-      tag = "#{name}:#{@version}"
-      container['tag'] = tag
-      image = DockerAdapter.build path
-      DockerAdapter.tag image, tag
-      DockerAdapter.push tag
+      repo_and_tag = "#{container['repo']}:#{@version}"
+      container['tag'] = @version
+      image = DockerAdapter.build path, &OutputParser.parser_proc
+      DockerAdapter.tag image, repo_and_tag
+      DockerAdapter.push repo_and_tag, &OutputParser.parser_proc
+    end
+
+    def containers
+      json['containers']
+    end
+
+    def json
+      @json ||= JSON.parse File.read @file
     end
 
     def outfile

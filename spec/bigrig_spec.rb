@@ -178,7 +178,8 @@ describe 'bigrig' do
         let(:file) do
           descriptor = {
             containers: {
-              "#{repo}:5000/test/ship-me" => {
+              'ship-me' => {
+                repo: "#{repo}:5000/test/ship-me",
                 path: 'build'
               }
             }
