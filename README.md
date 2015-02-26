@@ -50,8 +50,9 @@ generate a docker image.
 ```json
 {
   "containers": {
-    "hawknewton/my-awesome-app": {
+    "my-awesome-app": {
       "ports": ["80:80"],
+      "repo": "hawknewton/my-awesome-app",
       "path": ".",
       "env": {
         "USE_SSL": true,
@@ -60,32 +61,33 @@ generate a docker image.
     },
 
     "logger": {
-      "tag": "hawknewton/logger:1.2.3",
-      "volumes-from": ["hawknewton/my-awesome-app"]
+      "repo": "hawknewton/logger",
+      "tag": "1.2.3",
+      "volumes-from": ["my-awesome-app"]
     }
   },
 
   "profiles": {
     "qa": {
-      "hawknewton/my-awesome-app": {
+      "my-awesome-app": {
         "CACHE_TIMEOUT": "10"
       }
     },
 
     "qa-1": {
-      "hawknewton/my-awesome-app": {
+      "my-awesome-app": {
         "hosts": [ "qa-1-database.company.com:database" ]
       }
     },
 
     "qa-2": {
-      "hawknewton/my-awesome-app": {
+      "my-awesome-app": {
         "hosts": [ "qa-2-database.company.com:database" ]
       }
     },
 
     "production": {
-      "hawknewton/my-awesome-app": {
+      "my-awesome-app": {
         "hosts": [ "proddb12.company.com:database" ]
       }
     },
@@ -139,13 +141,14 @@ your `bigrig.json` that will always have the same **deterministic** behavior whe
 run. Additionally, it'll build, tag, and push all containers that contain a
 `path` entry.
 
-For example:
+For example given a bigrig.json that looks like this:
 
 ```json
 {
   "containers": {
-    "hawknewton/my-awesome-app": {
+    "my-awesome-app": {
       "ports": ["80:80"],
+      "repo": "hawknewton/my-awesome-app",
       "path": ".",
       "env": {
         "USE_SSL": true,
@@ -156,14 +159,17 @@ For example:
 }
 ```
 
-Becomes this:
+Running `bigrig ship 1.2.3` builds the Dockerfile in the current directory,
+tags the resulting image, pushes that image, and creates `bigrig-1.2.3.json`
+that looks like this:
 
 ```json
 {
   "containers": {
     "hawknewton/my-awesome-app": {
       "ports": ["80:80"],
-      "tag": "hawknewton/my-awesome-app:1.2.3",
+      "repo": "hawknewton/my-awesome-app",
+      "tag": "1.2.3",
       "env": {
         "USE_SSL": true,
         "CACHE_TIMEOUT": "3600"
@@ -172,3 +178,13 @@ Becomes this:
   }
 }
 ```
+
+TODO
+====
+* Error handling is pretty bad
+* Add model validation
+
+See Also
+========
+* The docker guys look to be renaming `fig` to `compose`.  If they added
+  profile support this project would become largely redundant.
