@@ -42,5 +42,15 @@ module Bigrig
         expect(repo).to eq 'hawknewton/show-env'
       end
     end
+
+    context 'given a descriptor that adds a container' do
+      let(:file) { 'addscontainer.json' }
+      let(:profiles) { ['new'] }
+      let(:container) { subject.as_json['new'] }
+
+      it 'adds the container' do
+        expect(container).to_not be_nil
+      end
+    end
   end
 end

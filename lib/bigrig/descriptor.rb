@@ -20,12 +20,13 @@ module Bigrig
 
     private
 
-    def apply_overrides(container_map, container, overrides)
+    def apply_overrides(container_map, name, overrides)
       overrides.each do |key, value|
+        container = container_map[name] ||= {}
         if value.is_a? Hash
-          container_map[container][key].merge! value
+          (container[key] ||= {}).merge! value
         else
-          container_map[container][key] = value
+          container[key] = value
         end
       end
     end
