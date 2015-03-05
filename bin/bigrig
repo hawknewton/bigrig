@@ -63,10 +63,19 @@ end
 desc 'Build, push, and tag docker images'
 arg_name 'version'
 command :ship do |c|
+  c.desc 'username'
+  c.flag [:u, :username]
 
-  c.action do |global_options, _options, args|
+  c.desc 'password'
+  c.flag [:p, :password]
+
+  c.desc 'email address'
+  c.flag [:e, :email]
+
+  c.action do |global_options, options, args|
     args[0] || fail('version is required')
-    Bigrig::ShipAction.new(global_options[:file], args[0]).perform
+
+    Bigrig::ShipAction.new(global_options[:file], args[0], options).perform
   end
 end
 
