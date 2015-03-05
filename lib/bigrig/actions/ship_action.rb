@@ -1,8 +1,9 @@
 module Bigrig
   class ShipAction
-    def initialize(file, version)
+    def initialize(file, version, credentials)
       @file = file
       @version = version
+      @credentials = credentials
     end
 
     def perform
@@ -21,11 +22,20 @@ module Bigrig
       container['tag'] = @version
       image = DockerAdapter.build path, &OutputParser.parser_proc
       DockerAdapter.tag image, repo_and_tag
-      DockerAdapter.push repo_and_tag, &OutputParser.parser_proc
+      DockerAdapter.push repo_and_tag, credentials, &OutputParser.parser_proc
     end
 
     def containers
       json['containers']
+    end
+
+    def credentials
+      @credentials && {
+        'username' => @credentials[:username],
+        'password' => @credentials[:password],
+        'email' => @credentials[:email],
+        'serveraddress' => 'https://index.docker.io/v1'
+      }
     end
 
     def json

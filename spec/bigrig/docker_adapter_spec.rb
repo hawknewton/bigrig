@@ -128,13 +128,15 @@ module Bigrig
     end
 
     describe '::push' do
-      subject { described_class.push tag }
+      subject { described_class.push tag, credentials }
+      let(:credentials) { nil }
       let(:host) { URI.parse(Docker.connection.url).host }
       let(:image) { Docker::Image.import test_file 'tiny-image.tar' }
       let(:repo) { "#{host}:5000/test/push-me" }
       let(:version) { '1.2.3' }
       let(:tag) { "#{repo}:#{version}" }
       let(:registry) do
+        Docker::Image.create 'fromImage' => 'registry'
         Docker::Container.create(
           'name' => 'registry',
           'Image' => 'registry',
@@ -151,6 +153,7 @@ module Bigrig
       before do
         registry.start
         image.tag 'repo' => repo, 'tag' => version
+        sleep 1
       end
 
       after do
@@ -162,6 +165,30 @@ module Bigrig
         subject
         Docker::Image.get(tag).remove 'force' => true
         expect { Docker::Image.create 'fromImage' => tag }.to_not raise_error
+      end
+
+      context 'given credentials' do
+        let(:credentials) do
+          {
+            'username' => 'username',
+            'password' => 'pass',
+            'email' => 'email@email.com',
+            'serveraddress' => 'https://index.docker.io/v1'
+          }
+        end
+        # I don't have the energy to set one of these up for real
+
+        it 'will pass login and password', :vcr do
+          creds = {
+            'username' => 'username',
+            'password' => 'pass',
+            'serveraddress' => 'https://index.docker.io/v1',
+            'email' => 'email@email.com'
+          }
+          expect_any_instance_of(Docker::Image).to receive(:push).
+            with(creds, {})
+          subject
+        end
       end
     end
 

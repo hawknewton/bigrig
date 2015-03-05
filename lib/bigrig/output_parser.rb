@@ -10,7 +10,9 @@ module Bigrig
 
     def parse(input)
       json = JSON.parse input
-      if json['stream'] || json['id'].nil?
+      if json['errorDetail']
+        "#{json['errorDetail']['message'].red}\n"
+      elsif json['stream'] || json['id'].nil?
         json['stream'] || "#{json['status']}\n"
       else
         parse_progress json

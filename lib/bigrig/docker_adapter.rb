@@ -11,7 +11,7 @@ module Bigrig
   class DockerAdapter
     class << self
       def build(path, &block)
-        Docker::Image.build_from_dir(path, &block).id
+        Docker::Image.build_from_dir(path, {}, connection, &block).id
       end
 
       def container_exists?(name)
@@ -44,9 +44,6 @@ module Bigrig
       end
 
       def logs(name, &block)
-        # one year
-        options = Docker.env_options.merge read_timeout: 31_536_000
-        connection = Docker::Connection.new Docker.url, options
         container = Docker::Container.get name, {}, connection
         container.streaming_logs follow: true, stdout: true, stderr: true, &block
       end
@@ -58,9 +55,9 @@ module Bigrig
         raise
       end
 
-      def push(tag, &block)
+      def push(tag, credentials = nil, &block)
         puts "Pushing #{tag}"
-        Docker::Image.get(tag).push nil, {}, &block
+        Docker::Image.get(tag).push credentials, {}, &block
       end
 
       def tag(id, tag)
@@ -98,6 +95,11 @@ module Bigrig
 
       private
 
+      def connection
+        options = Docker.env_options.merge read_timeout: 31_536_000
+        Docker::Connection.new Docker.url, options
+      end
+
       def create_container(args)
         Docker::Container.create(
           'Env' => (args[:env] || {}).map { |n, v| "#{n}=#{v}" },
@@ -116,11 +118,7 @@ module Bigrig
 
       def port_bindings(ports)
         (ports || []).each_with_object({}) do |port, hash|
-          if port.include? ':'
-            host_port, container_port = port.split ':'
-          else
-            container_port = port
-          end
+          host_port, container_port =  port.include?(':') && port.split(':') || nil, port
           hash["#{container_port}/tcp"] = [host_port && { 'HostPort' => host_port } || {}]
         end
       end
