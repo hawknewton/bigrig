@@ -2,6 +2,8 @@
 require 'gli'
 require 'bigrig'
 
+STDOUT.sync = true
+
 include GLI::App
 
 program_desc 'Describe your application here'
