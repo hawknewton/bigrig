@@ -1,6 +1,7 @@
 require 'docker'
 
 Excon.defaults[:ssl_verify_peer] = false
+Excon.defaults[:read_timeout] = 3600
 
 module Bigrig
   class ContainerNotFoundError < StandardError; end
