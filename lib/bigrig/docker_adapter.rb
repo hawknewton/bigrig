@@ -23,12 +23,8 @@ module Bigrig
 
       def hosts(arr)
         (arr || []).map do |line|
-          if line =~ /^[0-9\.]+:/
-            line
-          else
-            parts = line.split ':'
-            "#{Resolv.getaddress parts.first}:#{parts[1]}"
-          end
+          parts = line.split ':'
+          "#{Resolv.getaddress parts.first}:#{parts[1]}"
         end
       end
 
@@ -77,6 +73,13 @@ module Bigrig
         raise
       end
 
+      def remove_image(tag)
+        Docker::Image.get(tag).remove 'force' => true
+        true
+      rescue Docker::Error::NotFoundError
+        raise ImageNotFoundError
+      end
+
       def run(args)
         container = create_container args
         container.start(
@@ -119,7 +122,7 @@ module Bigrig
 
       def port_bindings(ports)
         (ports || []).each_with_object({}) do |port, hash|
-          host_port, container_port =  port.include?(':') && port.split(':') || nil, port
+          host_port, container_port = port.include?(':') && port.split(':') || [nil, port]
           hash["#{container_port}/tcp"] = [host_port && { 'HostPort' => host_port } || {}]
         end
       end

@@ -256,6 +256,27 @@ module Bigrig
       end
     end
 
+    describe '::remove_image' do
+      subject { described_class.remove_image image_id }
+
+      context 'when the image exists' do
+        let(:image_id) { Docker::Image.import(test_file 'tiny-image.tar').id }
+
+        it 'removes the image', :vcr do
+          subject
+          expect { Docker::Image.get(image_id) }.to raise_error(/404 Not Found/)
+        end
+      end
+
+      context 'when the image doesn''t exist' do
+        let(:image_id) { 'does_not_exist' }
+
+        it 'raises an error', :vcr do
+          expect { subject }.to raise_error ImageNotFoundError
+        end
+      end
+    end
+
     describe '::run' do
       subject { DockerAdapter.run({ image_id: image_id }.merge opts) }
 
