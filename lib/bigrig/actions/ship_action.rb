@@ -1,8 +1,9 @@
 module Bigrig
   class ShipAction
-    def initialize(file, version, credentials)
+    def initialize(file, version, clean, credentials)
       @file = file
       @version = version
+      @clean = clean
       @credentials = credentials
     end
 
@@ -23,6 +24,7 @@ module Bigrig
       image = DockerAdapter.build path, &OutputParser.parser_proc
       DockerAdapter.tag image, repo_and_tag
       DockerAdapter.push repo_and_tag, credentials, &OutputParser.parser_proc
+      @clean && DockerAdapter.remove_image(image)
     end
 
     def containers

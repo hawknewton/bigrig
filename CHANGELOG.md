@@ -10,3 +10,7 @@
 =====
 Bump read timeout to one hour
 
+0.0.5
+=====
+Add -c flag to cleanup after ship
+

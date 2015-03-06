@@ -225,6 +225,16 @@ describe 'bigrig' do
           subject
           expect { Docker::Image.get "#{repo}:5000/test/ship-me:#{version}" }.to_not raise_error
         end
+
+        context '-c' do
+          let(:args) { ['ship', '-c', version] }
+
+          it 'cleans the image when it''s done', :vcr do
+            subject
+            expect { Docker::Image.get "#{repo}:5000/test/ship-me:#{version}" }.
+              to raise_error(Docker::Error::NotFoundError)
+          end
+        end
       end
       context 'with no version' do
         let(:args) { ['ship'] }

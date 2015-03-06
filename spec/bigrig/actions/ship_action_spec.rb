@@ -1,6 +1,6 @@
 module Bigrig
   describe ShipAction do
-    subject { described_class.new(file_name, version, credentials).perform }
+    subject { described_class.new(file_name, version, false, credentials).perform }
     let(:dir) { Dir.mktmpdir }
     let(:version) { '1.2.3' }
     let(:file) { 'ship.json' }

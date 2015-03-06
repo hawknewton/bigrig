@@ -72,10 +72,14 @@ command :ship do |c|
   c.desc 'email address'
   c.flag [:e, :email]
 
+  c.desc 'remove the image after pushing'
+  c.switch [:c, :clean]
+
   c.action do |global_options, options, args|
     args[0] || fail('version is required')
+    creds = [:username, :password, :email].each_with_object({}) { |e, o| o[e] = options[e] }
 
-    Bigrig::ShipAction.new(global_options[:file], args[0], options).perform
+    Bigrig::ShipAction.new(global_options[:file], args[0], options[:clean], creds).perform
   end
 end
 
