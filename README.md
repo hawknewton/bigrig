@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/constantcontact/bigrig.svg?branch=master)](https://travis-ci.org/constantcontact/bigrig)
 # Bigrig
 
 Bigrig manages and coordinates the lifecycle of multiple Docker containers
