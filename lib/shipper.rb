@@ -1,0 +1,5 @@
+require 'shipper/actions'
+require 'shipper/dependency_graph'
+require 'shipper/docker_adapter'
+require 'shipper/models'
+require 'shipper/version'

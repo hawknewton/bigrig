@@ -1,0 +1,5 @@
+{
+  "containers": [
+    { "name": "env", "tag": "hawknewton/show-env" }
+  ]
+}

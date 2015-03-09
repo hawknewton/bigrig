@@ -1,0 +1,14 @@
+{
+  "containers": [
+    {
+      "name": "exports_volumes",
+      "path": "exports_volumes"
+    },
+    {
+      "name": "mounts_volumes",
+      "tag": "nginx:1.7.1",
+      "volumes_from": "exports_volumes",
+      "ports": ["80"]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "containers": [
+    {
+      "name": "env",
+      "tag": "hnewton/env"
+    },
+    {
+      "name": "test",
+      "tag": "hnewton/test",
+      "volumes_from": "env"
+    }
+  ]
+}
