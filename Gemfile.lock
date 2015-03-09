@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    shipper (0.0.1)
+    bigrig (0.0.1)
       colorize (= 0.7.5)
       docker-api (= 1.18.0)
       gli (= 2.12.2)
@@ -75,12 +75,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bigrig!
   popen4
   pry
   rake
   rspec
   rspec-its
   rubocop
-  shipper!
   vcr (~> 2.9.3)
   webmock (~> 1.20.4)

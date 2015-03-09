@@ -1,6 +1,6 @@
-# Shipper
+# Bigrig
 
-Shipper manages and coordinates the lifecycle of multiple Docker containers
+Bigrig manages and coordinates the lifecycle of multiple Docker containers
 in a composite deployment strategy so you don't have to.
 
 In its simplest form, docker looks super-easy to use.  Whip up a Dockerfile,
@@ -21,7 +21,7 @@ you're likely going to need to be able to deploy your application to different
 environments and you'll need the ability to configure the application in an
 environment-specific way.
 
-Shipper lets you specify environment-specific configuration for all your
+Bigrig lets you specify environment-specific configuration for all your
 environments in one place.  Having a single source-of-record for all
 environment details means it's easier to configure a new environment and it's
 easier to see the differences between environments.
@@ -39,11 +39,11 @@ you've got two choices:
 * Spin up more than one container and each one with a distinct job
 
 There are those that might argue you shouldn't run more than one process
-per container and if you count yourself among them Shipper might be for you.
+per container and if you count yourself among them Bigrig might be for you.
 
-## shipper.json
+## bigrig.json
 
-The below Shipper metadata would be part of the project
+The below Bigrig metadata would be part of the project
 `hawknewton/my-awesome-app`, sitting next to a Dockerfile that knows how to
 generate a docker image.
 
@@ -114,7 +114,7 @@ generate a docker image.
 ```
 
 A few things:
-* You can start Shipper with more than one active profile. In the example
+* You can start Bigrig with more than one active profile. In the example
   above, you'd probably start the individual QA environments with a
   specific profile (`qa-1`, for example) and the broader **environment class**
   `qa`.
@@ -123,19 +123,19 @@ A few things:
   needing environment-specific profile entries for anything but the simplest
   deployments.
 * If two profiles override the same value the profile declared later in
-  `shipper.json` wins.
+  `bigrig.json` wins.
 
 ## Development
 
 We strive to bring the developer's environment as close to production as
 possible (as well as the other way around).  The developer uses
-`shipper.json` to develop their code and production uses `shipper.json`
+`bigrig.json` to develop their code and production uses `bigrig.json`
 to start the application.
 
 ## QA/Production
 
-When building your application shipper will create an **immutable** version of
-your `shipper.json` that will always have the same **deterministic** behavior when
+When building your application bigrig will create an **immutable** version of
+your `bigrig.json` that will always have the same **deterministic** behavior when
 run. Additionally, it'll build, tag, and push all containers that contain a
 `path` entry.
 

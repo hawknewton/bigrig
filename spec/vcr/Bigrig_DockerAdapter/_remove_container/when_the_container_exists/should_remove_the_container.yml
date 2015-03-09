@@ -1,0 +1,194 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.15/containers/create"
+    body:
+      encoding: UTF-8
+      string: '{"Image":"hawknewton/true"}'
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 21 Feb 2015 11:44:39 GMT
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: |
+        {"Id":"3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434","Warnings":null}
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:30 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 21 Feb 2015 11:44:39 GMT
+      Content-Length:
+      - '1480'
+    body:
+      encoding: UTF-8
+      string: |
+        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"3c364da9117d","Image":"hawknewton/true","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:39.088914212Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/kickass_wilson","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":null,"VolumesRW":null}
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:30 GMT
+- request:
+    method: delete
+    uri: "<DOCKER_HOST>/v1.15/containers/3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      Date:
+      - Sat, 21 Feb 2015 11:44:39 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:30 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:44:39 GMT
+      Content-Length:
+      - '84'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: 3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:30 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:44:39 GMT
+      Content-Length:
+      - '84'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: 3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:30 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:44:39 GMT
+      Content-Length:
+      - '84'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: 3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:30 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:44:39 GMT
+      Content-Length:
+      - '84'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: 3c364da9117db8983c92a64449f303fad59d13309bc00e4c23b959b157e03434
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:30 GMT
+recorded_with: VCR 2.9.3

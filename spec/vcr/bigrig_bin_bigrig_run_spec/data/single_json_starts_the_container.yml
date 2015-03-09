@@ -1,0 +1,194 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/images/hawknewton/show-env/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 21 Feb 2015 11:45:07 GMT
+      Content-Length:
+      - '1865'
+    body:
+      encoding: UTF-8
+      string: |
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:58 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/single-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:45:07 GMT
+      Content-Length:
+      - '31'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: single-test
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:58 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/single-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:45:07 GMT
+      Content-Length:
+      - '31'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: single-test
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:58 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/single-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:45:07 GMT
+      Content-Length:
+      - '31'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: single-test
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:58 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.15/containers/single-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Sat, 21 Feb 2015 11:45:07 GMT
+      Content-Length:
+      - '31'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: single-test
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:58 GMT
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.15/containers/create?name=single-test"
+    body:
+      encoding: UTF-8
+      string: '{"Env":[],"Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","ExposedPorts":{}}'
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 21 Feb 2015 11:45:07 GMT
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: |
+        {"Id":"ce02b27311f68f131a71917b8accea7f32dc4fbfba332b9f98e2ca7974aff3d1","Warnings":null}
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:58 GMT
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.15/containers/ce02b27311f68f131a71917b8accea7f32dc4fbfba332b9f98e2ca7974aff3d1/start"
+    body:
+      encoding: UTF-8
+      string: '{"Links":[],"ExtraHosts":[],"PortBindings":{},"VolumesFrom":[]}'
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.18.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      Date:
+      - Sat, 21 Feb 2015 11:45:07 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 23 Feb 2015 02:23:59 GMT
+recorded_with: VCR 2.9.3

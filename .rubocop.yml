@@ -6,7 +6,7 @@
 #
 AllCops:
   Exclude:
-    - 'lib/shipper/docker_api.rb'
+    - 'lib/bigrig/docker_api.rb'
 
 Metrics/LineLength:
   Max: 100
