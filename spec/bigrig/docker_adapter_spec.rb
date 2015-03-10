@@ -136,7 +136,7 @@ module Bigrig
       let(:version) { '1.2.3' }
       let(:tag) { "#{repo}:#{version}" }
       let(:registry) do
-        Docker::Image.create 'fromImage' => 'registry'
+        Docker::Image.create 'fromImage' => 'registry:0.9.1'
         Docker::Container.create(
           'name' => 'registry',
           'Image' => 'registry',
