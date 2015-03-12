@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/images/hawknewton/show-env:0.0.1/json"
+    uri: "<DOCKER_HOST>/v1.16/images/hawknewton/show-env:0.0.1/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -19,24 +19,24 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:50 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
-      - '1865'
+      - '1859'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:18 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/images/hawknewton/log-test:0.0.1/json"
+    uri: "<DOCKER_HOST>/v1.16/images/hawknewton/log-test:0.0.1/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -47,24 +47,24 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
-      - '1499'
+      - '1493'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"71e72940b4dd","Image":"c507982f836db18913f4a5c7c7a174617c40da13cb0797cf4481220b906f59ff","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"13fbda9e12ada74a75b684aa44fbecc55acb529370b161d02dcb66fa7c612911","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) CMD [/run.sh]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"71e72940b4dd","Image":"c507982f836db18913f4a5c7c7a174617c40da13cb0797cf4481220b906f59ff","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-10T13:06:13.014751129Z","DockerVersion":"1.3.0","Id":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","Os":"linux","Parent":"c507982f836db18913f4a5c7c7a174617c40da13cb0797cf4481220b906f59ff","Size":0,"VirtualSize":117030274}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"71e72940b4dd","Image":"c507982f836db18913f4a5c7c7a174617c40da13cb0797cf4481220b906f59ff","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"13fbda9e12ada74a75b684aa44fbecc55acb529370b161d02dcb66fa7c612911","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) CMD [/run.sh]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"71e72940b4dd","Image":"c507982f836db18913f4a5c7c7a174617c40da13cb0797cf4481220b906f59ff","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-10T13:06:13.014751129Z","DockerVersion":"1.3.0","Id":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","Os":"linux","Parent":"c507982f836db18913f4a5c7c7a174617c40da13cb0797cf4481220b906f59ff","Size":0,"VirtualSize":117030274}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
       - '28'
     body:
@@ -83,16 +83,16 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
       - '28'
     body:
@@ -111,16 +111,16 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -131,7 +131,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
       - '28'
     body:
@@ -139,16 +139,16 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -159,7 +159,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
       - '28'
     body:
@@ -167,16 +167,16 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -187,24 +187,24 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
       - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: dev-logs
+        No such container: dev-test
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -215,24 +215,24 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
       - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: dev-logs
+        No such container: dev-test
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -243,24 +243,24 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
       Content-Length:
       - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: dev-logs
+        No such container: dev-test
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -271,7 +271,35 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:16 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
       Content-Length:
       - '28'
     body:
@@ -279,44 +307,212 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-logs
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-logs
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-logs
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-logs
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-logs
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-logs
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-logs
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.15/containers/create?name=dev-logs"
-    body:
-      encoding: UTF-8
-      string: '{"Env":[],"Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","ExposedPorts":{}}'
-    headers:
-      User-Agent:
-      - Swipely/Docker-API 1.18.0
-      Content-Type:
-      - application/json
-  response:
-    status:
-      code: 201
-      message: 
-    headers:
-      Content-Type:
-      - application/json
-      Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
-      Content-Length:
-      - '90'
-    body:
-      encoding: UTF-8
-      string: |
-        {"Id":"bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209","Warnings":null}
-    http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
-- request:
-    method: post
-    uri: "<DOCKER_HOST>/v1.15/containers/create?name=dev-test"
+    uri: "<DOCKER_HOST>/v1.16/containers/create?name=dev-test"
     body:
       encoding: UTF-8
       string: '{"Env":["PROFILE=dev"],"Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","ExposedPorts":{"80/tcp":{}}}'
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - application/json
   response:
@@ -327,24 +523,52 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:17 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e","Warnings":null}
+        {"Id":"d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30","Warnings":null}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.15/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/start"
+    uri: "<DOCKER_HOST>/v1.16/containers/create?name=dev-logs"
+    body:
+      encoding: UTF-8
+      string: '{"Env":[],"Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","ExposedPorts":{}}'
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 12 Mar 2015 21:38:17 GMT
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: |
+        {"Id":"583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7","Warnings":null}
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:19 GMT
+- request:
+    method: post
+    uri: "<DOCKER_HOST>/v1.16/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/start"
     body:
       encoding: UTF-8
       string: '{"Links":[],"ExtraHosts":[],"PortBindings":{},"VolumesFrom":[]}'
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - application/json
   response:
@@ -353,21 +577,21 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:17 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.15/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/start"
+    uri: "<DOCKER_HOST>/v1.16/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/start"
     body:
       encoding: UTF-8
       string: '{"Links":[],"ExtraHosts":[],"PortBindings":{"80/tcp":[{"HostPort":"4568"}]},"VolumesFrom":[]}'
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - application/json
   response:
@@ -376,21 +600,21 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:17 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -401,24 +625,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
-      Content-Length:
-      - '1905'
+      - Thu, 12 Mar 2015 21:38:17 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"bcc5c387a57e","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.328034744Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hosts","Id":"bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.2.143","IPPrefixLen":16,"MacAddress":"02:42:ac:11:02:8f","PortMapping":null,"Ports":{}},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":11147,"Restarting":false,"Running":true,"StartedAt":"2015-02-21T11:44:51.580460558Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"d6a635cf5003","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.284169361Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hosts","Id":"d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.2.107","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:26b","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:02:6b","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4568"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11919,"Restarting":false,"Running":true,"StartedAt":"2015-03-12T21:38:17.821690251Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -429,22 +651,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:17 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"71b9b68b0adc","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.34592791Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hosts","Id":"71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.2.144","IPPrefixLen":16,"MacAddress":"02:42:ac:11:02:90","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4568"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":11162,"Restarting":false,"Running":true,"StartedAt":"2015-02-21T11:44:51.672242436Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"583116ae960c","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.299176863Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hosts","Id":"583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.2.108","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:26c","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:02:6c","PortMapping":null,"Ports":{}},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11915,"Restarting":false,"Running":true,"StartedAt":"2015-03-12T21:38:17.779947175Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:42 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -455,22 +677,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"71b9b68b0adc","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.34592791Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hosts","Id":"71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.2.144","IPPrefixLen":16,"MacAddress":"02:42:ac:11:02:90","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4568"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":11162,"Restarting":false,"Running":true,"StartedAt":"2015-02-21T11:44:51.672242436Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"d6a635cf5003","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.284169361Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hosts","Id":"d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.2.107","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:26b","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:02:6b","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4568"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11919,"Restarting":false,"Running":true,"StartedAt":"2015-03-12T21:38:17.821690251Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:43 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -481,22 +703,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"71b9b68b0adc","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.34592791Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hosts","Id":"71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.2.144","IPPrefixLen":16,"MacAddress":"02:42:ac:11:02:90","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4568"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":11162,"Restarting":false,"Running":true,"StartedAt":"2015-02-21T11:44:51.672242436Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"d6a635cf5003","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.284169361Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hosts","Id":"d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.2.107","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:26b","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:02:6b","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4568"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11919,"Restarting":false,"Running":true,"StartedAt":"2015-03-12T21:38:17.821690251Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:43 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/logs?follow=true&stderr=true&stdout=true"
+    uri: "<DOCKER_HOST>/v1.16/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/logs?follow=true&stderr=true&stdout=true"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -505,7 +727,7 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
       Content-Length:
       - '0'
       Content-Type:
@@ -514,16 +736,16 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:43 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.15/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/kill"
+    uri: "<DOCKER_HOST>/v1.16/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/kill"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -532,21 +754,21 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:43 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -557,22 +779,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"71b9b68b0adc","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.34592791Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hosts","Id":"71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/resolv.conf","State":{"ExitCode":-1,"FinishedAt":"2015-02-21T11:44:52.599454464Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-02-21T11:44:51.672242436Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"d6a635cf5003","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.284169361Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hosts","Id":"d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":137,"FinishedAt":"2015-03-12T21:38:18.368454044Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-03-12T21:38:17.821690251Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:43 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-test/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -583,22 +805,48 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"71b9b68b0adc","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.34592791Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/hosts","Id":"71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e/resolv.conf","State":{"ExitCode":-1,"FinishedAt":"2015-02-21T11:44:52.599454464Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-02-21T11:44:51.672242436Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"d6a635cf5003","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.284169361Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hosts","Id":"d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":137,"FinishedAt":"2015-03-12T21:38:18.368454044Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-03-12T21:38:17.821690251Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:43 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 12 Mar 2015 21:38:18 GMT
+    body:
+      encoding: UTF-8
+      string: |
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"d6a635cf5003","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.284169361Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4568"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/hosts","Id":"d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":137,"FinishedAt":"2015-03-12T21:38:18.368454044Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-03-12T21:38:17.821690251Z"},"Volumes":{},"VolumesRW":{}}
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.15/containers/71b9b68b0adcf4e474ef2bccfe1b92560e6e6353e674cc18484e32599334115e"
+    uri: "<DOCKER_HOST>/v1.16/containers/d6a635cf50031e4b15f7775942cecbec67ea07d13e2db20094535d7e74845d30"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -607,21 +855,21 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -632,24 +880,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
-      Content-Length:
-      - '1905'
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"bcc5c387a57e","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.328034744Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hosts","Id":"bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.2.143","IPPrefixLen":16,"MacAddress":"02:42:ac:11:02:8f","PortMapping":null,"Ports":{}},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":11147,"Restarting":false,"Running":true,"StartedAt":"2015-02-21T11:44:51.580460558Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"583116ae960c","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.299176863Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hosts","Id":"583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.2.108","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:26c","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:02:6c","PortMapping":null,"Ports":{}},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11915,"Restarting":false,"Running":true,"StartedAt":"2015-03-12T21:38:17.779947175Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -660,24 +906,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:52 GMT
-      Content-Length:
-      - '1905'
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"bcc5c387a57e","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.328034744Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hosts","Id":"bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","IPAddress":"172.17.2.143","IPPrefixLen":16,"MacAddress":"02:42:ac:11:02:8f","PortMapping":null,"Ports":{}},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/resolv.conf","State":{"ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","Paused":false,"Pid":11147,"Restarting":false,"Running":true,"StartedAt":"2015-02-21T11:44:51.580460558Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"583116ae960c","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.299176863Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hosts","Id":"583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.2.108","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:26c","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:02:6c","PortMapping":null,"Ports":{}},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11915,"Restarting":false,"Running":true,"StartedAt":"2015-03-12T21:38:17.779947175Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:20 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/logs?follow=true&stderr=true&stdout=true"
+    uri: "<DOCKER_HOST>/v1.16/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/logs?follow=true&stderr=true&stdout=true"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -686,28 +930,26 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:51 GMT
+      - Thu, 12 Mar 2015 21:38:17 GMT
       Content-Type:
       - application/octet-stream
     body:
       encoding: UTF-8
       string: !binary |-
-        AQAAAAAAADBTYXQgRmViIDIxIDExOjQ0OjUxIFVUQyAyMDE1IGNvbnRhaW5l
-        ciAxIHN0ZG91dAoCAAAAAAAAMFNhdCBGZWIgMjEgMTE6NDQ6NTEgVVRDIDIw
-        MTUgY29udGFpbmVyIDEgc3RkZXJyCgEAAAAAAAAwU2F0IEZlYiAyMSAxMTo0
-        NDo1MiBVVEMgMjAxNSBjb250YWluZXIgMSBzdGRvdXQKAgAAAAAAADBTYXQg
-        RmViIDIxIDExOjQ0OjUyIFVUQyAyMDE1IGNvbnRhaW5lciAxIHN0ZGVycgo=
+        AQAAAAAAADBUaHUgTWFyIDEyIDIxOjM4OjE3IFVUQyAyMDE1IGNvbnRhaW5l
+        ciAxIHN0ZG91dAoCAAAAAAAAMFRodSBNYXIgMTIgMjE6Mzg6MTcgVVRDIDIw
+        MTUgY29udGFpbmVyIDEgc3RkZXJyCg==
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:21 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.15/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/kill"
+    uri: "<DOCKER_HOST>/v1.16/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/kill"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -716,21 +958,21 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:53 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:21 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -741,24 +983,22 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:53 GMT
-      Content-Length:
-      - '1867'
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"bcc5c387a57e","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.328034744Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hosts","Id":"bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/resolv.conf","State":{"ExitCode":-1,"FinishedAt":"2015-02-21T11:44:53.030573092Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-02-21T11:44:51.580460558Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"583116ae960c","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.299176863Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hosts","Id":"583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":137,"FinishedAt":"2015-03-12T21:38:18.769209224Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-03-12T21:38:17.779947175Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:21 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/containers/dev-logs/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -769,24 +1009,48 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:53 GMT
-      Content-Length:
-      - '1867'
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: |
-        {"Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"bcc5c387a57e","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-02-21T11:44:51.328034744Z","Driver":"aufs","ExecDriver":"native-0.2","HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"Links":null,"LxcConf":null,"NetworkMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/hosts","Id":"bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"","Gateway":"","IPAddress":"","IPPrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209/resolv.conf","State":{"ExitCode":-1,"FinishedAt":"2015-02-21T11:44:53.030573092Z","Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-02-21T11:44:51.580460558Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"583116ae960c","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.299176863Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hosts","Id":"583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":137,"FinishedAt":"2015-03-12T21:38:18.769209224Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-03-12T21:38:17.779947175Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:21 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 12 Mar 2015 21:38:18 GMT
+    body:
+      encoding: UTF-8
+      string: |
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/run.sh"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"583116ae960c","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:38:17.299176863Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/hosts","Id":"583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7","Image":"bf0f8a45f956aa470ab3c916c83925fdcffce23d37b1a9e33998561ce54ca030","MountLabel":"","Name":"/dev-logs","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/run.sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":137,"FinishedAt":"2015-03-12T21:38:18.769209224Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"2015-03-12T21:38:17.779947175Z"},"Volumes":{},"VolumesRW":{}}
+    http_version: 
+  recorded_at: Thu, 12 Mar 2015 21:38:21 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.15/containers/bcc5c387a57ef147b80d088b0cb6bfa5957cb75fdf651d261c13f57d0af40209"
+    uri: "<DOCKER_HOST>/v1.16/containers/583116ae960c81fa0debe175cf583fc9cf676fcc40f5e79e8d156baad9b4c6d7"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -795,10 +1059,10 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Sat, 21 Feb 2015 11:44:53 GMT
+      - Thu, 12 Mar 2015 21:38:18 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:44 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:21 GMT
 recorded_with: VCR 2.9.3

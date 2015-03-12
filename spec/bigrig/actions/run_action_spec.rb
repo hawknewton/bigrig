@@ -254,7 +254,7 @@ module Bigrig
 
         after do
           container = Docker::Container.get 'profiles'
-          container.kill.delete
+          container.delete force: true
         end
 
         it 'ignores the missing profile', :vcr do

@@ -1,3 +1,4 @@
+require 'pry'
 module Bigrig
   describe DockerAdapter do
 
@@ -136,7 +137,7 @@ module Bigrig
       let(:version) { '1.2.3' }
       let(:tag) { "#{repo}:#{version}" }
       let(:registry) do
-        Docker::Image.create 'fromImage' => 'registry:0.9.1'
+        Docker::Image.create 'fromImage' => 'registry:latest'
         Docker::Container.create(
           'name' => 'registry',
           'Image' => 'registry',
@@ -387,6 +388,13 @@ module Bigrig
       subject { described_class.tag id, tag }
       let(:id) { Docker::Image.create('fromImage' => 'hawknewton/true').id }
       let(:tag) { 'test/tag:1.2.3' }
+
+      before do
+        begin
+          Docker::Image.get(tag).remove 'force' => true
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
+      end
 
       after do
         Docker::Image.get(tag).remove 'force' => true
