@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.15/build"
+    uri: "<DOCKER_HOST>/v1.16/build"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - application/tar
       Transfer-Encoding:
@@ -23,22 +23,24 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:26 GMT
+      - Thu, 12 Mar 2015 21:37:40 GMT
     body:
       encoding: UTF-8
       string: "{\"stream\":\"Step 0 : FROM hawknewton/true\\n\"}\r\n{\"stream\":\"
-        ---\\u003e 5fbce35eb337\\n\"}\r\n{\"stream\":\"Successfully built 5fbce35eb337\\n\"}\r\n"
+        ---\\u003e 5fbce35eb337\\n\"}\r\n{\"stream\":\"Step 1 : ADD test /\\n\"}\r\n{\"stream\":\"
+        ---\\u003e 476bb395d050\\n\"}\r\n{\"stream\":\"Removing intermediate container
+        a7dcc091bbc5\\n\"}\r\n{\"stream\":\"Successfully built 476bb395d050\\n\"}\r\n"
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:17 GMT
+  recorded_at: Thu, 12 Mar 2015 21:37:43 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.15/images/5fbce35eb337/json"
+    uri: "<DOCKER_HOST>/v1.16/images/476bb395d050/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -49,13 +51,13 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:26 GMT
+      - Thu, 12 Mar 2015 21:37:41 GMT
       Content-Length:
-      - '1485'
+      - '1545'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"cb0575974a6a573010bf8f4fa1ca6ce5ac4760b880c30db72ffe47a4c62849c0","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) CMD [/true]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"SecurityOpt":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-01-10T13:42:58.118276832Z","DockerVersion":"1.3.0","Id":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Os":"linux","Parent":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","Size":0,"VirtualSize":125}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"a7dcc091bbc50de9aff3f3e8df9ef185301cd966d9022a5b73f609d52e6b6ba3","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:1cb489697a55d653f1feb7de29e7f70267402b9a9addcd5577961b16cf8bb7d7 in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:37:41.10438288Z","DockerVersion":"1.5.0","Id":"476bb395d0504e7bfa1e3f114219271d99b074739bdd404d9aa3c86d4c08bdcf","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:17 GMT
+  recorded_at: Thu, 12 Mar 2015 21:37:43 GMT
 recorded_with: VCR 2.9.3

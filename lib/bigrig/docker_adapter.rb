@@ -60,17 +60,15 @@ module Bigrig
       def tag(id, tag)
         i = tag.rindex ':'
         repo, version = [tag[0...i], tag[i + 1..-1]]
-        Docker::Image.get(id).tag 'repo' => repo, 'tag' => version
+        Docker::Image.get(id).tag 'repo' => repo, 'tag' => version, 'force' => true
       end
 
       def remove_container(name)
+        fail ContainerRunningError, 'You cannot remove a running container' if running?(name)
         Docker::Container.get(name).delete
         true
       rescue Docker::Error::NotFoundError
         raise ContainerNotFoundError
-      rescue Docker::Error::ServerError => e
-        e.to_s =~ /You cannot remove a running container/ && raise(ContainerRunningError)
-        raise
       end
 
       def remove_image(tag)

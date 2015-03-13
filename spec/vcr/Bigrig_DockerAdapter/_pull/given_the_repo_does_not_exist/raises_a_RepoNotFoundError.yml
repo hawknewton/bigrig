@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.15/images/create?fromImage=hawknewton%2Fdoesnotexist"
+    uri: "<DOCKER_HOST>/v1.16/images/create?fromImage=hawknewton%2Fdoesnotexist"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.18.0
+      - Swipely/Docker-API 1.20.0
       Content-Type:
       - text/plain
   response:
@@ -19,12 +19,12 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 21 Feb 2015 11:44:36 GMT
+      - Thu, 12 Mar 2015 21:38:01 GMT
     body:
       encoding: UTF-8
       string: "{\"status\":\"Pulling repository hawknewton/doesnotexist\"}\r\n{\"errorDetail\":{\"message\":\"Error:
-        image hawknewton/doesnotexist not found\"},\"error\":\"Error: image hawknewton/doesnotexist
+        image hawknewton/doesnotexist: not found\"},\"error\":\"Error: image hawknewton/doesnotexist:
         not found\"}\r\n"
     http_version: 
-  recorded_at: Mon, 23 Feb 2015 02:23:28 GMT
+  recorded_at: Thu, 12 Mar 2015 21:38:04 GMT
 recorded_with: VCR 2.9.3
