@@ -14,3 +14,6 @@ Bump read timeout to one hour
 =====
 Add -c flag to cleanup after ship
 
+0.0.7
+=====
+Add profiles to most commands
