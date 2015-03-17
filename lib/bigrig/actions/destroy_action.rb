@@ -1,7 +1,7 @@
 module Bigrig
   class DestroyAction
-    def initialize(file)
-      @application = Application.read file
+    def initialize(active_containers)
+      @application = Application.from_json active_containers
     end
 
     def perform

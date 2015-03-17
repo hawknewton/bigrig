@@ -28,18 +28,21 @@ flag [:f, :file]
 desc 'Start the applicaiton in dev mode'
 command :dev do |c|
   c.desc 'profiles to activate'
+  c.default_value 'dev'
   c.flag [:p, :profiles]
 
-  c.action do |global_options, options, _args|
-    profiles = options[:profiles] && options[:profiles].split(',') || []
-    Bigrig::DevAction.new(global_options[:file], profiles).perform
+  c.action do |global_options, _options, _args|
+    Bigrig::DevAction.new(global_options[:active_containers]).perform
   end
 end
 
 desc 'Prints logs from the application'
 command :logs do |c|
+  c.desc 'profiles to activate'
+  c.flag [:p, :profiles]
+
   c.action do |global_options, _options, _args|
-    Bigrig::LogAction.new(global_options[:file]).perform
+    Bigrig::LogAction.new(global_options[:active_containers]).perform
   end
 end
 
@@ -48,17 +51,18 @@ command :run do |c|
   c.desc 'profiles to activate'
   c.flag [:p, :profiles]
 
-  c.action do |global_options, options, _args|
-    profiles = options[:profiles] && options[:profiles].split(',') || []
-
-    Bigrig::RunAction.new(global_options[:file], profiles).perform
+  c.action do |global_options, _options, _args|
+    Bigrig::RunAction.new(global_options[:active_containers]).perform
   end
 end
 
 desc 'Stop and destroy a bigrig application'
 command :destroy do |c|
+  c.desc 'profiles to activate'
+  c.flag [:p, :profiles]
+
   c.action do |global_options, _options, _args|
-    Bigrig::DestroyAction.new(global_options[:file]).perform
+    Bigrig::DestroyAction.new(global_options[:active_containers]).perform
   end
 end
 
@@ -85,12 +89,10 @@ command :ship do |c|
   end
 end
 
-pre do |_global, _command, _options, _args|
-  # Pre logic here
-  # Return true to proceed; false to abort and not call the
-  # chosen command
-  # Use skips_pre before a command to skip this block
-  # on that command only
+pre do |global_options, _command, options, _args|
+  profiles = options[:profiles] && options[:profiles].split(',') || []
+  active_containers = Bigrig::Descriptor.read(global_options[:file], profiles)
+  global_options[:active_containers] = active_containers.as_json
   true
 end
 

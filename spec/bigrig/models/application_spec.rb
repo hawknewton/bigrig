@@ -6,11 +6,12 @@ module Bigrig
     it { is_expected.to respond_to :containers }
     it { is_expected.to respond_to :containers= }
 
-    describe '::read' do
-      subject { described_class.read test_file file }
+    describe '::from_json' do
+      subject { described_class.from_json json }
 
       context 'given a simple file' do
         let(:file) { 'single.json' }
+        let(:json) { Descriptor.read(test_file(file)).as_json }
 
         its('containers.size') { is_expected.to eq 1 }
 

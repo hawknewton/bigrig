@@ -2,8 +2,10 @@ module Bigrig
   describe LogAction do
     describe '#perform' do
       subject { runner.perform }
-      let(:runner) { described_class.new(file) }
-      let(:file) { test_file 'log.json' }
+      let(:active_containers) { Descriptor.read test_file(file), active_profiles }
+      let(:active_profiles) { [] }
+      let(:runner) { described_class.new(active_containers.as_json) }
+      let(:file) { 'log.json' }
       let(:image) { Docker::Image.create 'fromImage' => 'hawknewton/log-test:0.0.1' }
       let(:container) { Docker::Container.get 'log-test' }
 

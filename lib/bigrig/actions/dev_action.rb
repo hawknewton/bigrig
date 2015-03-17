@@ -1,15 +1,19 @@
 module Bigrig
   class DevAction
-    def initialize(file, profiles = [])
-      @file = file
-      profiles.include?('dev') || profiles << 'dev'
-      @profiles = profiles
+    def initialize(active_containers)
+      @active_containers = active_containers
     end
 
     def perform
-      RunAction.new(@file, @profiles).perform
-      [:SIGTERM, :SIGINT].each { |s| Signal.trap(s) { DestroyAction.new(@file).perform } }
-      LogAction.new(@file).perform
+      RunAction.new(@active_containers).perform
+      [:SIGTERM, :SIGINT].each { |s| Signal.trap(s) { destroy } }
+      LogAction.new(@active_containers).perform
+    end
+
+    private
+
+    def destroy
+      DestroyAction.new(@active_containers).perform
     end
   end
 end
