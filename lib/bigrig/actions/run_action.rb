@@ -2,8 +2,8 @@ module Bigrig
   class RunAction
     attr_accessor :application
 
-    def initialize(file, active_profiles)
-      application = Application.read file, active_profiles
+    def initialize(active_containers)
+      application = Application.from_json active_containers
       @runner = Runner.new application
     end
 

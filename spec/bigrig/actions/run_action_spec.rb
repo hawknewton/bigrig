@@ -1,7 +1,8 @@
 module Bigrig
   describe RunAction do
     describe '::perform' do
-      subject { described_class.new(test_file(file), active_profiles).perform }
+      subject { described_class.new(descriptor.as_json).perform }
+      let(:descriptor) { Descriptor.read test_file(file), active_profiles }
       let(:active_profiles) { [] }
 
       context 'given a file with one container' do

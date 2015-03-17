@@ -1,7 +1,9 @@
 module Bigrig
   describe DestroyAction do
     describe '#perform' do
-      subject { described_class.new(test_file file).perform }
+      subject { described_class.new(active_containers.as_json).perform }
+      let(:active_containers) { Descriptor.read test_file(file), profiles }
+      let(:profiles) { [] }
 
       context 'given json with a single container' do
         let(:container) do
