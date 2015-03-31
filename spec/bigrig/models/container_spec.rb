@@ -16,6 +16,16 @@ module Bigrig
     it { is_expected.to respond_to :tag= }
     it { is_expected.to respond_to :volumes_from }
     it { is_expected.to respond_to :volumes_from= }
+    it { is_expected.to respond_to :volumes }
+    it { is_expected.to respond_to :volumes= }
+
+    it 'accepts volumes as an array' do
+      expect(Container.from_json(nil, 'volumes' => ['test']).volumes).to be_kind_of Array
+    end
+
+    it 'wraps a single volumes in an array' do
+      expect(Container.from_json(nil, 'volumes' => 'test').volumes).to be_kind_of Array
+    end
 
     it 'accepts volumes_from as an array' do
       expect(Container.from_json(nil, 'volumes_from' => ['test']).volumes_from).to be_kind_of Array
@@ -67,6 +77,9 @@ module Bigrig
 
         its(:volumes_from) { is_expected.to be_empty }
         its(:volumes_from) { is_expected.to be_a Array }
+
+        its(:volumes) { is_expected.to be_empty }
+        its(:volumes) { is_expected.to be_a Array }
 
         its(:ports) { is_expected.to be_a Array }
         its(:ports) { is_expected.to be_empty }

@@ -143,8 +143,28 @@ module Bigrig
         end
       end
 
-      context 'given a file with volumes_from' do
+      context 'given a file with volumes' do
         let(:file) { 'volumes.json' }
+        let(:container) { Docker::Container.get 'volumes' }
+        let(:volumes) { container.json['HostConfig']['Binds'] }
+        let(:perform) { subject }
+
+        after do
+          begin
+            c1 = Docker::Container.get 'volumes'
+            c1.kill.delete
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
+        end
+
+        it 'should pass volumes to the right container', :vcr do
+          perform
+          expect(volumes).to eq ['/tmp/test:/test']
+        end
+      end
+
+      context 'given a file with volumes_from' do
+        let(:file) { 'volumes_from.json' }
         let(:container) { Docker::Container.get 'mounts_volumes' }
         let(:volumes_from) { container.json['HostConfig']['VolumesFrom'] }
         let(:perform) { subject }
@@ -254,8 +274,11 @@ module Bigrig
         let(:active_profiles) { ['notreallyathing'] }
 
         after do
-          container = Docker::Container.get 'profiles'
-          container.delete force: true
+          begin
+            container = Docker::Container.get 'profiles'
+            container.delete force: true
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
         end
 
         it 'ignores the missing profile', :vcr do

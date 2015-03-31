@@ -84,7 +84,8 @@ module Bigrig
           'Links' => args[:links],
           'ExtraHosts' => hosts(args[:hosts]),
           'PortBindings' => port_bindings(args[:ports]),
-          'VolumesFrom' => args[:volumes_from]
+          'VolumesFrom' => args[:volumes_from],
+          'Binds' => args[:volumes]
         )
         container.id
       end

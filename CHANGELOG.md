@@ -17,3 +17,7 @@ Add -c flag to cleanup after ship
 0.0.7
 =====
 Add profiles to most commands
+
+0.1.0
+=====
+Add `volumes` attriute

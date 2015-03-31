@@ -1,0 +1,13 @@
+{
+  "containers": {
+    "exports_volumes": {
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1"
+    },
+    "mounts_volumes": {
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1",
+      "volumes_from": "exports_volumes"
+    }
+  }
+}

@@ -43,6 +43,7 @@ module Bigrig
         name: container.name,
         ports: container.ports,
         volumes_from: container.volumes_from,
+        volumes: container.volumes,
         links: container.links,
         hosts: container.hosts }
     end
