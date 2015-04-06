@@ -27,3 +27,7 @@ Add `volumes` attriute
 * Profiles with volumes or volumes_from now augment eachother
 * Profiles are applied based on the order they are defined
 * Enahnce output formatter
+
+0.1.2
+=====
+* Remove pry-bedbug
