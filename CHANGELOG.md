@@ -21,3 +21,9 @@ Add profiles to most commands
 0.1.0
 =====
 Add `volumes` attriute
+
+0.1.1
+=====
+* Profiles with volumes or volumes_from now augment eachother
+* Profiles are applied based on the order they are defined
+* Enahnce output formatter

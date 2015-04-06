@@ -25,6 +25,8 @@ module Bigrig
         container = container_map[name] ||= {}
         if value.is_a? Hash
           (container[key] ||= {}).merge! value
+        elsif %w(volumes volumes_from).include? key
+          container[key] = (([container[key]] || []) + [value]).flatten
         else
           container[key] = value
         end
@@ -33,6 +35,7 @@ module Bigrig
 
     def self.profiles_for(json, active_profiles)
       if json['profiles']
+        active_profiles = json['profiles'].keys.select { |x| active_profiles.include? x }
         profiles = active_profiles.map do |profile|
           [profile, json['profiles'][profile]]
         end

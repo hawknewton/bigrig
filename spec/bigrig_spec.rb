@@ -19,6 +19,15 @@ describe 'bigrig' do
         text.split("\n").each_with_object({}) { |e, o| o.store(*e.split('=')) }
       end
 
+      before do
+        ['dev-test', 'dev-logs'].each do |container|
+          begin
+            Docker::Container.get(container).kill.delete
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
+        end
+      end
+
       it 'starts the containers', :vcr do
         command = %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '})
         pid = Open4.popen4(command).first
@@ -37,7 +46,6 @@ describe 'bigrig' do
       it 'destroys containers on exit', :vcr do
         command = %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '})
         pid = Open4.popen4(command).first
-        sleep 2
         Process.kill :SIGINT, pid
         Process.wait pid
         begin

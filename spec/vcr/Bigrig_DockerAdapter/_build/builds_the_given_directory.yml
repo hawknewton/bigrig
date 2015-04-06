@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 12 Mar 2015 21:37:40 GMT
+      - Mon, 06 Apr 2015 18:58:50 GMT
     body:
       encoding: UTF-8
       string: "{\"stream\":\"Step 0 : FROM hawknewton/true\\n\"}\r\n{\"stream\":\"
         ---\\u003e 5fbce35eb337\\n\"}\r\n{\"stream\":\"Step 1 : ADD test /\\n\"}\r\n{\"stream\":\"
-        ---\\u003e 476bb395d050\\n\"}\r\n{\"stream\":\"Removing intermediate container
-        a7dcc091bbc5\\n\"}\r\n{\"stream\":\"Successfully built 476bb395d050\\n\"}\r\n"
+        ---\\u003e 295209ded430\\n\"}\r\n{\"stream\":\"Removing intermediate container
+        15fb9a7cee80\\n\"}\r\n{\"stream\":\"Successfully built 295209ded430\\n\"}\r\n"
     http_version: 
-  recorded_at: Thu, 12 Mar 2015 21:37:43 GMT
+  recorded_at: Mon, 06 Apr 2015 18:58:49 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/476bb395d050/json"
+    uri: "<DOCKER_HOST>/v1.16/images/295209ded430/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -51,13 +51,13 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 12 Mar 2015 21:37:41 GMT
+      - Mon, 06 Apr 2015 18:58:50 GMT
       Content-Length:
-      - '1545'
+      - '1546'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"a7dcc091bbc50de9aff3f3e8df9ef185301cd966d9022a5b73f609d52e6b6ba3","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:1cb489697a55d653f1feb7de29e7f70267402b9a9addcd5577961b16cf8bb7d7 in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-03-12T21:37:41.10438288Z","DockerVersion":"1.5.0","Id":"476bb395d0504e7bfa1e3f114219271d99b074739bdd404d9aa3c86d4c08bdcf","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"15fb9a7cee804001c0e0e3ea5088b7353bc94d1c65ebee62113c13db5225416d","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:52bbe35c91cffdfeb92fb63662070c50155097a3258f203651b09f30ca67781e in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T18:58:50.448219867Z","DockerVersion":"1.5.0","Id":"295209ded430eb021c525dd2d48e504a1c0029ce0d9e2b518bdd6a561cb59a80","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
     http_version: 
-  recorded_at: Thu, 12 Mar 2015 21:37:43 GMT
+  recorded_at: Mon, 06 Apr 2015 18:58:49 GMT
 recorded_with: VCR 2.9.3

@@ -9,6 +9,20 @@ module Bigrig
       let(:mock_io) { double IO }
       let(:output) { subject }
 
+      context 'when the document comes in multiple chunks' do
+        let(:input) { ['{"stream": "val', 'ue"}'] }
+        it 'parses the document' do
+          expect(output).to eq 'value'
+        end
+      end
+
+      context 'when the chunk contains multiple documents' do
+        let(:input) { '{"stream": "value1"} {"stream": "value2"}' }
+        it 'parses both documents' do
+          expect(output).to eq 'value1value2'
+        end
+      end
+
       context 'with input that has a stream' do
         let(:input) { '{"stream": "value"}' }
 
@@ -64,6 +78,14 @@ module Bigrig
 
         it 'pads the output' do
           expect(output).to eq "id: status progress                  \r"
+        end
+      end
+
+      context 'given string with tokens' do
+        let(:input) { '{"status": "bla bla bla} { \\" bla"}' }
+
+        it 'ignores the special characters' do
+          expect(output).to eq "bla bla bla} { \" bla\n"
         end
       end
     end

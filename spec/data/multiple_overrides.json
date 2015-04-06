@@ -1,0 +1,22 @@
+{
+  "containers": {
+    "container": {
+      "repo": "hawknewton/true",
+      "tag": "0.0.1"
+    }
+  },
+
+  "profiles": {
+    "profile1": {
+      "container": {
+        "tag": "profile1"
+      }
+    },
+
+    "profile2": {
+      "container": {
+        "tag": "profile2"
+      }
+    }
+  }
+}

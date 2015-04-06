@@ -1,0 +1,17 @@
+{
+  "containers": {
+    "adds_volumes_from": {
+      "repo": "hawknewton/true",
+      "tag": "0.0.1",
+      "volumes_from": "container1"
+    }
+  },
+
+  "profiles": {
+    "qa": {
+      "adds_volumes_from": {
+        "volumes_from": "container2"
+      }
+    }
+  }
+}

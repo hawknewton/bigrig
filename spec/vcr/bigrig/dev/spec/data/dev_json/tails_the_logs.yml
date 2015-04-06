@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -19,18 +19,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -47,18 +47,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -75,18 +75,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -103,18 +103,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -131,18 +131,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -159,18 +159,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -187,18 +187,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -215,13 +215,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 18:59:49 GMT
       Content-Length:
-      - '32'
+      - '28'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 18:59:48 GMT
 recorded_with: VCR 2.9.3

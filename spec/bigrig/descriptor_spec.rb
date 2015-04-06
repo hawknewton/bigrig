@@ -43,6 +43,40 @@ module Bigrig
       end
     end
 
+    context 'given a descriptor that adds a volume' do
+      let(:file) { 'adds_volume.json' }
+      let(:profiles) { ['qa'] }
+      let(:volumes) { subject.as_json['adds_volumes']['volumes'] }
+
+      it 'includes both volumes' do
+        expect(volumes).to be_a Array
+        expect(volumes).to include '/tmp/volume1'
+        expect(volumes).to include '/tmp/volume2'
+      end
+    end
+
+    context 'given a descriptor that adds a volumes_from' do
+      let(:file) { 'adds_volumes_from.json' }
+      let(:profiles) { ['qa'] }
+      let(:volumes_from) { subject.as_json['adds_volumes_from']['volumes_from'] }
+
+      it 'includes both volumes' do
+        expect(volumes_from).to be_a Array
+        expect(volumes_from).to include 'container1'
+        expect(volumes_from).to include 'container2'
+      end
+    end
+
+    context 'given a descriptor that overrides the same value in multiple profiles' do
+      let(:file) { 'multiple_overrides.json' }
+      let(:profiles) { %w(profile2 profile1) }
+      let(:tag) { subject.as_json['container']['tag'] }
+
+      it 'uses the last value in the file' do
+        expect(tag).to eq 'profile2'
+      end
+    end
+
     context 'given a descriptor that adds a container' do
       let(:file) { 'addscontainer.json' }
       let(:profiles) { ['new'] }
