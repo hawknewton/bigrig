@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bigrig (0.1.0)
+    bigrig (0.1.1)
       colorize (= 0.7.5)
       docker-api (= 1.20.0)
       gli (= 2.12.2)
@@ -28,7 +28,7 @@ GEM
     docker-api (1.20.0)
       excon (>= 0.38.0)
       json
-    excon (0.44.4)
+    excon (0.45.1)
     gli (2.12.2)
     json (1.8.2)
     method_source (0.8.2)
