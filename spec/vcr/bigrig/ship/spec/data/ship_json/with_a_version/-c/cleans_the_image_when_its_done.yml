@@ -19,18 +19,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:36 GMT
+      - Mon, 06 Apr 2015 22:00:29 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"aefb697d44375b545df2dd6ed6d4cc715f53b0511b1489415dd3a9c83ca88594","Warnings":null}
+        {"Id":"ec6f8ed5eab58e79d560886eb42f7b3fd5da2ab724ccf11760dde39c76b0f6bc","Warnings":null}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:35 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:28 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/aefb697d44375b545df2dd6ed6d4cc715f53b0511b1489415dd3a9c83ca88594/start"
+    uri: "<DOCKER_HOST>/v1.16/containers/ec6f8ed5eab58e79d560886eb42f7b3fd5da2ab724ccf11760dde39c76b0f6bc/start"
     body:
       encoding: UTF-8
       string: "{}"
@@ -45,15 +45,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 19:00:36 GMT
+      - Mon, 06 Apr 2015 22:00:29 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:35 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:28 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/192.168.59.104:5000/test/ship-me:1.2.3/json"
+    uri: "<DOCKER_HOST>/v1.16/images/<REPO_URL>/test/ship-me:1.2.3/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -70,18 +70,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 19:00:42 GMT
+      - Mon, 06 Apr 2015 22:00:35 GMT
       Content-Length:
       - '54'
     body:
       encoding: UTF-8
       string: |
-        No such image: 192.168.59.104:5000/test/ship-me:1.2.3
+        No such image: <REPO_URL>/test/ship-me:1.2.3
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:41 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:34 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/192.168.59.104:5000/test/ship-me:1.2.3/json"
+    uri: "<DOCKER_HOST>/v1.16/images/<REPO_URL>/test/ship-me:1.2.3/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -98,18 +98,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 19:00:42 GMT
+      - Mon, 06 Apr 2015 22:00:35 GMT
       Content-Length:
       - '54'
     body:
       encoding: UTF-8
       string: |
-        No such image: 192.168.59.104:5000/test/ship-me:1.2.3
+        No such image: <REPO_URL>/test/ship-me:1.2.3
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:41 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:34 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/192.168.59.104:5000/test/ship-me:1.2.3/json"
+    uri: "<DOCKER_HOST>/v1.16/images/<REPO_URL>/test/ship-me:1.2.3/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -126,18 +126,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 19:00:42 GMT
+      - Mon, 06 Apr 2015 22:00:35 GMT
       Content-Length:
       - '54'
     body:
       encoding: UTF-8
       string: |
-        No such image: 192.168.59.104:5000/test/ship-me:1.2.3
+        No such image: <REPO_URL>/test/ship-me:1.2.3
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:41 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:34 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/192.168.59.104:5000/test/ship-me:1.2.3/json"
+    uri: "<DOCKER_HOST>/v1.16/images/<REPO_URL>/test/ship-me:1.2.3/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -154,18 +154,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 19:00:42 GMT
+      - Mon, 06 Apr 2015 22:00:35 GMT
       Content-Length:
       - '54'
     body:
       encoding: UTF-8
       string: |
-        No such image: 192.168.59.104:5000/test/ship-me:1.2.3
+        No such image: <REPO_URL>/test/ship-me:1.2.3
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:41 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:34 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/aefb697d44375b545df2dd6ed6d4cc715f53b0511b1489415dd3a9c83ca88594/kill"
+    uri: "<DOCKER_HOST>/v1.16/containers/ec6f8ed5eab58e79d560886eb42f7b3fd5da2ab724ccf11760dde39c76b0f6bc/kill"
     body:
       encoding: US-ASCII
       string: ''
@@ -180,15 +180,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 19:00:43 GMT
+      - Mon, 06 Apr 2015 22:00:36 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:42 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:34 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/containers/aefb697d44375b545df2dd6ed6d4cc715f53b0511b1489415dd3a9c83ca88594"
+    uri: "<DOCKER_HOST>/v1.16/containers/ec6f8ed5eab58e79d560886eb42f7b3fd5da2ab724ccf11760dde39c76b0f6bc"
     body:
       encoding: US-ASCII
       string: ''
@@ -203,10 +203,10 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 19:00:43 GMT
+      - Mon, 06 Apr 2015 22:00:36 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:42 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:34 GMT
 recorded_with: VCR 2.9.3

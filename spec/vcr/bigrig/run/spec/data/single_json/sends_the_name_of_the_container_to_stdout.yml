@@ -19,16 +19,16 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:09 GMT
+      - Mon, 06 Apr 2015 22:00:09 GMT
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"92554903b415","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T19:00:09.259214654Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/92554903b415ba614481d0ad071dff3aa9111117bf0f0475274996c8bbc5e364/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/92554903b415ba614481d0ad071dff3aa9111117bf0f0475274996c8bbc5e364/hosts","Id":"92554903b415ba614481d0ad071dff3aa9111117bf0f0475274996c8bbc5e364","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/single-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.0.236","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:ec","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:00:ec","PortMapping":null,"Ports":{"80/tcp":null}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/92554903b415ba614481d0ad071dff3aa9111117bf0f0475274996c8bbc5e364/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":2086,"Restarting":false,"Running":true,"StartedAt":"2015-04-06T19:00:09.684317102Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"d5bb87d48e3b","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T22:00:09.268807745Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/d5bb87d48e3be1724194071028dce2c6981e346be496592a2a816d97693fef1f/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/d5bb87d48e3be1724194071028dce2c6981e346be496592a2a816d97693fef1f/hosts","Id":"d5bb87d48e3be1724194071028dce2c6981e346be496592a2a816d97693fef1f","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/single-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.1.235","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:1eb","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:01:eb","PortMapping":null,"Ports":{"80/tcp":null}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/d5bb87d48e3be1724194071028dce2c6981e346be496592a2a816d97693fef1f/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":7855,"Restarting":false,"Running":true,"StartedAt":"2015-04-06T22:00:09.683961028Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:08 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:08 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/92554903b415ba614481d0ad071dff3aa9111117bf0f0475274996c8bbc5e364/kill"
+    uri: "<DOCKER_HOST>/v1.16/containers/d5bb87d48e3be1724194071028dce2c6981e346be496592a2a816d97693fef1f/kill"
     body:
       encoding: US-ASCII
       string: ''
@@ -43,15 +43,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 19:00:10 GMT
+      - Mon, 06 Apr 2015 22:00:09 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:09 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:08 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/containers/92554903b415ba614481d0ad071dff3aa9111117bf0f0475274996c8bbc5e364"
+    uri: "<DOCKER_HOST>/v1.16/containers/d5bb87d48e3be1724194071028dce2c6981e346be496592a2a816d97693fef1f"
     body:
       encoding: US-ASCII
       string: ''
@@ -66,10 +66,10 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 19:00:10 GMT
+      - Mon, 06 Apr 2015 22:00:09 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:09 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:08 GMT
 recorded_with: VCR 2.9.3

@@ -19,18 +19,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:59:31 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58","Warnings":null}
+        {"Id":"32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832","Warnings":null}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:30 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -47,18 +47,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:59:31 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
       Content-Length:
-      - '1739'
+      - '1740'
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"1941f8a5a737","Image":"hawknewton/true","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T18:59:31.800250627Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/lonely_colden","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"32ada448dc85","Image":"hawknewton/true","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T21:59:32.295073872Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/dreamy_meitner","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:30 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -75,18 +75,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:59:31 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
       Content-Length:
-      - '1739'
+      - '1740'
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"1941f8a5a737","Image":"hawknewton/true","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T18:59:31.800250627Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/lonely_colden","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"32ada448dc85","Image":"hawknewton/true","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T21:59:32.295073872Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MountLabel":"","Name":"/dreamy_meitner","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:30 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/containers/1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58"
+    uri: "<DOCKER_HOST>/v1.16/containers/32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832"
     body:
       encoding: US-ASCII
       string: ''
@@ -101,15 +101,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -126,18 +126,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: 1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58
+        No such container: 32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -154,18 +154,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: 1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58
+        No such container: 32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -182,18 +182,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: 1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58
+        No such container: 32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -210,13 +210,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:32 GMT
+      - Mon, 06 Apr 2015 21:59:32 GMT
       Content-Length:
       - '84'
     body:
       encoding: UTF-8
       string: |
-        No such container: 1941f8a5a737d8ecd4ccb491f83144f916794e60cf6304c49489c36d549dcf58
+        No such container: 32ada448dc8554a5b372f6c1be44be03ea45e05e93c1c0806e777eda17301832
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:31 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:31 GMT
 recorded_with: VCR 2.9.3

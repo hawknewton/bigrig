@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:58:53 GMT
+      - Mon, 06 Apr 2015 21:59:02 GMT
       Content-Length:
       - '1479'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"cb0575974a6a573010bf8f4fa1ca6ce5ac4760b880c30db72ffe47a4c62849c0","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) CMD [/true]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-01-10T13:42:58.118276832Z","DockerVersion":"1.3.0","Id":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Os":"linux","Parent":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","Size":0,"VirtualSize":125}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:58:52 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:01 GMT
 - request:
     method: delete
     uri: "<DOCKER_HOST>/v1.16/images/hawknewton/true:not_exist"
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:58:53 GMT
+      - Mon, 06 Apr 2015 21:59:02 GMT
       Content-Length:
       - '43'
     body:
@@ -56,7 +56,7 @@ http_interactions:
         [{"Untagged":"hawknewton/true:not_exist"}
         ]
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:58:52 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:01 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/hawknewton/true:not_exist/json"
@@ -76,7 +76,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:58:53 GMT
+      - Mon, 06 Apr 2015 21:59:02 GMT
       Content-Length:
       - '41'
     body:
@@ -84,7 +84,7 @@ http_interactions:
       string: |
         No such image: hawknewton/true:not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:58:52 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:01 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/hawknewton/true:not_exist/json"
@@ -104,7 +104,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:58:53 GMT
+      - Mon, 06 Apr 2015 21:59:02 GMT
       Content-Length:
       - '41'
     body:
@@ -112,7 +112,7 @@ http_interactions:
       string: |
         No such image: hawknewton/true:not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:58:52 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:01 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/hawknewton/true:not_exist/json"
@@ -132,7 +132,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:58:53 GMT
+      - Mon, 06 Apr 2015 21:59:02 GMT
       Content-Length:
       - '41'
     body:
@@ -140,7 +140,7 @@ http_interactions:
       string: |
         No such image: hawknewton/true:not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:58:52 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:01 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/hawknewton/true:not_exist/json"
@@ -160,7 +160,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:58:54 GMT
+      - Mon, 06 Apr 2015 21:59:02 GMT
       Content-Length:
       - '41'
     body:
@@ -168,5 +168,5 @@ http_interactions:
       string: |
         No such image: hawknewton/true:not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:58:53 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:01 GMT
 recorded_with: VCR 2.9.3

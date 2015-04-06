@@ -21,15 +21,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:59:33 GMT
+      - Mon, 06 Apr 2015 21:59:33 GMT
     body:
       encoding: UTF-8
-      string: "{\"status\":\"195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449\"}\r\n"
+      string: "{\"status\":\"c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936\"}\r\n"
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:32 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:32 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449/json"
+    uri: "<DOCKER_HOST>/v1.16/images/c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -46,18 +46,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:59:33 GMT
+      - Mon, 06 Apr 2015 21:59:33 GMT
       Content-Length:
       - '679'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"Imported from -","Config":null,"Container":"","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T18:59:33.052824965Z","DockerVersion":"1.5.0","Id":"195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449","Os":"linux","Parent":"","Size":0,"VirtualSize":0}
+        {"Architecture":"amd64","Author":"","Comment":"Imported from -","Config":null,"Container":"","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T21:59:33.473333135Z","DockerVersion":"1.5.0","Id":"c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936","Os":"linux","Parent":"","Size":0,"VirtualSize":0}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:32 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:32 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/images/195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449?force=true"
+    uri: "<DOCKER_HOST>/v1.16/images/c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936?force=true"
     body:
       encoding: US-ASCII
       string: ''
@@ -74,19 +74,19 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 18:59:33 GMT
+      - Mon, 06 Apr 2015 21:59:33 GMT
       Content-Length:
       - '81'
     body:
       encoding: UTF-8
       string: |-
-        [{"Deleted":"195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449"}
+        [{"Deleted":"c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936"}
         ]
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:32 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:32 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449/json"
+    uri: "<DOCKER_HOST>/v1.16/images/c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -103,18 +103,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:33 GMT
+      - Mon, 06 Apr 2015 21:59:33 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449
+        No such image: c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:32 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:32 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449/json"
+    uri: "<DOCKER_HOST>/v1.16/images/c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -131,18 +131,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:33 GMT
+      - Mon, 06 Apr 2015 21:59:33 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449
+        No such image: c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:32 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:32 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449/json"
+    uri: "<DOCKER_HOST>/v1.16/images/c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -159,18 +159,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:33 GMT
+      - Mon, 06 Apr 2015 21:59:33 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449
+        No such image: c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:32 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:32 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449/json"
+    uri: "<DOCKER_HOST>/v1.16/images/c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -187,13 +187,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 18:59:33 GMT
+      - Mon, 06 Apr 2015 21:59:33 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 195d8dd1d566bdbd7e87e5b9e39ae2bd9c500459d5c1a7d8852bb36767030449
+        No such image: c87526584da794b88c2bdde032488b966e2c259d7b633293a0274e1c14aa1936
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 18:59:32 GMT
+  recorded_at: Mon, 06 Apr 2015 21:59:32 GMT
 recorded_with: VCR 2.9.3

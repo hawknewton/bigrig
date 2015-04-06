@@ -23,7 +23,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:22 GMT
+      - Mon, 06 Apr 2015 22:00:21 GMT
     body:
       encoding: UTF-8
       string: "{\"stream\":\"Step 0 : FROM hawknewton/true\\n\"}\r\n{\"status\":\"Pulling
@@ -37,13 +37,13 @@ http_interactions:
         complete\",\"progressDetail\":{},\"id\":\"5fbce35eb337\"}{\"status\":\"Status:
         Image is up to date for hawknewton/true:latest\"}\r\n{\"stream\":\" ---\\u003e
         5fbce35eb337\\n\"}\r\n{\"stream\":\"Step 1 : ADD test /\\n\"}\r\n{\"stream\":\"
-        ---\\u003e 079f64ba6864\\n\"}\r\n{\"stream\":\"Removing intermediate container
-        4c49f67bd884\\n\"}\r\n{\"stream\":\"Successfully built 079f64ba6864\\n\"}\r\n"
+        ---\\u003e 71676f2316b8\\n\"}\r\n{\"stream\":\"Removing intermediate container
+        cd92c5b233e1\\n\"}\r\n{\"stream\":\"Successfully built 71676f2316b8\\n\"}\r\n"
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:29 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:23 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/079f64ba6864/json"
+    uri: "<DOCKER_HOST>/v1.16/images/71676f2316b8/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -60,18 +60,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:30 GMT
+      - Mon, 06 Apr 2015 22:00:24 GMT
       Content-Length:
       - '1546'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"4c49f67bd8843731c521760b485982f48f1a183b7265897f32915623fab2715b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:90d3f9cb7659ccd473f08794972e503ef7704302d0144d14baa7ac6159b3f71b in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T19:00:30.546584911Z","DockerVersion":"1.5.0","Id":"079f64ba6864dfb9cf100fbcf189b39b68e96c1b0148aa616c8a36b40bb5795a","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"cd92c5b233e1ff8696cbb66d251c8e8fd761469b940af5c02a2af7f6eb5e27ca","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:bd8f31417e8a8088e4e474be5eb15e23dab457a47e522dcdeddf8dea00fa795c in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T22:00:24.255299919Z","DockerVersion":"1.5.0","Id":"71676f2316b8d6d0a01e7a1b979b292339b827387a58ab2057b4a4220440b6f7","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:29 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:23 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/images/079f64ba6864dfb9cf100fbcf189b39b68e96c1b0148aa616c8a36b40bb5795a/tag?force=true&repo=192.168.59.104%3A5000%2Ftest%2Fship-me&tag=1.2.3"
+    uri: "<DOCKER_HOST>/v1.16/images/71676f2316b8d6d0a01e7a1b979b292339b827387a58ab2057b4a4220440b6f7/tag?force=true&repo=<ENCODED_REPO_URL>%2Ftest%2Fship-me&tag=1.2.3"
     body:
       encoding: US-ASCII
       string: ''
@@ -86,7 +86,7 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 19:00:30 GMT
+      - Mon, 06 Apr 2015 22:00:24 GMT
       Content-Length:
       - '0'
       Content-Type:
@@ -95,10 +95,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:29 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:23 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/192.168.59.104:5000/test/ship-me:1.2.3/json"
+    uri: "<DOCKER_HOST>/v1.16/images/<REPO_URL>/test/ship-me:1.2.3/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -115,15 +115,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:30 GMT
+      - Mon, 06 Apr 2015 22:00:24 GMT
       Content-Length:
       - '1546'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"4c49f67bd8843731c521760b485982f48f1a183b7265897f32915623fab2715b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:90d3f9cb7659ccd473f08794972e503ef7704302d0144d14baa7ac6159b3f71b in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T19:00:30.546584911Z","DockerVersion":"1.5.0","Id":"079f64ba6864dfb9cf100fbcf189b39b68e96c1b0148aa616c8a36b40bb5795a","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"cd92c5b233e1ff8696cbb66d251c8e8fd761469b940af5c02a2af7f6eb5e27ca","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:bd8f31417e8a8088e4e474be5eb15e23dab457a47e522dcdeddf8dea00fa795c in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T22:00:24.255299919Z","DockerVersion":"1.5.0","Id":"71676f2316b8d6d0a01e7a1b979b292339b827387a58ab2057b4a4220440b6f7","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:29 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:23 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/json?all=true"
@@ -143,11 +143,31 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:30 GMT
+      - Mon, 06 Apr 2015 22:00:24 GMT
     body:
       encoding: UTF-8
       string: |-
-        [{"Created":1428346830,"Id":"079f64ba6864dfb9cf100fbcf189b39b68e96c1b0148aa616c8a36b40bb5795a","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["192.168.59.104:5000/test/ship-me:1.2.3"],"Size":0,"VirtualSize":125}
+        [{"Created":1428357624,"Id":"71676f2316b8d6d0a01e7a1b979b292339b827387a58ab2057b4a4220440b6f7","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["<REPO_URL>/test/ship-me:1.2.3"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428357538,"Id":"396ac7e65ba2b7e368237b560c43f1a6a02295ba1e32066f6c2d14c00afc8493","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428357538,"Id":"4d88c18f8cd7121b3372d4e73339e76cbbb7d617fe851f0a107fa4f192a0102d","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428357534,"Id":"e2037e82a884a27ca7d7f819172c8b87e2ad92901c41e9792003a3cb60346400","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428355730,"Id":"4bdc059336ed88e38db935d4009f00b6b3f07857c8aca6cdcb5d21c08ec7af9b","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428355642,"Id":"da2417b8fdad78024ae593ac2bbf128a5ff529d5ed5198895c7b615b01f2d6f7","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428355639,"Id":"b66bd1b60f8893c68850c90616f11370c21e021cbe9f0416394c537e388c6564","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428350119,"Id":"24c8d69218d7ba52199a6d3d02c3ea7c5d8ceff913bdaace7a05396d9c73b275","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428350032,"Id":"82747af76181f125a97e3b1315854de5216a1b609f49308c311e194447766c0e","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428350028,"Id":"78270f6e28e3ec08f4223e8e73226f8ceb68e757b8e5e18d8e76cf2ebdefbee4","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428349962,"Id":"92a0725858cff15102c484c5b8f0c99df768f8ac7908b900653fde760972f965","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428349875,"Id":"4d15b614ef381d32806191776b95c7f5ac8d97a2f23a75618d27cc5d7601da03","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428349872,"Id":"5f140e87d26ef1bc73bcd2f13c4c5041c359cef05f3b5f9b3b7840cfdd09c0fd","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428349162,"Id":"bed00dc6a14a23f17744da8e608108ddac0e0c1e10f68fd5cc9190a6c5630510","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428349078,"Id":"399105b7e99810846604fb632b9f533c29df4b8c89f0f99eaeb1eeb19f54c4c1","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428349078,"Id":"b0caedf7ac724b1b95e8e5c3b5e1c966b17ac9107a77eed7ce9d69f9f38d2868","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428349074,"Id":"295a4b7c42af0989e6330c6146da65a4d3f9eb00a3d25267ca685f3a8b86de55","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428347845,"Id":"0a27655f9255949b6cd9be43c4d4e9acf051de73c42f0157eafc8a63f75cece0","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428347755,"Id":"0aff1efc4e0c02ade4d859d7242b874c0e64a676925b75cd781547ded5ca6c35","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428347752,"Id":"1a54590c767f0b45fd42242e3f143abb0a27ae6aab50adbbc1f4a045bb72650e","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
+        ,{"Created":1428346830,"Id":"079f64ba6864dfb9cf100fbcf189b39b68e96c1b0148aa616c8a36b40bb5795a","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
         ,{"Created":1428346730,"Id":"295209ded430eb021c525dd2d48e504a1c0029ce0d9e2b518bdd6a561cb59a80","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
         ,{"Created":1428346726,"Id":"e028977a2b365dc617611d7652b70ac1f4c80a23aeff5ae5cebcafd2e39fcc4f","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
         ,{"Created":1428342758,"Id":"314c4be582f40c85ad91337de1494ed287025474549a55a740e3ff6a68c9885f","ParentId":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":125}
@@ -189,20 +209,20 @@ http_interactions:
         ,{"Created":1422470391,"Id":"100a1992ec48bfdaba03509a9d7996ed3106055f01512474eb6371f5ecac8b68","ParentId":"d96760d4a0ed439104425133cd6387dd41ce57a972553dfa83cf0861ee064a9d","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":1879,"VirtualSize":117030161}
         ,{"Created":1422470381,"Id":"d96760d4a0ed439104425133cd6387dd41ce57a972553dfa83cf0861ee064a9d","ParentId":"ac5159eeb0a3662f344fb31b458887044cabc8528e5e0b6d916ccee890abe72e","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":214981,"VirtualSize":117028282}
         ,{"Created":1422470368,"Id":"ac5159eeb0a3662f344fb31b458887044cabc8528e5e0b6d916ccee890abe72e","ParentId":"511136ea3c5a64f264b78b5433614aec563103b4d4702f3ba7d4d2698e22c158","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":116813301,"VirtualSize":116813301}
-        ,{"Created":1420897378,"Id":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","ParentId":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","RepoTags":["hawknewton/true:0.0.1","hawknewton/true:latest","hawknewton/true:not_exist","test/tag:1.2.3"],"Size":0,"VirtualSize":125}
         ,{"Created":1420897378,"Id":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","ParentId":"511136ea3c5a64f264b78b5433614aec563103b4d4702f3ba7d4d2698e22c158","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":125,"VirtualSize":125}
+        ,{"Created":1420897378,"Id":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","ParentId":"c0d55928342254f4d19858c0b9ef3991e22ee7d5c2e8f4a0239a398e4b4e657f","RepoTags":["hawknewton/true:0.0.1","hawknewton/true:latest","hawknewton/true:not_exist","test/tag:1.2.3"],"Size":0,"VirtualSize":125}
         ,{"Created":1414094442,"Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","ParentId":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","RepoTags":["hawknewton/show-env:0.0.1","hawknewton/show-env:latest"],"Size":0,"VirtualSize":801041825}
         ,{"Created":1414094441,"Id":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","ParentId":"b020883398e688aa4b142bda22696584e3e59f74322db5516780ceb9c36f3e8b","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":801041825}
         ,{"Created":1414094441,"Id":"b020883398e688aa4b142bda22696584e3e59f74322db5516780ceb9c36f3e8b","ParentId":"c18ee8e5eefa490253f2b261cb1e8841b7c9306f3d5b735fc1192dbbcb51caf7","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":40159,"VirtualSize":801041825}
+        ,{"Created":1413843388,"Id":"c18ee8e5eefa490253f2b261cb1e8841b7c9306f3d5b735fc1192dbbcb51caf7","ParentId":"30c479473225225d0b6da53390cc32f5e7adafde604e69710194dbaaef16df9d","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":801001666}
         ,{"Created":1413843388,"Id":"a490c0bc4c17e72be77abbb8bde7b39f82dd8d6d5175d0033c7cc83c988ddfb8","ParentId":"4e2f12b9e2460b6538505ab5002ab18dd2eaec6b1c78d531b9845b1048ace417","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":3957733,"VirtualSize":801001666}
         ,{"Created":1413843388,"Id":"30c479473225225d0b6da53390cc32f5e7adafde604e69710194dbaaef16df9d","ParentId":"a490c0bc4c17e72be77abbb8bde7b39f82dd8d6d5175d0033c7cc83c988ddfb8","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":801001666}
-        ,{"Created":1413843388,"Id":"c18ee8e5eefa490253f2b261cb1e8841b7c9306f3d5b735fc1192dbbcb51caf7","ParentId":"30c479473225225d0b6da53390cc32f5e7adafde604e69710194dbaaef16df9d","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":801001666}
-        ,{"Created":1413843381,"Id":"fd3901892100907b06fc49223e42df5b3fde62bbe5073bb07c3d3b169d884b28","ParentId":"4164e85056797ab350cc5de90e84f48f257c95c15c0d0ea3d7f08bae82f66379","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":23,"VirtualSize":797043933}
         ,{"Created":1413843381,"Id":"aa82a409e225dba4257f3e72814d417e05fbd86544904a1ae4c2c00f24ce35fc","ParentId":"fd3901892100907b06fc49223e42df5b3fde62bbe5073bb07c3d3b169d884b28","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":797043933}
         ,{"Created":1413843381,"Id":"4e2f12b9e2460b6538505ab5002ab18dd2eaec6b1c78d531b9845b1048ace417","ParentId":"aa82a409e225dba4257f3e72814d417e05fbd86544904a1ae4c2c00f24ce35fc","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":797043933}
+        ,{"Created":1413843381,"Id":"fd3901892100907b06fc49223e42df5b3fde62bbe5073bb07c3d3b169d884b28","ParentId":"4164e85056797ab350cc5de90e84f48f257c95c15c0d0ea3d7f08bae82f66379","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":23,"VirtualSize":797043933}
         ,{"Created":1412819608,"Id":"4164e85056797ab350cc5de90e84f48f257c95c15c0d0ea3d7f08bae82f66379","ParentId":"49d1d522cd44ba8f1db1a1ca5129d6ecaa9528afb86f4c3236a370f6d63d2dc4","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":98431386,"VirtualSize":797043910}
-        ,{"Created":1412819306,"Id":"4641ba92cd87925f11e4ec979e43e8ea77aa2a3fe7b62fafdd5ff2d61e37e532","ParentId":"eac5dcb909748ce68df211a443145fa36e52c4de57419b3330cb50346b42cc88","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":698612524}
         ,{"Created":1412819306,"Id":"49d1d522cd44ba8f1db1a1ca5129d6ecaa9528afb86f4c3236a370f6d63d2dc4","ParentId":"4641ba92cd87925f11e4ec979e43e8ea77aa2a3fe7b62fafdd5ff2d61e37e532","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":698612524}
+        ,{"Created":1412819306,"Id":"4641ba92cd87925f11e4ec979e43e8ea77aa2a3fe7b62fafdd5ff2d61e37e532","ParentId":"eac5dcb909748ce68df211a443145fa36e52c4de57419b3330cb50346b42cc88","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":698612524}
         ,{"Created":1412818980,"Id":"eac5dcb909748ce68df211a443145fa36e52c4de57419b3330cb50346b42cc88","ParentId":"7d2b41d8b63481696f0feddc568379f9263ed0be30ed0c944afaefd3ce7946b4","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":1442958,"VirtualSize":698612524}
         ,{"Created":1412800918,"Id":"7d2b41d8b63481696f0feddc568379f9263ed0be30ed0c944afaefd3ce7946b4","ParentId":"71e62a8beff35bb692f64fb2e04bf1d6d19f5262500ad05dd95b1a95dcb5599d","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":115429837,"VirtualSize":697169566}
         ,{"Created":1412800824,"Id":"71e62a8beff35bb692f64fb2e04bf1d6d19f5262500ad05dd95b1a95dcb5599d","ParentId":"53f380325ee97bd72fc8c5d9da68bdd0b6ec904e2619e3c22739d026786309d6","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":461720194,"VirtualSize":581739729}
@@ -211,10 +231,10 @@ http_interactions:
         ,{"Created":1371157430,"Id":"511136ea3c5a64f264b78b5433614aec563103b4d4702f3ba7d4d2698e22c158","ParentId":"","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":0}
         ]
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:29 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:23 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/079f64ba6864dfb9cf100fbcf189b39b68e96c1b0148aa616c8a36b40bb5795a/json"
+    uri: "<DOCKER_HOST>/v1.16/images/71676f2316b8d6d0a01e7a1b979b292339b827387a58ab2057b4a4220440b6f7/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -231,18 +251,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:30 GMT
+      - Mon, 06 Apr 2015 22:00:24 GMT
       Content-Length:
       - '1546'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"4c49f67bd8843731c521760b485982f48f1a183b7265897f32915623fab2715b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:90d3f9cb7659ccd473f08794972e503ef7704302d0144d14baa7ac6159b3f71b in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T19:00:30.546584911Z","DockerVersion":"1.5.0","Id":"079f64ba6864dfb9cf100fbcf189b39b68e96c1b0148aa616c8a36b40bb5795a","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"cd92c5b233e1ff8696cbb66d251c8e8fd761469b940af5c02a2af7f6eb5e27ca","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:bd8f31417e8a8088e4e474be5eb15e23dab457a47e522dcdeddf8dea00fa795c in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T22:00:24.255299919Z","DockerVersion":"1.5.0","Id":"71676f2316b8d6d0a01e7a1b979b292339b827387a58ab2057b4a4220440b6f7","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:29 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:23 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/images/192.168.59.104:5000/test/ship-me/push?tag=1.2.3"
+    uri: "<DOCKER_HOST>/v1.16/images/<REPO_URL>/test/ship-me/push?tag=1.2.3"
     body:
       encoding: US-ASCII
       string: ''
@@ -261,41 +281,41 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 19:00:35 GMT
+      - Mon, 06 Apr 2015 22:00:28 GMT
     body:
       encoding: UTF-8
-      string: "{\"status\":\"The push refers to a repository [192.168.59.104:5000/test/ship-me]
+      string: "{\"status\":\"The push refers to a repository [<REPO_URL>/test/ship-me]
         (len: 1)\"}\r\n{\"status\":\"Sending image list\"}\r\n{\"status\":\"Pushing
-        repository 192.168.59.104:5000/test/ship-me (1 tags)\"}\r\n{\"status\":\"Pushing\",\"progressDetail\":{},\"id\":\"511136ea3c5a\"}{\"status\":\"Buffering
-        to disk\",\"progressDetail\":{\"current\":1024,\"start\":1428346835},\"progress\":\"1.024
-        kB\",\"id\":\"511136ea3c5a\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428346835},\"id\":\"511136ea3c5a\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":1024,\"start\":1428346835},\"progress\":\"[=========================\\u003e
-        \                        ]    512 B/1.024 kB 0\",\"id\":\"511136ea3c5a\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
-        1.024 kB/1.024 kB\",\"id\":\"511136ea3c5a\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
+        repository <REPO_URL>/test/ship-me (1 tags)\"}\r\n{\"status\":\"Pushing\",\"progressDetail\":{},\"id\":\"511136ea3c5a\"}{\"status\":\"Buffering
+        to disk\",\"progressDetail\":{\"current\":1024,\"start\":1428357628},\"progress\":\"1.024
+        kB\",\"id\":\"511136ea3c5a\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428357628},\"id\":\"511136ea3c5a\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":1024,\"start\":1428357628},\"progress\":\"[=========================\\u003e
+        \                        ]    512 B/1.024 kB 0\",\"id\":\"511136ea3c5a\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
+        1.024 kB/1.024 kB\",\"id\":\"511136ea3c5a\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
         1.024 kB/1.024 kB\",\"id\":\"511136ea3c5a\"}{\"status\":\"Image successfully
         pushed\",\"progressDetail\":{},\"id\":\"511136ea3c5a\"}{\"status\":\"Pushing\",\"progressDetail\":{},\"id\":\"c0d559283422\"}{\"status\":\"Buffering
-        to disk\",\"progressDetail\":{\"current\":2048,\"start\":1428346835},\"progress\":\"2.048
-        kB\",\"id\":\"c0d559283422\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428346835},\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":2048,\"start\":1428346835},\"progress\":\"[============\\u003e
-        \                                     ]    512 B/2.048 kB 0\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":637,\"total\":2048,\"start\":1428346835},\"progress\":\"[===============\\u003e
-        \                                  ]    637 B/2.048 kB 0\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":2048,\"start\":1428346835},\"progress\":\"[=========================\\u003e
-        \                        ] 1.024 kB/2.048 kB 0\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1536,\"total\":2048,\"start\":1428346835},\"progress\":\"[=====================================\\u003e
-        \            ] 1.536 kB/2.048 kB 0\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":2048,\"total\":2048,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
-        2.048 kB/2.048 kB\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":2048,\"total\":2048,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
+        to disk\",\"progressDetail\":{\"current\":2048,\"start\":1428357628},\"progress\":\"2.048
+        kB\",\"id\":\"c0d559283422\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428357628},\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":2048,\"start\":1428357628},\"progress\":\"[============\\u003e
+        \                                     ]    512 B/2.048 kB 2s\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":637,\"total\":2048,\"start\":1428357628},\"progress\":\"[===============\\u003e
+        \                                  ]    637 B/2.048 kB 1s\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":2048,\"start\":1428357628},\"progress\":\"[=========================\\u003e
+        \                        ] 1.024 kB/2.048 kB 0\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1536,\"total\":2048,\"start\":1428357628},\"progress\":\"[=====================================\\u003e
+        \            ] 1.536 kB/2.048 kB 0\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":2048,\"total\":2048,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
+        2.048 kB/2.048 kB\",\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":2048,\"total\":2048,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
         2.048 kB/2.048 kB\",\"id\":\"c0d559283422\"}{\"status\":\"Image successfully
         pushed\",\"progressDetail\":{},\"id\":\"c0d559283422\"}{\"status\":\"Pushing\",\"progressDetail\":{},\"id\":\"5fbce35eb337\"}{\"status\":\"Buffering
-        to disk\",\"progressDetail\":{\"current\":1024,\"start\":1428346835},\"progress\":\"1.024
-        kB\",\"id\":\"5fbce35eb337\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428346835},\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":1024,\"start\":1428346835},\"progress\":\"[=========================\\u003e
-        \                        ]    512 B/1.024 kB 0\",\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
-        1.024 kB/1.024 kB\",\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
+        to disk\",\"progressDetail\":{\"current\":1024,\"start\":1428357628},\"progress\":\"1.024
+        kB\",\"id\":\"5fbce35eb337\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428357628},\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":1024,\"start\":1428357628},\"progress\":\"[=========================\\u003e
+        \                        ]    512 B/1.024 kB 0\",\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
+        1.024 kB/1.024 kB\",\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1024,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
         1.024 kB/1.024 kB\",\"id\":\"5fbce35eb337\"}{\"status\":\"Image successfully
-        pushed\",\"progressDetail\":{},\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{},\"id\":\"079f64ba6864\"}{\"status\":\"Buffering
-        to disk\",\"progressDetail\":{\"current\":1536,\"start\":1428346835},\"progress\":\"1.536
-        kB\",\"id\":\"079f64ba6864\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428346835},\"id\":\"079f64ba6864\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":1536,\"start\":1428346835},\"progress\":\"[================\\u003e
-        \                                 ]    512 B/1.536 kB 0\",\"id\":\"079f64ba6864\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1536,\"start\":1428346835},\"progress\":\"[=================================\\u003e
-        \                ] 1.024 kB/1.536 kB 0\",\"id\":\"079f64ba6864\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1536,\"total\":1536,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
-        1.536 kB/1.536 kB\",\"id\":\"079f64ba6864\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1536,\"total\":1536,\"start\":1428346835},\"progress\":\"[==================================================\\u003e]
-        1.536 kB/1.536 kB\",\"id\":\"079f64ba6864\"}{\"status\":\"Image successfully
-        pushed\",\"progressDetail\":{},\"id\":\"079f64ba6864\"}{\"status\":\"Pushing
-        tag for rev [079f64ba6864] on {http://192.168.59.104:5000/v1/repositories/test/ship-me/tags/1.2.3}\"}\r\n"
+        pushed\",\"progressDetail\":{},\"id\":\"5fbce35eb337\"}{\"status\":\"Pushing\",\"progressDetail\":{},\"id\":\"71676f2316b8\"}{\"status\":\"Buffering
+        to disk\",\"progressDetail\":{\"current\":1536,\"start\":1428357628},\"progress\":\"1.536
+        kB\",\"id\":\"71676f2316b8\"}{\"status\":\"Buffering to disk\",\"progressDetail\":{\"start\":1428357628},\"id\":\"71676f2316b8\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":512,\"total\":1536,\"start\":1428357628},\"progress\":\"[================\\u003e
+        \                                 ]    512 B/1.536 kB 1s\",\"id\":\"71676f2316b8\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1024,\"total\":1536,\"start\":1428357628},\"progress\":\"[=================================\\u003e
+        \                ] 1.024 kB/1.536 kB 0\",\"id\":\"71676f2316b8\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1536,\"total\":1536,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
+        1.536 kB/1.536 kB\",\"id\":\"71676f2316b8\"}{\"status\":\"Pushing\",\"progressDetail\":{\"current\":1536,\"total\":1536,\"start\":1428357628},\"progress\":\"[==================================================\\u003e]
+        1.536 kB/1.536 kB\",\"id\":\"71676f2316b8\"}{\"status\":\"Image successfully
+        pushed\",\"progressDetail\":{},\"id\":\"71676f2316b8\"}{\"status\":\"Pushing
+        tag for rev [71676f2316b8] on {http://<REPO_URL>/v1/repositories/test/ship-me/tags/1.2.3}\"}\r\n"
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 19:00:34 GMT
+  recorded_at: Mon, 06 Apr 2015 22:00:27 GMT
 recorded_with: VCR 2.9.3
