@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 module Bigrig
   class OutputParser
     def self.parser_proc
