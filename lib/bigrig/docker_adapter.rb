@@ -12,7 +12,7 @@ module Bigrig
   class DockerAdapter
     class << self
       def build(path, &block)
-        Docker::Image.build_from_dir(path, {}, connection, &block).id
+        Docker::Image.build_from_tar(Docker::Util.create_dir_tar(path), {}, connection, &block).id
       end
 
       def container_exists?(name)

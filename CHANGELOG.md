@@ -31,3 +31,7 @@ Add `volumes` attriute
 0.1.2
 =====
 * Remove pry-bedbug
+
+0.1.4
+=====
+* Unbreak build caching
