@@ -4,7 +4,7 @@ module Bigrig
 
     def initialize(active_containers)
       application = Application.from_json active_containers
-      @runner = Runner.new application
+      @runner = Runner.new application.containers
     end
 
     def perform

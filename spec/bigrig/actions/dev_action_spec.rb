@@ -2,7 +2,7 @@ module Bigrig
   describe DevAction do
     describe '#perform' do
       subject { described_class.new descriptor.as_json }
-      let(:descriptor) { Descriptor.new test_file(file), profiles }
+      let(:descriptor) { Descriptor.read test_file(file), profiles }
 
       context 'when no profile is provided' do
         let(:profiles) { [] }

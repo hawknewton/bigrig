@@ -1,7 +1,12 @@
 module Bigrig
   class Runner
-    def initialize(application)
-      @application = application
+    def self.start(container)
+      puts "Starting #{container.name}"
+      puts DockerAdapter.run docker_opts_for container
+    end
+
+    def initialize(containers)
+      @containers = containers
     end
 
     def run
@@ -10,13 +15,11 @@ module Bigrig
 
     private
 
+    attr_accessor :containers
+
     def build(path)
       puts "Building #{path}"
       DockerAdapter.build path, &OutputParser.parser_proc
-    end
-
-    def containers
-      @application.containers
     end
 
     def depends_on_containers(container, containers)
@@ -33,22 +36,21 @@ module Bigrig
     end
 
     def docker_opts(step)
-      step.map do |container|
-        docker_opts_for(container).merge image_id: image_id(container)
-      end
+      step.map { |c| Runner.docker_opts_for c }
     end
 
-    def docker_opts_for(container)
+    def self.docker_opts_for(container)
       { env: container.env,
         name: container.name,
         ports: container.ports,
         volumes_from: container.volumes_from,
         volumes: container.volumes,
         links: container.links,
-        hosts: container.hosts }
+        hosts: container.hosts,
+        image_id: image_id(container) }
     end
 
-    def image_id(container)
+    def self.image_id(container)
       if container.path
         build container.path
       else
