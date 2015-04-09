@@ -1,10 +1,5 @@
 module Bigrig
   class Runner
-    def self.start(container)
-      puts "Starting #{container.name}"
-      puts DockerAdapter.run docker_opts_for container
-    end
-
     def initialize(containers)
       @containers = containers
     end
@@ -36,10 +31,10 @@ module Bigrig
     end
 
     def docker_opts(step)
-      step.map { |c| Runner.docker_opts_for c }
+      step.map { |c| docker_opts_for c }
     end
 
-    def self.docker_opts_for(container)
+    def docker_opts_for(container)
       { env: container.env,
         name: container.name,
         ports: container.ports,
@@ -50,7 +45,7 @@ module Bigrig
         image_id: image_id(container) }
     end
 
-    def self.image_id(container)
+    def image_id(container)
       if container.path
         build container.path
       else
