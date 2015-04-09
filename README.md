@@ -55,6 +55,7 @@ generate a docker image.
       "ports": ["80:80"],
       "repo": "hawknewton/my-awesome-app",
       "path": ".",
+      "scan": "target/app.war",
       "env": {
         "USE_SSL": true,
         "CACHE_TIMEOUT": "3600"
