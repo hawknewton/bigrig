@@ -20,12 +20,12 @@ module Bigrig
       subject { described_class.new(containers).resolve_subtree target }
       context 'given three containers, two of which have a relationship' do
         let(:target) do
-          Container.new(name: 'target')
+          containers[0]
         end
 
         let(:containers) do
           [
-            target,
+            Container.new(name: 'target', volumes_from: ['test2']),
             Container.new(name: 'test1', volumes_from: ['target']),
             Container.new(name: 'test2')
           ]
