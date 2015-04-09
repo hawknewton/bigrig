@@ -1,0 +1,18 @@
+{
+  "containers": {
+    "scanning": {
+      "repo": "hawknewton/log-test",
+      "tag": "0.0.1",
+      "scan": "/tmp/scan/**"
+    },
+    "uses_scanning": {
+      "repo": "hawknewton/log-test",
+      "tag": "0.0.1",
+      "links": "scanning:scanning"
+    },
+    "some_ahole": {
+      "repo": "hawknewton/log-test",
+      "tag": "0.0.1"
+    }
+  }
+}

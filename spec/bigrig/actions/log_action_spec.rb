@@ -10,6 +10,10 @@ module Bigrig
       let(:container) { Docker::Container.get 'log-test' }
 
       before do
+        begin
+          Docker::Container.get('log-test').kill.delete
+        rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+        end
         Docker::Container.create('Image' => image.id, 'name' => 'log-test').start
       end
 
@@ -24,7 +28,7 @@ module Bigrig
           and_yield(:stdout, 'stdout message').
           and_yield(:stderr, 'stderr message')
         expect($stdout).to receive(:puts).with "\e[0;32;49mlog-test\e[0m: stdout message"
-        expect(runner).to receive(:print).
+        expect_any_instance_of(LogTailer).to receive(:print).
           with "\e[0;32;49mlog-test\e[0m: \e[0;91;49mstderr message\e[0m"
         subject
       end

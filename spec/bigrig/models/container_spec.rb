@@ -12,6 +12,8 @@ module Bigrig
     it { is_expected.to respond_to :ports= }
     it { is_expected.to respond_to :repo }
     it { is_expected.to respond_to :repo= }
+    it { is_expected.to respond_to :scan= }
+    it { is_expected.to respond_to :scan }
     it { is_expected.to respond_to :tag }
     it { is_expected.to respond_to :tag= }
     it { is_expected.to respond_to :volumes_from }
@@ -83,7 +85,6 @@ module Bigrig
 
         its(:ports) { is_expected.to be_a Array }
         its(:ports) { is_expected.to be_empty }
-
       end
 
       context 'given json with a path' do
@@ -91,6 +92,14 @@ module Bigrig
 
         it 'sets the path' do
           expect(subject.path).to eq '/path/to/Dockerfile'
+        end
+      end
+
+      context 'given json with a scan' do
+        let(:json) { { 'scan' => '/path/to/scan' } }
+
+        it 'sets the path' do
+          expect(subject.scan).to eq '/path/to/scan'
         end
       end
 

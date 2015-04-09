@@ -90,6 +90,18 @@ def capture_stdout(command)
   [pid, output]
 end
 
+def drain_io(io)
+  Thread.new do
+    loop do
+      begin
+        puts io.read_nonblock 512_000
+      rescue IO::EAGAINWaitReadable # rubocop:disable Lint/HandleExceptions
+      end
+      sleep 0.1
+    end
+  end
+end
+
 def read_stdout(stdout)
   output = ''
   5.times do
@@ -101,4 +113,17 @@ def read_stdout(stdout)
     sleep 1
   end
   output
+end
+
+def wait_for(containers)
+  [containers].flatten.each do |container|
+    Timeout.timeout(5) do
+      begin
+        Docker::Container.get container
+      rescue Docker::Error::NotFoundError
+        sleep 0.5
+        retry
+      end
+    end
+  end
 end

@@ -11,8 +11,61 @@ describe 'bigrig' do
   end
 
   describe 'dev' do
+    context 'spec/data/scan.json' do
+      let(:args) { ['-f', 'spec/data/scan.json', 'dev'] }
+      let(:command) { %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '}) }
+
+      before do
+        FileUtils.mkdir_p '/tmp/scan'
+        FileUtils.touch '/tmp/scan/scan.me'
+      end
+
+      it 'restarts the container when the scanned file changes', :vcr do
+        pid, _stdin, stdout, _stderr = Open4.popen4(command)
+        drain_io stdout
+
+        wait_for %w(scanning uses_scanning some_ahole)
+        before_image = Docker::Container.get 'scanning'
+        FileUtils.touch '/tmp/scan/scan.me'
+        sleep 3
+        wait_for 'scanning'
+        expect(before_image.id).to_not eq Docker::Container.get('scanning').id
+        Process.kill :SIGINT, pid
+        Process.wait pid
+      end
+
+      it 'restarts dependant containers when the scanned file changes', :vcr do
+        pid, _stdin, stdout, _stderr = Open4.popen4(command)
+        drain_io stdout
+        wait_for %w(scanning uses_scanning some_ahole)
+        before_image = Docker::Container.get 'uses_scanning'
+
+        FileUtils.touch '/tmp/scan/scan.me'
+        sleep 3
+        wait_for 'uses_scanning'
+        expect(before_image.id).to_not eq Docker::Container.get('uses_scanning').id
+        Process.kill :SIGINT, pid
+        Process.wait pid
+      end
+
+      it 'leaves unaffected containers alone when the scanned file changes', :vcr do
+        pid, _stdin, stdout, _stderr = Open4.popen4(command)
+        drain_io stdout
+        wait_for %w(scanning uses_scanning some_ahole)
+        before_image = Docker::Container.get 'some_ahole'
+
+        FileUtils.touch '/tmp/scan/scan.me'
+        sleep 3
+        wait_for %w(scanning uses_scanning)
+        expect(before_image.id).to eq Docker::Container.get('some_ahole').id
+        Process.kill :SIGINT, pid
+        Process.wait pid
+      end
+    end
+
     context 'spec/data/dev.json' do
       let(:args) { ['-f', 'spec/data/dev.json', 'dev'] }
+      let(:command) { %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '}) }
       let(:env) do
         url = URI.parse Docker.connection.url
         text = Net::HTTP.get URI.parse("http://#{url.host}:4568")
@@ -29,8 +82,8 @@ describe 'bigrig' do
       end
 
       it 'starts the containers', :vcr do
-        command = %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '})
         pid = Open4.popen4(command).first
+        wait_for %w(dev-test dev-logs)
         sleep 2
         dev_test = Docker::Container.get('dev-test')
         dev_logs = Docker::Container.get('dev-logs')
@@ -44,7 +97,6 @@ describe 'bigrig' do
       end
 
       it 'destroys containers on exit', :vcr do
-        command = %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '})
         pid = Open4.popen4(command).first
         Process.kill :SIGINT, pid
         Process.wait pid
@@ -61,8 +113,8 @@ describe 'bigrig' do
       end
 
       it 'activates the dev profile', :vcr do
-        command = %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '})
         pid = Open4.popen4(command).first
+        wait_for 'dev-test'
         sleep 2
         begin
           expect(env).to include 'PROFILE' => 'dev'
@@ -73,7 +125,6 @@ describe 'bigrig' do
       end
 
       it 'tails the logs', :vcr do
-        command = %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '})
         pid, output = capture_stdout command
         Process.kill :SIGINT, pid
         Process.wait pid

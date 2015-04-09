@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -55,7 +55,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -83,7 +83,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -111,7 +111,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -131,7 +131,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -139,7 +139,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -159,7 +159,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -167,7 +167,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -187,7 +187,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -195,7 +195,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -215,7 +215,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Thu, 09 Apr 2015 19:01:34 GMT
       Content-Length:
       - '28'
     body:
@@ -223,7 +223,259 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:34 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:34 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:34 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:36 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:34 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:37 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:34 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:37 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:34 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:37 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:35 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:37 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Content-Type:
+      - text/plain; charset=utf-8
+      Date:
+      - Thu, 09 Apr 2015 19:01:35 GMT
+      Content-Length:
+      - '28'
+    body:
+      encoding: UTF-8
+      string: |
+        No such container: dev-test
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:37 GMT
+- request:
+    method: get
+    uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Swipely/Docker-API 1.20.0
+      Content-Type:
+      - text/plain
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 09 Apr 2015 19:01:35 GMT
+      Content-Length:
+      - '1998'
+    body:
+      encoding: UTF-8
+      string: |
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PROFILE=dev","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"c6e6e663983e","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-09T19:01:35.595354943Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"c6e6e663983e9da77c292788bfd628ea94bebb5f8e2581c5b0407d7de527a6e3","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/dev-test","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":null,"VolumesRW":null}
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 19:01:38 GMT
 - request:
     method: get
     uri: "<TEST_URL>/"
@@ -250,12 +502,12 @@ http_interactions:
         BUNDLE_APP_CONFIG=/usr/local/bundle
         GEM_HOME=/usr/local/bundle
         HOME=/root
-        HOSTNAME=828f606793da
+        HOSTNAME=c6e6e663983e
         PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
         PROFILE=dev
         PWD=/
         RUBY_MAJOR=2.1
         RUBY_VERSION=2.1.3
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:48 GMT
+  recorded_at: Thu, 09 Apr 2015 19:01:40 GMT
 recorded_with: VCR 2.9.3

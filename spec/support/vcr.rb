@@ -3,6 +3,7 @@ require 'webmock'
 require 'docker'
 
 VCR.configure do |c|
+  ENV['VCR_RECORD_ALL'] == 'true' && c.default_cassette_options = { record: :all }
   docker_host = URI.parse(Docker.url).host
   c.allow_http_connections_when_no_cassette = false
   c.filter_sensitive_data('<USERNAME>') { ENV['DOCKER_API_USER'] }
