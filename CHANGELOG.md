@@ -35,3 +35,7 @@ Add `volumes` attriute
 0.1.4
 =====
 * Unbreak build caching
+
+0.2.0
+=====
+* Added `scan` functionality
