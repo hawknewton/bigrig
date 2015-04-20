@@ -39,3 +39,7 @@ Add `volumes` attriute
 0.2.0
 =====
 * Added `scan` functionality
+
+0.2.2
+=====
+* scanned containers no longer restart their dependencies
