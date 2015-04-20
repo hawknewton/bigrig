@@ -18,18 +18,26 @@ describe 'bigrig' do
       before do
         FileUtils.mkdir_p '/tmp/scan'
         FileUtils.touch '/tmp/scan/scan.me'
+
+        %w(scanning uses_scanning some_ahole).each do |name|
+          begin
+            Docker::Container.get(name).kill.delete
+          rescue Docker::Error::NotFoundError # rubocop:disable Lint/HandleExceptions
+          end
+        end
       end
 
       it 'restarts the container when the scanned file changes', :vcr do
         pid, _stdin, stdout, _stderr = Open4.popen4(command)
         drain_io stdout
 
-        wait_for %w(scanning uses_scanning some_ahole)
-        before_image = Docker::Container.get 'scanning'
+        scanning = wait_for_containers(%w(scanning uses_scanning some_ahole)).first
+
         FileUtils.touch '/tmp/scan/scan.me'
-        sleep 3
-        wait_for 'scanning'
-        expect(before_image.id).to_not eq Docker::Container.get('scanning').id
+        expect { Docker::Container.get('scanning').id }.to eventually_not(eq scanning.id).
+          by_suppressing_errors
+        wait_for { Docker::Container.get('uses_scanning').info['State']['Running'] }.to eq true
+
         Process.kill :SIGINT, pid
         Process.wait pid
       end
@@ -37,13 +45,14 @@ describe 'bigrig' do
       it 'restarts dependant containers when the scanned file changes', :vcr do
         pid, _stdin, stdout, _stderr = Open4.popen4(command)
         drain_io stdout
-        wait_for %w(scanning uses_scanning some_ahole)
-        before_image = Docker::Container.get 'uses_scanning'
+
+        before_image = wait_for_containers(%w(uses_scanning scanning some_ahole)).first
 
         FileUtils.touch '/tmp/scan/scan.me'
-        sleep 3
-        wait_for 'uses_scanning'
-        expect(before_image.id).to_not eq Docker::Container.get('uses_scanning').id
+        expect { Docker::Container.get('uses_scanning').id }.to eventually_not(eq before_image.id).
+          by_suppressing_errors
+        wait_for { Docker::Container.get('uses_scanning').info['State']['Running'] }.to eq true
+
         Process.kill :SIGINT, pid
         Process.wait pid
       end
@@ -51,13 +60,14 @@ describe 'bigrig' do
       it 'leaves unaffected containers alone when the scanned file changes', :vcr do
         pid, _stdin, stdout, _stderr = Open4.popen4(command)
         drain_io stdout
-        wait_for %w(scanning uses_scanning some_ahole)
-        before_image = Docker::Container.get 'some_ahole'
+        containers = wait_for_containers(%w(some_ahole uses_scanning scanning ))
 
         FileUtils.touch '/tmp/scan/scan.me'
-        sleep 3
-        wait_for %w(scanning uses_scanning)
-        expect(before_image.id).to eq Docker::Container.get('some_ahole').id
+
+        wait_for { Docker::Container.get('uses_scanning').id }.to_not eq containers[1].id
+        wait_for { Docker::Container.get('scanning').id }.to_not eq containers[2].id
+
+        expect(Docker::Container.get('some_ahole').id).to eq containers.first.id
         Process.kill :SIGINT, pid
         Process.wait pid
       end
@@ -67,9 +77,11 @@ describe 'bigrig' do
       let(:args) { ['-f', 'spec/data/dev.json', 'dev'] }
       let(:command) { %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '}) }
       let(:env) do
-        url = URI.parse Docker.connection.url
-        text = Net::HTTP.get URI.parse("http://#{url.host}:4568")
-        text.split("\n").each_with_object({}) { |e, o| o.store(*e.split('=')) }
+        lambda do
+          url = URI.parse Docker.connection.url
+          text = Net::HTTP.get URI.parse("http://#{url.host}:4568")
+          text.split("\n").each_with_object({}) { |e, o| o.store(*e.split('=')) }
+        end
       end
 
       before do
@@ -83,13 +95,12 @@ describe 'bigrig' do
 
       it 'starts the containers', :vcr do
         pid = Open4.popen4(command).first
-        wait_for %w(dev-test dev-logs)
-        sleep 2
-        dev_test = Docker::Container.get('dev-test')
-        dev_logs = Docker::Container.get('dev-logs')
         begin
-          expect(dev_test.json['State']['Running']).to be true
-          expect(dev_logs.json['State']['Running']).to be true
+          expect { Docker::Container.get('dev-test').json['State']['Running'] }.
+            to eventually(be true).by_suppressing_errors
+
+          expect { Docker::Container.get('dev-logs').json['State']['Running'] }.
+            to eventually(be true).by_suppressing_errors
         ensure
           Process.kill :SIGINT, pid
           Process.wait pid
@@ -114,10 +125,9 @@ describe 'bigrig' do
 
       it 'activates the dev profile', :vcr do
         pid = Open4.popen4(command).first
-        wait_for 'dev-test'
-        sleep 2
         begin
-          expect(env).to include 'PROFILE' => 'dev'
+          wait_for { Docker::Container.get('dev-test').info['State']['Running'] }.to eq true
+          expect { env.call }.to eventually(include 'PROFILE' => 'dev').by_suppressing_errors
         ensure
           Process.kill :SIGINT, pid
           Process.wait pid
@@ -183,9 +193,11 @@ describe 'bigrig' do
       let(:image) { Docker::Image.get 'hawknewton/show-env' }
       let(:file) { 'spec/data/profiles.json' }
       let(:env) do
-        url = URI.parse Docker.connection.url
-        text = Net::HTTP.get URI.parse("http://#{url.host}:4567")
-        text.split("\n").each_with_object({}) { |e, o| o.store(*e.split('=')) }
+        lambda do
+          url = URI.parse Docker.connection.url
+          text = Net::HTTP.get URI.parse("http://#{url.host}:4567")
+          text.split("\n").each_with_object({}) { |e, o| o.store(*e.split('=')) }
+        end
       end
 
       after { container.kill.delete }
@@ -197,14 +209,12 @@ describe 'bigrig' do
 
       it 'overrides the env', :vcr do
         subject
-        sleep 1
-        expect(env).to include 'NAME1' => 'VALUE1A'
+        expect { env.call }.to eventually(include 'NAME1' => 'VALUE1A').by_suppressing_errors
       end
 
       it 'leaves existing env values alone', :vcr do
         subject
-        sleep 1
-        expect(env).to include 'NAME2' => 'VALUE2'
+        expect { env.call }.to eventually(include 'NAME2' => 'VALUE2').by_suppressing_errors
       end
     end
   end

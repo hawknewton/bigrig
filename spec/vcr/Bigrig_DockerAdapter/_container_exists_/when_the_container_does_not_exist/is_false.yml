@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:58:59 GMT
+      - Mon, 20 Apr 2015 23:28:15 GMT
       Content-Length:
       - '44'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:58:57 GMT
+  recorded_at: Mon, 20 Apr 2015 23:28:14 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/container_does_not_exist/json"
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:58:59 GMT
+      - Mon, 20 Apr 2015 23:28:15 GMT
       Content-Length:
       - '44'
     body:
@@ -55,7 +55,7 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:58:57 GMT
+  recorded_at: Mon, 20 Apr 2015 23:28:14 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/container_does_not_exist/json"
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:58:59 GMT
+      - Mon, 20 Apr 2015 23:28:15 GMT
       Content-Length:
       - '44'
     body:
@@ -83,7 +83,7 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:58:58 GMT
+  recorded_at: Mon, 20 Apr 2015 23:28:15 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/container_does_not_exist/json"
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:58:59 GMT
+      - Mon, 20 Apr 2015 23:28:15 GMT
       Content-Length:
       - '44'
     body:
@@ -111,5 +111,5 @@ http_interactions:
       string: |
         No such container: container_does_not_exist
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:58:58 GMT
+  recorded_at: Mon, 20 Apr 2015 23:28:15 GMT
 recorded_with: VCR 2.9.3

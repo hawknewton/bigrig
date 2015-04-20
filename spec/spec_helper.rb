@@ -1,5 +1,6 @@
 require 'bigrig'
 require 'rspec/its'
+require 'rspec/eventually'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
@@ -113,17 +114,4 @@ def read_stdout(stdout)
     sleep 1
   end
   output
-end
-
-def wait_for(containers)
-  [containers].flatten.each do |container|
-    Timeout.timeout(5) do
-      begin
-        Docker::Container.get container
-      rescue Docker::Error::NotFoundError
-        sleep 0.5
-        retry
-      end
-    end
-  end
 end

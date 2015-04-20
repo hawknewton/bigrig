@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -55,7 +55,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -83,7 +83,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -111,7 +111,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -131,7 +131,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -139,7 +139,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -159,7 +159,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -167,7 +167,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -187,7 +187,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -195,7 +195,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -215,7 +215,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -223,7 +223,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:44 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -243,7 +243,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:20 GMT
       Content-Length:
       - '28'
     body:
@@ -251,7 +251,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -271,7 +271,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:21 GMT
       Content-Length:
       - '28'
     body:
@@ -279,7 +279,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -299,7 +299,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:21 GMT
       Content-Length:
       - '28'
     body:
@@ -307,7 +307,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-test/json"
@@ -327,7 +327,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:21 GMT
       Content-Length:
       - '28'
     body:
@@ -335,7 +335,7 @@ http_interactions:
       string: |
         No such container: dev-test
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -355,7 +355,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:21 GMT
       Content-Length:
       - '28'
     body:
@@ -363,7 +363,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -383,7 +383,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:21 GMT
       Content-Length:
       - '28'
     body:
@@ -391,7 +391,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -411,7 +411,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:21 GMT
       Content-Length:
       - '28'
     body:
@@ -419,7 +419,7 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/dev-logs/json"
@@ -439,7 +439,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 21:59:46 GMT
+      - Mon, 20 Apr 2015 23:29:21 GMT
       Content-Length:
       - '28'
     body:
@@ -447,5 +447,5 @@ http_interactions:
       string: |
         No such container: dev-logs
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:59:45 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:20 GMT
 recorded_with: VCR 2.9.3

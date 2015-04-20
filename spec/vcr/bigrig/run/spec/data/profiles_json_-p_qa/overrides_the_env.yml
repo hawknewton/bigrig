@@ -26,7 +26,7 @@ http_interactions:
         BUNDLE_APP_CONFIG=/usr/local/bundle
         GEM_HOME=/usr/local/bundle
         HOME=/root
-        HOSTNAME=47fc0b69b6f3
+        HOSTNAME=ce902ad9be84
         NAME1=VALUE1A
         NAME2=VALUE2
         PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -34,7 +34,7 @@ http_interactions:
         RUBY_MAJOR=2.1
         RUBY_VERSION=2.1.3
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:13 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:42 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -54,16 +54,16 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 22:00:14 GMT
+      - Mon, 20 Apr 2015 23:29:42 GMT
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["NAME1=VALUE1A","NAME2=VALUE2","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"47fc0b69b6f3","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-06T22:00:13.118196387Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4567"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/47fc0b69b6f355df9376bc53e410605f6b41574e16235738dbae0890ac33e456/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/47fc0b69b6f355df9376bc53e410605f6b41574e16235738dbae0890ac33e456/hosts","Id":"47fc0b69b6f355df9376bc53e410605f6b41574e16235738dbae0890ac33e456","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/profiles","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.1.237","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:1ed","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:01:ed","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4567"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/47fc0b69b6f355df9376bc53e410605f6b41574e16235738dbae0890ac33e456/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":7892,"Restarting":false,"Running":true,"StartedAt":"2015-04-06T22:00:13.625332603Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","ruby /code/server.rb"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["NAME1=VALUE1A","NAME2=VALUE2","PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"ce902ad9be84","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-20T23:29:42.172318202Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"ContainerIDFile":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LxcConf":null,"NetworkMode":"","PidMode":"","PortBindings":{"80/tcp":[{"HostIp":"","HostPort":"4567"}]},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/ce902ad9be8410d03b4caf15c330fcbf95368802b7e13d110cce8f8c1dac595f/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/ce902ad9be8410d03b4caf15c330fcbf95368802b7e13d110cce8f8c1dac595f/hosts","Id":"ce902ad9be8410d03b4caf15c330fcbf95368802b7e13d110cce8f8c1dac595f","Image":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","MountLabel":"","Name":"/profiles","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.7.230","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:7e6","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:07:e6","PortMapping":null,"Ports":{"80/tcp":[{"HostIp":"0.0.0.0","HostPort":"4567"}]}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/ce902ad9be8410d03b4caf15c330fcbf95368802b7e13d110cce8f8c1dac595f/resolv.conf","RestartCount":0,"State":{"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":13891,"Restarting":false,"Running":true,"StartedAt":"2015-04-20T23:29:42.596715511Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:13 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:42 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/47fc0b69b6f355df9376bc53e410605f6b41574e16235738dbae0890ac33e456/kill"
+    uri: "<DOCKER_HOST>/v1.16/containers/ce902ad9be8410d03b4caf15c330fcbf95368802b7e13d110cce8f8c1dac595f/kill"
     body:
       encoding: US-ASCII
       string: ''
@@ -78,15 +78,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 22:00:14 GMT
+      - Mon, 20 Apr 2015 23:29:42 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:13 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:42 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/containers/47fc0b69b6f355df9376bc53e410605f6b41574e16235738dbae0890ac33e456"
+    uri: "<DOCKER_HOST>/v1.16/containers/ce902ad9be8410d03b4caf15c330fcbf95368802b7e13d110cce8f8c1dac595f"
     body:
       encoding: US-ASCII
       string: ''
@@ -101,10 +101,10 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 22:00:15 GMT
+      - Mon, 20 Apr 2015 23:29:42 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:13 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:42 GMT
 recorded_with: VCR 2.9.3
