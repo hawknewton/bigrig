@@ -10,7 +10,8 @@ module Bigrig
     end
 
     def resolve_subtree(container)
-      startup_order @containers.select { |c| resolve_deps(c, []).include? container.name }
+      subtree = @containers.select { |c| resolve_deps(c, []).include? container.name }
+      startup_order(subtree) & subtree
     end
 
     private
@@ -26,6 +27,7 @@ module Bigrig
     end
 
     def resolve_deps(container, resolved)
+      container || return
       container.dependencies.each do |dep_name|
         resolve_deps @map[dep_name], resolved unless resolved.include? dep_name
       end

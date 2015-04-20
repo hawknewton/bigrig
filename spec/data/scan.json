@@ -3,7 +3,8 @@
     "scanning": {
       "repo": "hawknewton/log-test",
       "tag": "0.0.1",
-      "scan": "/tmp/scan/**"
+      "scan": "/tmp/scan/**",
+      "links": "some_ahole:some_ahole"
     },
     "uses_scanning": {
       "repo": "hawknewton/log-test",

@@ -20,19 +20,25 @@ module Bigrig
       subject { described_class.new(containers).resolve_subtree target }
       context 'given three containers, two of which have a relationship' do
         let(:target) do
-          containers[0]
+          containers[2]
         end
+
+        let(:subtree) { subject }
 
         let(:containers) do
           [
-            Container.new(name: 'target', volumes_from: ['test2']),
             Container.new(name: 'test1', volumes_from: ['target']),
-            Container.new(name: 'test2')
+            Container.new(name: 'test2'),
+            Container.new(name: 'target', volumes_from: ['test2'])
           ]
         end
 
         it 'resolves only related containers' do
-          expect(subject.map(&:name)).to eq %w(target test1)
+          expect(subtree.map(&:name)).to match_array %w(target test1)
+        end
+
+        it 'orders containers in restart order' do
+          expect(subtree.map(&:name)).to eq %w(target test1)
         end
       end
     end

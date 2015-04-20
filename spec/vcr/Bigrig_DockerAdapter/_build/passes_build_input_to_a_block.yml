@@ -23,13 +23,13 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 21:58:58 GMT
+      - Mon, 20 Apr 2015 23:28:14 GMT
     body:
       encoding: UTF-8
       string: "{\"stream\":\"Step 0 : FROM hawknewton/true\\n\"}\r\n{\"stream\":\"
         ---\\u003e 5fbce35eb337\\n\"}\r\n{\"stream\":\"Step 1 : ADD test /\\n\"}\r\n{\"stream\":\"
-        ---\\u003e 4d88c18f8cd7\\n\"}\r\n{\"stream\":\"Removing intermediate container
-        e072d6c4f6c3\\n\"}\r\n{\"stream\":\"Successfully built 4d88c18f8cd7\\n\"}\r\n"
+        ---\\u003e 26b842674509\\n\"}\r\n{\"stream\":\"Removing intermediate container
+        4b0b49e895da\\n\"}\r\n{\"stream\":\"Successfully built 26b842674509\\n\"}\r\n"
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 21:58:57 GMT
+  recorded_at: Mon, 20 Apr 2015 23:28:14 GMT
 recorded_with: VCR 2.9.3

@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 22:00:15 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '1859'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:15 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -55,7 +55,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:15 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -83,7 +83,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:15 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -111,7 +111,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -131,7 +131,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:16 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -139,7 +139,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -159,7 +159,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:16 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -167,7 +167,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -187,7 +187,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:16 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -195,7 +195,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -215,7 +215,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:16 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -223,7 +223,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/profiles/json"
@@ -243,7 +243,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 06 Apr 2015 22:00:16 GMT
+      - Mon, 20 Apr 2015 23:29:43 GMT
       Content-Length:
       - '28'
     body:
@@ -251,7 +251,7 @@ http_interactions:
       string: |
         No such container: profiles
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: post
     uri: "<DOCKER_HOST>/v1.16/containers/create?name=profiles"
@@ -271,18 +271,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 06 Apr 2015 22:00:16 GMT
+      - Mon, 20 Apr 2015 23:29:44 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"3ba98e81286cec5d3bf0f95c6a055ae990fc48254397cfdeac741b3676f5c276","Warnings":null}
+        {"Id":"f571d0fd7a0875236574e62188a590a3c7a8e00ba239af4f8e12e45d223011e3","Warnings":null}
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:14 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:43 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/3ba98e81286cec5d3bf0f95c6a055ae990fc48254397cfdeac741b3676f5c276/start"
+    uri: "<DOCKER_HOST>/v1.16/containers/f571d0fd7a0875236574e62188a590a3c7a8e00ba239af4f8e12e45d223011e3/start"
     body:
       encoding: UTF-8
       string: '{"Links":[],"ExtraHosts":[],"PortBindings":{"80/tcp":[{"HostPort":"4567"}]},"VolumesFrom":[],"Binds":[]}'
@@ -297,10 +297,10 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 06 Apr 2015 22:00:16 GMT
+      - Mon, 20 Apr 2015 23:29:44 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 06 Apr 2015 22:00:15 GMT
+  recorded_at: Mon, 20 Apr 2015 23:29:44 GMT
 recorded_with: VCR 2.9.3
