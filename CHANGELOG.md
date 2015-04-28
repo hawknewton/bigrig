@@ -43,3 +43,7 @@ Add `volumes` attriute
 0.2.2
 =====
 * scanned containers no longer restart their dependencies
+
+0.3.0
+=====
+* Honor .dockerignore, if present
