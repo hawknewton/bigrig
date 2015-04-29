@@ -47,3 +47,7 @@ Add `volumes` attriute
 0.3.0
 =====
 * Honor .dockerignore, if present
+
+0.3.1
+=====
+* OutputParser now emits newlines correctly
