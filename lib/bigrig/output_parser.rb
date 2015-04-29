@@ -1,7 +1,8 @@
 module Bigrig
   class OutputParser
     def self.parser_proc
-      proc { |chunk| print OutputParser.new.parse chunk }
+      parser = OutputParser.new
+      proc { |chunk| print parser.parse chunk }
     end
 
     def initialize
