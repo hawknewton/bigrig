@@ -168,14 +168,14 @@ describe 'bigrig' do
   end
 
   describe 'run' do
+    after { container.kill.delete }
+
     context 'spec/data/single.json' do
       let(:args) { ['run'] }
       let(:output) { subject }
       let(:container) { Docker::Container.get 'single-test' }
       let(:running?) { container.json['State']['Running'] }
       let(:file) { 'spec/data/single.json' }
-
-      after { container.kill.delete }
 
       it 'starts the container', :vcr do
         subject
@@ -200,8 +200,6 @@ describe 'bigrig' do
         end
       end
 
-      after { container.kill.delete }
-
       it 'overrides the tag', :vcr do
         subject
         expect(container.info['Image']).to eq image.id
@@ -215,6 +213,21 @@ describe 'bigrig' do
       it 'leaves existing env values alone', :vcr do
         subject
         expect { env.call }.to eventually(include 'NAME2' => 'VALUE2').by_suppressing_errors
+      end
+    end
+
+    context 'spec/data/wait_for.json' do
+      let(:args) { ['run'] }
+      let(:output) { subject }
+      let(:file) { 'spec/data/wait_for.json' }
+      let(:container) { Docker::Container.get 'wait_for-test' }
+      let(:result) do
+        Docker::Container.get('wait_for-test').exec(['cat', '/tmp/result.txt']).first.first.to_i
+      end
+
+      it 'waits for wait_for', :vcr do
+        subject
+        expect(result).to be 2
       end
     end
   end

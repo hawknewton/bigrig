@@ -1,0 +1,9 @@
+{
+  "containers": {
+    "wait_for-test": {
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1",
+      "wait_for": ["bash", "-c", "B=$(date +%s);sleep 2;echo $(($(date +%s) - $B)) > /tmp/result.txt"]
+    }
+  }
+}

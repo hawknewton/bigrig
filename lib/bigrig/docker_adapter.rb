@@ -21,6 +21,10 @@ module Bigrig
         false
       end
 
+      def exec(name, command)
+        Docker::Container.get(name).exec(command)
+      end
+
       def hosts(arr)
         (arr || []).map do |line|
           parts = line.split ':'
@@ -80,13 +84,9 @@ module Bigrig
 
       def run(args)
         container = create_container args
-        container.start(
-          'Links' => args[:links],
-          'ExtraHosts' => hosts(args[:hosts]),
-          'PortBindings' => port_bindings(args[:ports]),
-          'VolumesFrom' => args[:volumes_from],
-          'Binds' => args[:volumes]
-        )
+        container.start('Links' => args[:links], 'ExtraHosts' => hosts(args[:hosts]),
+                        'PortBindings' => port_bindings(args[:ports]),
+                        'VolumesFrom' => args[:volumes_from], 'Binds' => args[:volumes])
         container.id
       end
 
