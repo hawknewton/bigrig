@@ -59,3 +59,7 @@ Add `volumes` attriute
 0.4.1
 =====
 * wait_for failures fail bigrig
+
+0.4.2
+=====
+* Fix nasty jruby incompadability
