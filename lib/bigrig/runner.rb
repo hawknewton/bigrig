@@ -34,6 +34,7 @@ module Bigrig
       step.map { |c| docker_opts_for c }
     end
 
+    # This is so retarded
     def docker_opts_for(container)
       { env: container.env,
         name: container.name,
@@ -42,7 +43,8 @@ module Bigrig
         volumes: container.volumes,
         links: container.links,
         hosts: container.hosts,
-        image_id: image_id(container) }
+        image_id: image_id(container),
+        wait_for: container.wait_for }
     end
 
     def image_id(container)
@@ -70,6 +72,7 @@ module Bigrig
         Thread.new do
           puts "Starting #{container[:name]}"
           puts DockerAdapter.run(container)
+          wait_for container
         end
       end
 
@@ -87,6 +90,12 @@ module Bigrig
         current_step << container
       end
       steps
+    end
+
+    def wait_for(container)
+      container[:wait_for].empty? && return
+      puts "Waiting for `#{container[:wait_for].join ' '}` to compelte on #{container[:name]}"
+      DockerAdapter.exec(container[:name], container[:wait_for])
     end
   end
 end

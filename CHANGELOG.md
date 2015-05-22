@@ -51,3 +51,7 @@ Add `volumes` attriute
 0.3.1
 =====
 * OutputParser now emits newlines correctly
+
+0.4.1
+=====
+* Add wait_for semantics

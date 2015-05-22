@@ -20,6 +20,8 @@ module Bigrig
     it { is_expected.to respond_to :volumes_from= }
     it { is_expected.to respond_to :volumes }
     it { is_expected.to respond_to :volumes= }
+    it { is_expected.to respond_to :wait_for }
+    it { is_expected.to respond_to :wait_for= }
 
     it 'accepts volumes as an array' do
       expect(Container.from_json(nil, 'volumes' => ['test']).volumes).to be_kind_of Array
@@ -59,6 +61,14 @@ module Bigrig
 
     it 'depends on containers it links to' do
       expect(Container.from_json(nil, 'links' => 'machine:alias').dependencies).to eq ['machine']
+    end
+
+    it 'accepts wait_for as an array' do
+      expect(Container.from_json(nil, 'wait_for' => ['test']).wait_for).to be_kind_of Array
+    end
+
+    it 'wraps a single wait_for in an array' do
+      expect(Container.from_json(nil, 'wait_for' => 'test').wait_for).to be_kind_of Array
     end
 
     describe '#dependencies' do
@@ -130,6 +140,14 @@ module Bigrig
 
         it 'has ports' do
           expect(subject.ports).to eq ['80:8080', '12345']
+        end
+      end
+
+      context 'given json with wait_for' do
+        let(:json) { { 'wait_for' => 'random command' } }
+
+        it 'has wait_for' do
+          expect(subject.wait_for).to eq ['random command']
         end
       end
     end
