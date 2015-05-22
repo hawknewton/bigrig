@@ -230,6 +230,21 @@ describe 'bigrig' do
         expect(result).to be 2
       end
     end
+
+    context 'spec/data/wait_for_broken.json' do
+      let(:command) { %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '}) }
+      let(:args) { %w(-f spec/data/wait_for_broken.json run) }
+      let(:container) do
+        Docker::Container.get('wait_for_broken-test')
+      end
+
+      it 'fails with an error', :vcr do
+        pid, output = capture_stdout command
+        Process.kill :SIGINT, pid
+        Process.wait pid
+        expect(output).to match(/Error waiting for container/)
+      end
+    end
   end
 
   describe 'destroy' do

@@ -1,0 +1,9 @@
+{
+  "containers": {
+    "wait_for_broken-test": {
+      "repo": "hawknewton/show-env",
+      "tag": "0.0.1",
+      "wait_for": "/i/do/not/exist"
+    }
+  }
+}

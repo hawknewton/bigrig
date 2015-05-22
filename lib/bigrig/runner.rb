@@ -95,7 +95,8 @@ module Bigrig
     def wait_for(container)
       container[:wait_for].empty? && return
       puts "Waiting for `#{container[:wait_for].join ' '}` to compelte on #{container[:name]}"
-      DockerAdapter.exec(container[:name], container[:wait_for])
+      result = DockerAdapter.exec(container[:name], container[:wait_for])
+      result[2] != 0 && fail("Error waiting for container: #{result.first.first}")
     end
   end
 end
