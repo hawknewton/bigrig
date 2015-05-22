@@ -10,15 +10,6 @@ module Bigrig
       @buffer = ''
     end
 
-    # WTF jruby?!
-    def as_array(input)
-      if input.is_a? Enumerator
-        input.each_with_object([]) { |ch, x| x << ch }
-      else
-        input
-      end
-    end
-
     def parse(input)
       output = documents(input).map do |json|
         if json['errorDetail']
@@ -52,7 +43,7 @@ module Bigrig
 
     # rubocop:disable all
     def next_document
-      chars = as_array @buffer.chars
+      chars = @buffer.chars
       i = count = 0
       string = false
 
