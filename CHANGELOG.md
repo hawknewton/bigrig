@@ -52,6 +52,10 @@ Add `volumes` attriute
 =====
 * OutputParser now emits newlines correctly
 
-0.4.1
+0.4.0
 =====
 * Add wait_for semantics
+
+0.4.1
+=====
+* wait_for failures fail bigrig
