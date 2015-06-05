@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -19,15 +19,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '1859'
+      - '1887'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/hawknewton/show-env:0.0.1/json"
@@ -36,7 +36,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -47,15 +47,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '1859'
+      - '1887'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"d6d34d2bfd452f4175eab78597ddd29856f0af494d503b00f4160d5eb3f13f1b","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ENTRYPOINT [/bin/sh -c ruby /code/server.rb]"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":["/bin/sh","-c","ruby /code/server.rb"],"Env":["PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","RUBY_MAJOR=2.1","RUBY_VERSION=2.1.3","GEM_HOME=/usr/local/bundle","BUNDLE_APP_CONFIG=/usr/local/bundle"],"ExposedPorts":{"80/tcp":{}},"Hostname":"e5474231b7cd","Image":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2014-10-23T20:00:42.057514693Z","DockerVersion":"1.3.0","Id":"b9c5be3a918d80b0d898ed8eca3fc76f75c482b531238e539cb00f75bb4e12d2","Os":"linux","Parent":"4929b61a5fda27a07a26efc94ad61504c0f4aa2fb50471bfa4fd61c656d42131","Size":0,"VirtualSize":801041825}
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -64,7 +64,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -75,15 +75,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -92,7 +92,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -103,15 +103,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -120,7 +120,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -131,15 +131,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -148,7 +148,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -159,15 +159,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -176,7 +176,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -187,15 +187,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -204,7 +204,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -215,15 +215,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -232,7 +232,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -243,15 +243,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -260,7 +260,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -271,15 +271,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -288,7 +288,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -299,15 +299,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -316,7 +316,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -327,15 +327,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:16 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -344,7 +344,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -355,15 +355,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:16 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:17 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -372,7 +372,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -383,15 +383,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:17 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:17 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -400,7 +400,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -411,15 +411,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:56 GMT
+      - Fri, 05 Jun 2015 23:25:17 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:17 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -428,7 +428,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -439,15 +439,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:57 GMT
+      - Fri, 05 Jun 2015 23:25:17 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:17 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -456,7 +456,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -467,15 +467,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:57 GMT
+      - Fri, 05 Jun 2015 23:25:17 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:17 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -484,7 +484,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -495,15 +495,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:57 GMT
+      - Fri, 05 Jun 2015 23:25:17 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:56 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:17 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -512,7 +512,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -523,15 +523,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:57 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -540,7 +540,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -551,15 +551,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:57 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -568,7 +568,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -579,15 +579,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:58 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test1/json"
@@ -596,7 +596,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -607,15 +607,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test1
+        no such id: multiple-test1
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:58 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -624,7 +624,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -635,15 +635,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:58 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -652,7 +652,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -663,15 +663,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:58 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -680,7 +680,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -691,15 +691,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:58 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/multiple-test2/json"
@@ -708,7 +708,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -719,13 +719,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:27:58 GMT
+      - Fri, 05 Jun 2015 23:25:18 GMT
       Content-Length:
-      - '34'
+      - '27'
     body:
       encoding: UTF-8
       string: |
-        No such container: multiple-test2
+        no such id: multiple-test2
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:27:58 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:18 GMT
 recorded_with: VCR 2.9.3

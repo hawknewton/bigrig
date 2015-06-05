@@ -216,26 +216,40 @@ describe 'bigrig' do
       end
     end
 
-    context 'spec/data/wait_for.json' do
+    context 'spec/data/wait_for/bigrig.json' do
       let(:args) { ['run'] }
       let(:output) { subject }
-      let(:file) { 'spec/data/wait_for.json' }
+      let(:file) { 'bigrig.json' }
+      let(:here) { "#{File.expand_path '../..', __FILE__}/" }
       let(:container) { Docker::Container.get 'wait_for-test' }
       let(:result) do
-        Docker::Container.get('wait_for-test').exec(['cat', '/tmp/result.txt']).first.first.to_i
+        Docker::Container.get('wait_for-test').exec(['cat', '/tmp/result.txt']).first.first.strip
+      end
+
+      around do |example|
+        Dir.chdir 'spec/data/wait_for' do
+          example.run
+        end
       end
 
       it 'waits for wait_for', :vcr do
         subject
-        expect(result).to be 2
+        expect(result).to eq '2'
       end
     end
 
     context 'spec/data/wait_for_broken.json' do
-      let(:command) { %(spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '}) }
-      let(:args) { %w(-f spec/data/wait_for_broken.json run) }
+      let(:command) { %(#{here}spec/support/bigrig_vcr "#{casette_name}" #{args.join ' '}) }
+      let(:args) { ['run'] }
+      let(:here) { "#{File.expand_path '../..', __FILE__}/" }
       let(:container) do
         Docker::Container.get('wait_for_broken-test')
+      end
+
+      around do |example|
+        Dir.chdir 'spec/data/wait_for_broken' do
+          example.run
+        end
       end
 
       it 'fails with an error', :vcr do

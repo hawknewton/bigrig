@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - application/tar
       Transfer-Encoding:
@@ -21,21 +21,21 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 Apr 2015 23:28:46 GMT
+      - Fri, 05 Jun 2015 23:26:24 GMT
     body:
       encoding: UTF-8
-      string: "{\"status\":\"fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b\"}\r\n"
+      string: "{\"status\":\"6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f\"}\r\n"
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:46 GMT
+  recorded_at: Fri, 05 Jun 2015 23:26:24 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b/json"
+    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -46,24 +46,24 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 Apr 2015 23:28:46 GMT
+      - Fri, 05 Jun 2015 23:26:24 GMT
       Content-Length:
-      - '678'
+      - '1080'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"Imported from -","Config":null,"Container":"","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-04-20T23:28:46.30247942Z","DockerVersion":"1.5.0","Id":"fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b","Os":"linux","Parent":"","Size":0,"VirtualSize":0}
+        {"Architecture":"amd64","Author":"","Comment":"Imported from -","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-05T23:26:24.520700554Z","DockerVersion":"1.6.0","Id":"6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f","Os":"linux","Parent":"","Size":0,"VirtualSize":0}
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:46 GMT
+  recorded_at: Fri, 05 Jun 2015 23:26:24 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/images/fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b?force=true"
+    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f?force=true"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -74,25 +74,25 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 Apr 2015 23:28:46 GMT
+      - Fri, 05 Jun 2015 23:26:25 GMT
       Content-Length:
       - '81'
     body:
       encoding: UTF-8
       string: |-
-        [{"Deleted":"fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b"}
+        [{"Deleted":"6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f"}
         ]
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:46 GMT
+  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b/json"
+    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -103,24 +103,24 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:46 GMT
+      - Fri, 05 Jun 2015 23:26:25 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b
+        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:46 GMT
+  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b/json"
+    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -131,24 +131,24 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:46 GMT
+      - Fri, 05 Jun 2015 23:26:25 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b
+        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:46 GMT
+  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b/json"
+    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -159,24 +159,24 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:46 GMT
+      - Fri, 05 Jun 2015 23:26:25 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b
+        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:46 GMT
+  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b/json"
+    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -187,13 +187,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:46 GMT
+      - Fri, 05 Jun 2015 23:26:25 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: fff9b84a2f80b48343c08bb300ad33b792e06bd073db41615f8c5854bcccd80b
+        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:46 GMT
+  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
 recorded_with: VCR 2.9.3

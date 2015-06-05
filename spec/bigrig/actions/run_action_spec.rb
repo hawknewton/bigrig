@@ -56,6 +56,10 @@ module Bigrig
           end
         end
 
+        before do
+          allow_any_instance_of(Waiter).to receive :wait_if_needed
+        end
+
         it 'spins up multiple containers', :vcr do
           perform
           expect(running?).to be true
@@ -199,6 +203,8 @@ module Bigrig
             sleep 0.5
             expect(running).to eq 0
           end
+
+          allow_any_instance_of(Waiter).to receive :wait_if_needed
           perform
         end
       end
@@ -231,6 +237,7 @@ module Bigrig
             image_id: 'env-testid',
             env: { 'NAME1' => 'VALUE1', 'NAME2' => 'VALUE2' }
           )
+          allow_any_instance_of(Waiter).to receive :wait_if_needed
 
           subject
         end
@@ -247,6 +254,7 @@ module Bigrig
             image_id: 'env-testid',
             ports: ['80:8080', '12345']
           )
+          allow_any_instance_of(Waiter).to receive :wait_if_needed
 
           subject
         end
