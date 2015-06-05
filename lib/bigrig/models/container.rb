@@ -1,8 +1,8 @@
 module Bigrig
   class Container < BaseModel
-    ARRAY_ATTRS = :volumes_from, :links, :hosts, :volumes, :wait_for
+    ARRAY_ATTRS = :volumes_from, :links, :hosts, :volumes
     attr_accessor :env, :name, :path, :ports, :tag, :volumes_from, :links, :hosts, :repo,
-                  :volumes, :scan, :wait_for
+                  :volumes, :scan
 
     class << self
       def from_json(name, json)

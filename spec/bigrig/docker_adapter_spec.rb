@@ -264,7 +264,7 @@ module Bigrig
 
         it 'removes the image', :vcr do
           subject
-          expect { Docker::Image.get(image_id) }.to raise_error(/404 Not Found/)
+          expect { Docker::Image.get(image_id) }.to raise_error Docker::Error::NotFoundError
         end
       end
 

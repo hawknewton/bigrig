@@ -43,8 +43,7 @@ module Bigrig
         volumes: container.volumes,
         links: container.links,
         hosts: container.hosts,
-        image_id: image_id(container),
-        wait_for: container.wait_for }
+        image_id: image_id(container) }
     end
 
     def image_id(container)
@@ -72,7 +71,7 @@ module Bigrig
         Thread.new do
           puts "Starting #{container[:name]}"
           puts DockerAdapter.run(container)
-          wait_for container
+          Waiter.new(container[:name]).wait_if_needed
         end
       end
 
@@ -90,13 +89,6 @@ module Bigrig
         current_step << container
       end
       steps
-    end
-
-    def wait_for(container)
-      container[:wait_for].empty? && return
-      puts "Waiting for `#{container[:wait_for].join ' '}` to compelte on #{container[:name]}"
-      result = DockerAdapter.exec(container[:name], container[:wait_for])
-      result[2] != 0 && fail("Error waiting for container: #{result.first.first}")
     end
   end
 end

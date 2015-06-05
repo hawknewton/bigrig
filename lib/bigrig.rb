@@ -9,5 +9,6 @@ require 'bigrig/output_parser'
 require 'bigrig/tar'
 require 'bigrig/runner'
 require 'bigrig/version'
+require 'bigrig/waiter'
 
 module Bigrig; end

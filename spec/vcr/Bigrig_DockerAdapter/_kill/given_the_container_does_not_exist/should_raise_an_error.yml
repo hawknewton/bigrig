@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -19,15 +19,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:20 GMT
+      - Fri, 05 Jun 2015 23:25:44 GMT
       Content-Length:
-      - '32'
+      - '25'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        no such id: doesnotexist
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:20 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:44 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
@@ -36,7 +36,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -47,15 +47,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:20 GMT
+      - Fri, 05 Jun 2015 23:25:44 GMT
       Content-Length:
-      - '32'
+      - '25'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        no such id: doesnotexist
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:20 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:44 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
@@ -64,7 +64,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -75,15 +75,15 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:20 GMT
+      - Fri, 05 Jun 2015 23:25:44 GMT
       Content-Length:
-      - '32'
+      - '25'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        no such id: doesnotexist
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:20 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:44 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/doesnotexist/json"
@@ -92,7 +92,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Swipely/Docker-API 1.20.0
+      - Swipely/Docker-API 1.21.4
       Content-Type:
       - text/plain
   response:
@@ -103,13 +103,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Mon, 20 Apr 2015 23:28:20 GMT
+      - Fri, 05 Jun 2015 23:25:44 GMT
       Content-Length:
-      - '32'
+      - '25'
     body:
       encoding: UTF-8
       string: |
-        No such container: doesnotexist
+        no such id: doesnotexist
     http_version: 
-  recorded_at: Mon, 20 Apr 2015 23:28:20 GMT
+  recorded_at: Fri, 05 Jun 2015 23:25:44 GMT
 recorded_with: VCR 2.9.3

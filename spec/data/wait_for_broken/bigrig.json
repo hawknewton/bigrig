@@ -1,0 +1,8 @@
+{
+  "containers": {
+    "wait_for_broken-test": {
+      "repo": "hawknewton/wait_for-broken",
+      "path": "."
+    }
+  }
+}
