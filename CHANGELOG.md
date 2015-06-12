@@ -63,3 +63,9 @@ Add `volumes` attriute
 0.4.2
 =====
 * Fix nasty jruby incompadability
+
+0.5.0
+=====
+**BREAKING CHANGE**
+* removed wait_for from bigrig.json.  We now wait for the script at
+  `/bigrig-wait.sh`, if present
