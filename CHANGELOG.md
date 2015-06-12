@@ -69,3 +69,7 @@ Add `volumes` attriute
 **BREAKING CHANGE**
 * removed wait_for from bigrig.json.  We now wait for the script at
   `/bigrig-wait.sh`, if present
+
+0.6.0
+=====
+* Set container hostname based on container hostname

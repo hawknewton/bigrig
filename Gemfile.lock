@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bigrig (0.5.0)
+    bigrig (0.6.0)
       colorize (= 0.7.5)
       docker-api (= 1.21.4)
       filewatcher (= 0.4.0)
