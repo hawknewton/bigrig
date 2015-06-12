@@ -1,4 +1,5 @@
 require 'docker'
+require 'socket'
 
 Excon.defaults[:ssl_verify_peer] = false
 Excon.defaults[:read_timeout] = 3600
@@ -106,6 +107,7 @@ module Bigrig
       def create_container(args)
         Docker::Container.create(
           'Env' => (args[:env] || {}).map { |n, v| "#{n}=#{v}" },
+          'Hostname' => "#{Socket.gethostname}-DOCKER-#{args[:name]}",
           'Image' => args[:image_id],
           'name' => args[:name],
           'ExposedPorts' => exposed_ports(args[:ports])

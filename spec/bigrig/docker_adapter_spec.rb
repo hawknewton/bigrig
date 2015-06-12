@@ -292,12 +292,21 @@ module Bigrig
 
           # strip the leading '/' from the json name
           let(:container_name) { container.json['Name'][1..-1] }
+          let(:container_hostname) { container.json['Config']['Hostname'] }
+
+          before do
+            allow(Socket).to receive(:gethostname).and_return 'hostname'
+          end
 
           after { Docker::Container.get(name).kill!.delete }
 
           it 'starts the container with the right name', :vcr do
             expect(running?).to be true
             expect(container_name).to eq name
+          end
+
+          it 'sets the hostname', :vcr do
+            expect(container_hostname).to eq 'hostname-DOCKER-and_a_name'
           end
         end
 
