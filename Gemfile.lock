@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bigrig (0.6.0)
+    bigrig (0.6.1)
       colorize (= 0.7.5)
       docker-api (= 1.21.4)
       filewatcher (= 0.4.0)
@@ -80,3 +80,6 @@ DEPENDENCIES
   rubocop (~> 0.27.1)
   vcr (~> 2.9.3)
   webmock (~> 1.20.4)
+
+BUNDLED WITH
+   1.10.3

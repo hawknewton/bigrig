@@ -73,3 +73,7 @@ Add `volumes` attriute
 0.6.0
 =====
 * Set container hostname based on container hostname
+
+0.6.1
+=====
+* Use container hostname for hostname.  Might be a really bad idea.
