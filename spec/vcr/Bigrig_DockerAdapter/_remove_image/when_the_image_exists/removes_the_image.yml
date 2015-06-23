@@ -21,15 +21,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:26:24 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
     body:
       encoding: UTF-8
-      string: "{\"status\":\"6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f\"}\r\n"
+      string: "{\"status\":\"1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb\"}\r\n"
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:24 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
+    uri: "<DOCKER_HOST>/v1.16/images/1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -46,18 +46,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:26:24 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
       Content-Length:
       - '1080'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"Imported from -","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-05T23:26:24.520700554Z","DockerVersion":"1.6.0","Id":"6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f","Os":"linux","Parent":"","Size":0,"VirtualSize":0}
+        {"Architecture":"amd64","Author":"","Comment":"Imported from -","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":null,"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":null,"ExposedPorts":null,"Hostname":"","Image":"","Labels":null,"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-23T01:00:36.161418183Z","DockerVersion":"1.6.0","Id":"1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb","Os":"linux","Parent":"","Size":0,"VirtualSize":0}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:24 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f?force=true"
+    uri: "<DOCKER_HOST>/v1.16/images/1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb?force=true"
     body:
       encoding: US-ASCII
       string: ''
@@ -74,19 +74,19 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
       Content-Length:
       - '81'
     body:
       encoding: UTF-8
       string: |-
-        [{"Deleted":"6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f"}
+        [{"Deleted":"1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb"}
         ]
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
+    uri: "<DOCKER_HOST>/v1.16/images/1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -103,18 +103,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
+        No such image: 1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
+    uri: "<DOCKER_HOST>/v1.16/images/1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -131,18 +131,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
+        No such image: 1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
+    uri: "<DOCKER_HOST>/v1.16/images/1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -159,18 +159,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
+        No such image: 1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/images/6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f/json"
+    uri: "<DOCKER_HOST>/v1.16/images/1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -187,13 +187,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
       Content-Length:
       - '80'
     body:
       encoding: UTF-8
       string: |
-        No such image: 6cbcdea9c26223cb03610df72d14cd6fb12adef8766b51222ca1fed66f4eef6f
+        No such image: 1289d774640f21541a06d13c24b212e1cb6523d32719e7cffc101dd5cb1adfbb
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 recorded_with: VCR 2.9.3

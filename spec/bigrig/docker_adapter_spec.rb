@@ -306,7 +306,7 @@ module Bigrig
           end
 
           it 'sets the hostname', :vcr do
-            expect(container_hostname).to eq 'hostname-DOCKER-and_a_name'
+            expect(container_hostname).to eq 'hostname'
           end
         end
 

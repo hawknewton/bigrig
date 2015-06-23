@@ -107,7 +107,7 @@ module Bigrig
       def create_container(args)
         Docker::Container.create(
           'Env' => (args[:env] || {}).map { |n, v| "#{n}=#{v}" },
-          'Hostname' => "#{Socket.gethostname}-DOCKER-#{args[:name]}",
+          'Hostname' => Socket.gethostname,
           'Image' => args[:image_id],
           'name' => args[:name],
           'ExposedPorts' => exposed_ports(args[:ports])

@@ -19,18 +19,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a","Warnings":null}
+        {"Id":"32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f","Warnings":null}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -47,18 +47,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
       Content-Length:
-      - '1912'
+      - '1915'
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"893eeb9c0841","Image":"hawknewton/true","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-05T23:26:23.428939468Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","LogPath":"","MountLabel":"","Name":"/jovial_brown","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"32bc0e924f07","Image":"hawknewton/true","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-23T01:00:35.107131092Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","LogPath":"","MountLabel":"","Name":"/modest_franklin","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -75,18 +75,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
       Content-Length:
-      - '1912'
+      - '1915'
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"893eeb9c0841","Image":"hawknewton/true","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-05T23:26:23.428939468Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","LogPath":"","MountLabel":"","Name":"/jovial_brown","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":[],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"32bc0e924f07","Image":"hawknewton/true","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-23T01:00:35.107131092Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":null,"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":null,"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":null,"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":null},"HostnamePath":"","HostsPath":"","Id":"32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","LogPath":"","MountLabel":"","Name":"/modest_franklin","NetworkSettings":{"Bridge":"","Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"","IPPrefixLen":0,"IPv6Gateway":"","LinkLocalIPv6Address":"","LinkLocalIPv6PrefixLen":0,"MacAddress":"","PortMapping":null,"Ports":null},"Path":"/true","ProcessLabel":"","ResolvConfPath":"","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":0,"Restarting":false,"Running":false,"StartedAt":"0001-01-01T00:00:00Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/containers/893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a"
+    uri: "<DOCKER_HOST>/v1.16/containers/32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f"
     body:
       encoding: US-ASCII
       string: ''
@@ -101,15 +101,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -126,18 +126,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
       Content-Length:
       - '77'
     body:
       encoding: UTF-8
       string: |
-        no such id: 893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a
+        no such id: 32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -154,18 +154,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
       Content-Length:
       - '77'
     body:
       encoding: UTF-8
       string: |
-        no such id: 893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a
+        no such id: 32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -182,18 +182,18 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
       Content-Length:
       - '77'
     body:
       encoding: UTF-8
       string: |
-        no such id: 893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a
+        no such id: 32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/containers/893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a/json"
+    uri: "<DOCKER_HOST>/v1.16/containers/32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -210,13 +210,13 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:23 GMT
+      - Tue, 23 Jun 2015 01:00:35 GMT
       Content-Length:
       - '77'
     body:
       encoding: UTF-8
       string: |
-        no such id: 893eeb9c084169e6aee1a9c49a3ec583a1d9694fb66f807c3392406bc506452a
+        no such id: 32bc0e924f071fca7cc02aa78a8043e0472d92ba197082261c1bf6d4e7c2b67f
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:23 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:35 GMT
 recorded_with: VCR 2.9.3

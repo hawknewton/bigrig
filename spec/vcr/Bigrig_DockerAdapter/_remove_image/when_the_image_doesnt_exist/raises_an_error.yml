@@ -19,7 +19,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:36 GMT
       Content-Length:
       - '30'
     body:
@@ -27,7 +27,7 @@ http_interactions:
       string: |
         No such image: does_not_exist
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:36 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/does_not_exist/json"
@@ -47,7 +47,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:37 GMT
       Content-Length:
       - '30'
     body:
@@ -55,7 +55,7 @@ http_interactions:
       string: |
         No such image: does_not_exist
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:37 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/does_not_exist/json"
@@ -75,7 +75,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:37 GMT
       Content-Length:
       - '30'
     body:
@@ -83,7 +83,7 @@ http_interactions:
       string: |
         No such image: does_not_exist
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:37 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/does_not_exist/json"
@@ -103,7 +103,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:26:25 GMT
+      - Tue, 23 Jun 2015 01:00:37 GMT
       Content-Length:
       - '30'
     body:
@@ -111,5 +111,5 @@ http_interactions:
       string: |
         No such image: does_not_exist
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:26:25 GMT
+  recorded_at: Tue, 23 Jun 2015 01:00:37 GMT
 recorded_with: VCR 2.9.3

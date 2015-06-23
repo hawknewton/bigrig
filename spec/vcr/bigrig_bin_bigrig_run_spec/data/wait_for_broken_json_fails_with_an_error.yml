@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:42 GMT
+      - Tue, 23 Jun 2015 01:01:53 GMT
     body:
       encoding: UTF-8
       string: "{\"stream\":\"Step 0 : FROM debian:jessie\\n\"}\r\n{\"stream\":\" ---\\u003e
         df2a0347c9d0\\n\"}\r\n{\"stream\":\"Step 1 : ADD bigrig-wait.sh /\\n\"}\r\n{\"stream\":\"
-        ---\\u003e 8ee707dd7cb8\\n\"}\r\n{\"stream\":\"Removing intermediate container
-        863fffc77b37\\n\"}\r\n{\"stream\":\"Step 2 : CMD tail -f /dev/null\\n\"}\r\n{\"stream\":\"
-        ---\\u003e Running in 04c490b2734f\\n\"}\r\n{\"stream\":\" ---\\u003e 46023980cd78\\n\"}\r\n{\"stream\":\"Removing
-        intermediate container 04c490b2734f\\n\"}\r\n{\"stream\":\"Successfully built
-        46023980cd78\\n\"}\r\n"
+        ---\\u003e 6777fd85b512\\n\"}\r\n{\"stream\":\"Removing intermediate container
+        03918b84de74\\n\"}\r\n{\"stream\":\"Step 2 : CMD tail -f /dev/null\\n\"}\r\n{\"stream\":\"
+        ---\\u003e Running in e17cf9fca602\\n\"}\r\n{\"stream\":\" ---\\u003e d8c1c092ebf2\\n\"}\r\n{\"stream\":\"Removing
+        intermediate container e17cf9fca602\\n\"}\r\n{\"stream\":\"Successfully built
+        d8c1c092ebf2\\n\"}\r\n"
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -54,7 +54,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:43 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -62,7 +62,7 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -82,7 +82,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:43 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -90,7 +90,7 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -110,7 +110,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:43 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -118,7 +118,7 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -138,7 +138,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:43 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -146,7 +146,7 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -166,7 +166,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:43 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -174,7 +174,7 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -194,7 +194,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:43 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -202,7 +202,7 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -222,7 +222,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:43 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -230,7 +230,7 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:43 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -250,7 +250,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '33'
     body:
@@ -258,13 +258,13 @@ http_interactions:
       string: |
         no such id: wait_for_broken-test
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: post
     uri: "<DOCKER_HOST>/v1.16/containers/create?name=wait_for_broken-test"
     body:
       encoding: UTF-8
-      string: '{"Env":[],"Image":"46023980cd78","ExposedPorts":{}}'
+      string: '{"Env":[],"Hostname":"HNEWTONMAC3","Image":"d8c1c092ebf2","ExposedPorts":{}}'
     headers:
       User-Agent:
       - Swipely/Docker-API 1.21.4
@@ -278,18 +278,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:54 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580","Warnings":null}
+        {"Id":"21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2","Warnings":null}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:54 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/start"
+    uri: "<DOCKER_HOST>/v1.16/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/start"
     body:
       encoding: UTF-8
       string: '{"Links":[],"ExtraHosts":[],"PortBindings":{},"VolumesFrom":[],"Binds":[]}'
@@ -304,12 +304,12 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:55 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -329,16 +329,16 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:55 GMT
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":["-c","tail -f /dev/null"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","tail -f /dev/null"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"fbe9e3c313f2","Image":"46023980cd78","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-05T23:27:44.086401997Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hosts","Id":"fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580","Image":"46023980cd78dc89a9cf7a1f73b4051b5d2e0aad2b99a4b16643f303245fea4a","LogPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580-json.log","MountLabel":"","Name":"/wait_for_broken-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.1.110","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:16e","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:01:6e","PortMapping":null,"Ports":{}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/resolv.conf","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":24396,"Restarting":false,"Running":true,"StartedAt":"2015-06-05T23:27:44.483429272Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","tail -f /dev/null"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","tail -f /dev/null"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"HNEWTONMAC3","Image":"d8c1c092ebf2","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-23T01:01:54.888969207Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":null,"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hosts","Id":"21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2","Image":"d8c1c092ebf22c61720b9b233453a2ea4adcba721b45d2d599251990358ab6b9","LogPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2-json.log","MountLabel":"","Name":"/wait_for_broken-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.0.136","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:88","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:00:88","PortMapping":null,"Ports":{}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/resolv.conf","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11004,"Restarting":false,"Running":true,"StartedAt":"2015-06-23T01:01:55.306304684Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/exec"
+    uri: "<DOCKER_HOST>/v1.16/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/exec"
     body:
       encoding: UTF-8
       string: '{"AttachStdin":false,"AttachStdout":true,"AttachStderr":true,"Tty":false,"Cmd":["ls","/bigrig-wait.sh"]}'
@@ -355,18 +355,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:55 GMT
       Content-Length:
       - '74'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"54b46e403f9335105bfd5ec168a0fe57c5bf9ba0b5a54b286a1aa2edeafbdb3d"}
+        {"Id":"09bc014736d34483bde6b6cb9806f9ab175b6ba271249752f130809ac23ee820"}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/exec/54b46e403f9335105bfd5ec168a0fe57c5bf9ba0b5a54b286a1aa2edeafbdb3d/start"
+    uri: "<DOCKER_HOST>/v1.16/exec/09bc014736d34483bde6b6cb9806f9ab175b6ba271249752f130809ac23ee820/start"
     body:
       encoding: UTF-8
       string: '{"Tty":false,"Detach":false}'
@@ -387,10 +387,10 @@ http_interactions:
       string: !binary |-
         AQAAAAAAABAvYmlncmlnLXdhaXQuc2gK
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/exec/54b46e403f9335105bfd5ec168a0fe57c5bf9ba0b5a54b286a1aa2edeafbdb3d/json"
+    uri: "<DOCKER_HOST>/v1.16/exec/09bc014736d34483bde6b6cb9806f9ab175b6ba271249752f130809ac23ee820/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -407,14 +407,14 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:55 GMT
     body:
       encoding: UTF-8
-      string: '{"ID":"54b46e403f9335105bfd5ec168a0fe57c5bf9ba0b5a54b286a1aa2edeafbdb3d","Running":false,"ExitCode":0,"ProcessConfig":{"privileged":false,"user":"","tty":false,"entrypoint":"ls","arguments":["/bigrig-wait.sh"]},"OpenStdin":false,"OpenStderr":true,"OpenStdout":true,"Container":{"State":{"Running":true,"Paused":false,"Restarting":false,"OOMKilled":false,"Dead":false,"Pid":24396,"ExitCode":0,"Error":"","StartedAt":"2015-06-05T23:27:44.483429272Z","FinishedAt":"0001-01-01T00:00:00Z"},"ID":"fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580","Created":"2015-06-05T23:27:44.086401997Z","Path":"/bin/sh","Args":["-c","tail
-        -f /dev/null"],"Config":{"Hostname":"fbe9e3c313f2","Domainname":"","User":"","Memory":0,"MemorySwap":0,"CpuShares":0,"Cpuset":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"PortSpecs":null,"ExposedPorts":null,"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"Cmd":["/bin/sh","-c","tail
-        -f /dev/null"],"Image":"46023980cd78","Volumes":null,"WorkingDir":"","Entrypoint":null,"NetworkDisabled":false,"MacAddress":"","OnBuild":null,"Labels":{}},"Image":"46023980cd78dc89a9cf7a1f73b4051b5d2e0aad2b99a4b16643f303245fea4a","NetworkSettings":{"IPAddress":"172.17.1.110","IPPrefixLen":16,"MacAddress":"02:42:ac:11:01:6e","LinkLocalIPv6Address":"fe80::42:acff:fe11:16e","LinkLocalIPv6PrefixLen":64,"GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"Gateway":"172.17.42.1","IPv6Gateway":"","Bridge":"docker0","PortMapping":null,"Ports":{}},"ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/resolv.conf","HostnamePath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hosts","LogPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580-json.log","Name":"/wait_for_broken-test","Driver":"aufs","ExecDriver":"native-0.2","MountLabel":"","ProcessLabel":"","AppArmorProfile":"","RestartCount":0,"UpdateDns":false,"Volumes":{},"VolumesRW":{},"AppliedVolumesFrom":null}}'
+      string: '{"ID":"09bc014736d34483bde6b6cb9806f9ab175b6ba271249752f130809ac23ee820","Running":false,"ExitCode":0,"ProcessConfig":{"privileged":false,"user":"","tty":false,"entrypoint":"ls","arguments":["/bigrig-wait.sh"]},"OpenStdin":false,"OpenStderr":true,"OpenStdout":true,"Container":{"State":{"Running":true,"Paused":false,"Restarting":false,"OOMKilled":false,"Dead":false,"Pid":11004,"ExitCode":0,"Error":"","StartedAt":"2015-06-23T01:01:55.306304684Z","FinishedAt":"0001-01-01T00:00:00Z"},"ID":"21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2","Created":"2015-06-23T01:01:54.888969207Z","Path":"/bin/sh","Args":["-c","tail
+        -f /dev/null"],"Config":{"Hostname":"HNEWTONMAC3","Domainname":"","User":"","Memory":0,"MemorySwap":0,"CpuShares":0,"Cpuset":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"PortSpecs":null,"ExposedPorts":null,"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"Cmd":["/bin/sh","-c","tail
+        -f /dev/null"],"Image":"d8c1c092ebf2","Volumes":null,"WorkingDir":"","Entrypoint":null,"NetworkDisabled":false,"MacAddress":"","OnBuild":null,"Labels":{}},"Image":"d8c1c092ebf22c61720b9b233453a2ea4adcba721b45d2d599251990358ab6b9","NetworkSettings":{"IPAddress":"172.17.0.136","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:88","LinkLocalIPv6Address":"fe80::42:acff:fe11:88","LinkLocalIPv6PrefixLen":64,"GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"Gateway":"172.17.42.1","IPv6Gateway":"","Bridge":"docker0","PortMapping":null,"Ports":{}},"ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/resolv.conf","HostnamePath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hosts","LogPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2-json.log","Name":"/wait_for_broken-test","Driver":"aufs","ExecDriver":"native-0.2","MountLabel":"","ProcessLabel":"","AppArmorProfile":"","RestartCount":0,"UpdateDns":false,"Volumes":{},"VolumesRW":{},"AppliedVolumesFrom":null}}'
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/containers/wait_for_broken-test/json"
@@ -434,16 +434,16 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:55 GMT
     body:
       encoding: UTF-8
       string: |
-        {"AppArmorProfile":"","Args":["-c","tail -f /dev/null"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","tail -f /dev/null"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"fbe9e3c313f2","Image":"46023980cd78","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-05T23:27:44.086401997Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":["54b46e403f9335105bfd5ec168a0fe57c5bf9ba0b5a54b286a1aa2edeafbdb3d"],"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hosts","Id":"fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580","Image":"46023980cd78dc89a9cf7a1f73b4051b5d2e0aad2b99a4b16643f303245fea4a","LogPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580-json.log","MountLabel":"","Name":"/wait_for_broken-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.1.110","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:16e","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:01:6e","PortMapping":null,"Ports":{}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/resolv.conf","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":24396,"Restarting":false,"Running":true,"StartedAt":"2015-06-05T23:27:44.483429272Z"},"Volumes":{},"VolumesRW":{}}
+        {"AppArmorProfile":"","Args":["-c","tail -f /dev/null"],"Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","tail -f /dev/null"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":null,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"HNEWTONMAC3","Image":"d8c1c092ebf2","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":null,"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-23T01:01:54.888969207Z","Driver":"aufs","ExecDriver":"native-0.2","ExecIDs":["09bc014736d34483bde6b6cb9806f9ab175b6ba271249752f130809ac23ee820"],"HostConfig":{"Binds":[],"CapAdd":null,"CapDrop":null,"CgroupParent":"","ContainerIDFile":"","CpuShares":0,"CpusetCpus":"","Devices":null,"Dns":null,"DnsSearch":null,"ExtraHosts":[],"IpcMode":"","Links":null,"LogConfig":{"Config":null,"Type":"json-file"},"LxcConf":null,"Memory":0,"MemorySwap":0,"NetworkMode":"","PidMode":"","PortBindings":{},"Privileged":false,"PublishAllPorts":false,"ReadonlyRootfs":false,"RestartPolicy":{"MaximumRetryCount":0,"Name":""},"SecurityOpt":null,"Ulimits":null,"VolumesFrom":[]},"HostnamePath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hosts","Id":"21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2","Image":"d8c1c092ebf22c61720b9b233453a2ea4adcba721b45d2d599251990358ab6b9","LogPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2-json.log","MountLabel":"","Name":"/wait_for_broken-test","NetworkSettings":{"Bridge":"docker0","Gateway":"172.17.42.1","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"IPAddress":"172.17.0.136","IPPrefixLen":16,"IPv6Gateway":"","LinkLocalIPv6Address":"fe80::42:acff:fe11:88","LinkLocalIPv6PrefixLen":64,"MacAddress":"02:42:ac:11:00:88","PortMapping":null,"Ports":{}},"Path":"/bin/sh","ProcessLabel":"","ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/resolv.conf","RestartCount":0,"State":{"Dead":false,"Error":"","ExitCode":0,"FinishedAt":"0001-01-01T00:00:00Z","OOMKilled":false,"Paused":false,"Pid":11004,"Restarting":false,"Running":true,"StartedAt":"2015-06-23T01:01:55.306304684Z"},"Volumes":{},"VolumesRW":{}}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/exec"
+    uri: "<DOCKER_HOST>/v1.16/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/exec"
     body:
       encoding: UTF-8
       string: '{"AttachStdin":false,"AttachStdout":true,"AttachStderr":true,"Tty":false,"Cmd":"/bigrig-wait.sh"}'
@@ -460,18 +460,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:44 GMT
+      - Tue, 23 Jun 2015 01:01:55 GMT
       Content-Length:
       - '74'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"b2738a8eb95e698a57147ed867a32288e197319eab9918e81d41c0be5e1a0b4a"}
+        {"Id":"bd404a88d5b39bcd0a6b098f007748e87bbb0fdf4a065a32174afea3c700dbf7"}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:44 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/exec/b2738a8eb95e698a57147ed867a32288e197319eab9918e81d41c0be5e1a0b4a/start"
+    uri: "<DOCKER_HOST>/v1.16/exec/bd404a88d5b39bcd0a6b098f007748e87bbb0fdf4a065a32174afea3c700dbf7/start"
     body:
       encoding: UTF-8
       string: '{"Tty":false,"Detach":false}'
@@ -491,10 +491,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:45 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 - request:
     method: get
-    uri: "<DOCKER_HOST>/v1.16/exec/b2738a8eb95e698a57147ed867a32288e197319eab9918e81d41c0be5e1a0b4a/json"
+    uri: "<DOCKER_HOST>/v1.16/exec/bd404a88d5b39bcd0a6b098f007748e87bbb0fdf4a065a32174afea3c700dbf7/json"
     body:
       encoding: US-ASCII
       string: ''
@@ -511,12 +511,12 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:45 GMT
+      - Tue, 23 Jun 2015 01:01:55 GMT
     body:
       encoding: UTF-8
-      string: '{"ID":"b2738a8eb95e698a57147ed867a32288e197319eab9918e81d41c0be5e1a0b4a","Running":false,"ExitCode":1,"ProcessConfig":{"privileged":false,"user":"","tty":false,"entrypoint":"/bigrig-wait.sh","arguments":[]},"OpenStdin":false,"OpenStderr":true,"OpenStdout":true,"Container":{"State":{"Running":true,"Paused":false,"Restarting":false,"OOMKilled":false,"Dead":false,"Pid":24396,"ExitCode":0,"Error":"","StartedAt":"2015-06-05T23:27:44.483429272Z","FinishedAt":"0001-01-01T00:00:00Z"},"ID":"fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580","Created":"2015-06-05T23:27:44.086401997Z","Path":"/bin/sh","Args":["-c","tail
-        -f /dev/null"],"Config":{"Hostname":"fbe9e3c313f2","Domainname":"","User":"","Memory":0,"MemorySwap":0,"CpuShares":0,"Cpuset":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"PortSpecs":null,"ExposedPorts":null,"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"Cmd":["/bin/sh","-c","tail
-        -f /dev/null"],"Image":"46023980cd78","Volumes":null,"WorkingDir":"","Entrypoint":null,"NetworkDisabled":false,"MacAddress":"","OnBuild":null,"Labels":{}},"Image":"46023980cd78dc89a9cf7a1f73b4051b5d2e0aad2b99a4b16643f303245fea4a","NetworkSettings":{"IPAddress":"172.17.1.110","IPPrefixLen":16,"MacAddress":"02:42:ac:11:01:6e","LinkLocalIPv6Address":"fe80::42:acff:fe11:16e","LinkLocalIPv6PrefixLen":64,"GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"Gateway":"172.17.42.1","IPv6Gateway":"","Bridge":"docker0","PortMapping":null,"Ports":{}},"ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/resolv.conf","HostnamePath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/hosts","LogPath":"/mnt/sda1/var/lib/docker/containers/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580/fbe9e3c313f21b7ed3ea4c5d3fcfe350bdb0a6560272de1ca1489b6abc56e580-json.log","Name":"/wait_for_broken-test","Driver":"aufs","ExecDriver":"native-0.2","MountLabel":"","ProcessLabel":"","AppArmorProfile":"","RestartCount":0,"UpdateDns":false,"Volumes":{},"VolumesRW":{},"AppliedVolumesFrom":null}}'
+      string: '{"ID":"bd404a88d5b39bcd0a6b098f007748e87bbb0fdf4a065a32174afea3c700dbf7","Running":false,"ExitCode":1,"ProcessConfig":{"privileged":false,"user":"","tty":false,"entrypoint":"/bigrig-wait.sh","arguments":[]},"OpenStdin":false,"OpenStderr":true,"OpenStdout":true,"Container":{"State":{"Running":true,"Paused":false,"Restarting":false,"OOMKilled":false,"Dead":false,"Pid":11004,"ExitCode":0,"Error":"","StartedAt":"2015-06-23T01:01:55.306304684Z","FinishedAt":"0001-01-01T00:00:00Z"},"ID":"21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2","Created":"2015-06-23T01:01:54.888969207Z","Path":"/bin/sh","Args":["-c","tail
+        -f /dev/null"],"Config":{"Hostname":"HNEWTONMAC3","Domainname":"","User":"","Memory":0,"MemorySwap":0,"CpuShares":0,"Cpuset":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"PortSpecs":null,"ExposedPorts":null,"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"Cmd":["/bin/sh","-c","tail
+        -f /dev/null"],"Image":"d8c1c092ebf2","Volumes":null,"WorkingDir":"","Entrypoint":null,"NetworkDisabled":false,"MacAddress":"","OnBuild":null,"Labels":{}},"Image":"d8c1c092ebf22c61720b9b233453a2ea4adcba721b45d2d599251990358ab6b9","NetworkSettings":{"IPAddress":"172.17.0.136","IPPrefixLen":16,"MacAddress":"02:42:ac:11:00:88","LinkLocalIPv6Address":"fe80::42:acff:fe11:88","LinkLocalIPv6PrefixLen":64,"GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"Gateway":"172.17.42.1","IPv6Gateway":"","Bridge":"docker0","PortMapping":null,"Ports":{}},"ResolvConfPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/resolv.conf","HostnamePath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hostname","HostsPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/hosts","LogPath":"/mnt/sda1/var/lib/docker/containers/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2/21e99c42e7445de1ece72477322e34e776249db5a6d82d1b2dd7921e052b1cb2-json.log","Name":"/wait_for_broken-test","Driver":"aufs","ExecDriver":"native-0.2","MountLabel":"","ProcessLabel":"","AppArmorProfile":"","RestartCount":0,"UpdateDns":false,"Volumes":{},"VolumesRW":{},"AppliedVolumesFrom":null}}'
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:45 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:55 GMT
 recorded_with: VCR 2.9.3

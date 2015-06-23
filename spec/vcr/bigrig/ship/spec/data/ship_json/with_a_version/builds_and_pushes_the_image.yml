@@ -19,18 +19,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:27:49 GMT
+      - Tue, 23 Jun 2015 01:01:59 GMT
       Content-Length:
       - '90'
     body:
       encoding: UTF-8
       string: |
-        {"Id":"fdabf2f0f9e7dbab748ef0744d8cfba77448fa1e456594fecbaa09f99d7068f7","Warnings":null}
+        {"Id":"646c793c84465b311c0b471b9398601af830b97059ed6f77d273f8e1d32e54d7","Warnings":null}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:49 GMT
+  recorded_at: Tue, 23 Jun 2015 01:01:59 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/fdabf2f0f9e7dbab748ef0744d8cfba77448fa1e456594fecbaa09f99d7068f7/start"
+    uri: "<DOCKER_HOST>/v1.16/containers/646c793c84465b311c0b471b9398601af830b97059ed6f77d273f8e1d32e54d7/start"
     body:
       encoding: UTF-8
       string: "{}"
@@ -45,12 +45,12 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Fri, 05 Jun 2015 23:27:50 GMT
+      - Tue, 23 Jun 2015 01:02:00 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:27:50 GMT
+  recorded_at: Tue, 23 Jun 2015 01:02:00 GMT
 - request:
     method: get
     uri: "<DOCKER_HOST>/v1.16/images/<REPO_URL>/test/ship-me:1.2.3/json"
@@ -70,18 +70,18 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 05 Jun 2015 23:28:04 GMT
+      - Tue, 23 Jun 2015 01:02:12 GMT
       Content-Length:
-      - '1570'
+      - '1569'
     body:
       encoding: UTF-8
       string: |
-        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"465e8fcac3a30d65cbaef9b3ba4cf9163764a23b7c9664757d8f6b458f98f351","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:fe0b65938fff4ffbae40570ca6321a6be27c59ff3ed115e255b56e8e14509b9c in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-05T23:27:58.046995274Z","DockerVersion":"1.6.0","Id":"d9233004357520a6df483669491755cf9fc73c9237238cb762a2df15ae819e01","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
+        {"Architecture":"amd64","Author":"","Comment":"","Config":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/true"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Container":"9d2ccd86a5de2040975bf465c5c28968a53c7b3e72414d55d45265efd4770890","ContainerConfig":{"AttachStderr":false,"AttachStdin":false,"AttachStdout":false,"Cmd":["/bin/sh","-c","#(nop) ADD file:60583d625cba3707e874c447932e1f998bc80096b9fa55345e7cbff1c8ce5c72 in /"],"CpuShares":0,"Cpuset":"","Domainname":"","Entrypoint":[],"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"],"ExposedPorts":null,"Hostname":"5a0d2e5f7af6","Image":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Labels":{},"MacAddress":"","Memory":0,"MemorySwap":0,"NetworkDisabled":false,"OnBuild":[],"OpenStdin":false,"PortSpecs":null,"StdinOnce":false,"Tty":false,"User":"","Volumes":null,"WorkingDir":""},"Created":"2015-06-23T01:02:05.08112046Z","DockerVersion":"1.6.0","Id":"4eef935163b36d5856d3019b12a82fdc059463a6a4ff3432d7e12fefe9d930d4","Os":"linux","Parent":"5fbce35eb33780adf252ee2f87b7156660fdb5c7ca54a0fb4e262a87447cceeb","Size":0,"VirtualSize":125}
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:28:04 GMT
+  recorded_at: Tue, 23 Jun 2015 01:02:12 GMT
 - request:
     method: post
-    uri: "<DOCKER_HOST>/v1.16/containers/fdabf2f0f9e7dbab748ef0744d8cfba77448fa1e456594fecbaa09f99d7068f7/kill"
+    uri: "<DOCKER_HOST>/v1.16/containers/646c793c84465b311c0b471b9398601af830b97059ed6f77d273f8e1d32e54d7/kill"
     body:
       encoding: US-ASCII
       string: ''
@@ -96,15 +96,15 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Fri, 05 Jun 2015 23:28:04 GMT
+      - Tue, 23 Jun 2015 01:02:12 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:28:04 GMT
+  recorded_at: Tue, 23 Jun 2015 01:02:12 GMT
 - request:
     method: delete
-    uri: "<DOCKER_HOST>/v1.16/containers/fdabf2f0f9e7dbab748ef0744d8cfba77448fa1e456594fecbaa09f99d7068f7"
+    uri: "<DOCKER_HOST>/v1.16/containers/646c793c84465b311c0b471b9398601af830b97059ed6f77d273f8e1d32e54d7"
     body:
       encoding: US-ASCII
       string: ''
@@ -119,10 +119,10 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Fri, 05 Jun 2015 23:28:04 GMT
+      - Tue, 23 Jun 2015 01:02:12 GMT
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 23:28:04 GMT
+  recorded_at: Tue, 23 Jun 2015 01:02:12 GMT
 recorded_with: VCR 2.9.3
