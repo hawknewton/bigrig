@@ -7,7 +7,7 @@ module Bigrig
     def wait_if_needed
       script_present? || return
       puts "Waiting for `/bigrig-wait.sh` to compelte on #{@name}"
-      result = DockerAdapter.exec @name, '/bigrig-wait.sh'
+      result = DockerAdapter.exec @name, ['/bigrig-wait.sh']
       result[2] != 0 && fail("Error waiting for container: #{result.first.first}")
     end
 
