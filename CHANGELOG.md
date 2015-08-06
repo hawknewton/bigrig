@@ -77,3 +77,7 @@ Add `volumes` attriute
 0.6.1
 =====
 * Use container hostname for hostname.  Might be a really bad idea.
+
+0.6.2
+=====
+* Fix for docker 1.7.1
