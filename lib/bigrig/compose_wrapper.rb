@@ -1,4 +1,5 @@
-require 'open3'
+require 'pty'
+require 'english'
 
 module Bigrig
   class ComposeWrapper
@@ -8,29 +9,55 @@ module Bigrig
     end
 
     def run
-      command = "docker-compose -f - #{@args.map { |a| "\"#{a}\"" }.join ' '}"
-      stdin, @stdout, @stderr, wait_thr = Open3.popen3 command
+      wait_thread = launch_compose
 
-      stdin.write docker_compose_yml
-      stdin.close
+      begin
+        while (s = output.sysread 1024)
+          STDOUT.write s
+        end
+      # rubocop:disable Lint/HandleExceptions
+      rescue EOFError
+      end
+      # rubocop:enable Lint/HandleExceptions
 
-      print_output
-
-      exit wait_thr.value.exitstatus
+      wait_thread.join
+      exitstatus
     end
 
     private
 
-    attr_accessor :args, :stdout, :stderr, :profiles
+    attr_accessor :args, :output, :profiles, :exitstatus
 
-    def docker_compose_yml
-      Renderer.new(profiles).render
+    def docker_command
+      "docker-compose -f - #{@args.map { |a| "\"#{a}\"" }.join ' '}"
     end
 
-    def print_output
-      while [stdout, stderr].select { |io| !io.eof? }.any?
-        ready = IO.select([stderr, stdout], [])[0]
-        ready.each { |io| print io.read }
+    def compose_yml
+      @compose_yml ||= Renderer.new(profiles).render
+    end
+
+    def exitstatus
+      $CHILD_STATUS.exitstatus
+    end
+
+    def launch_compose
+      @output, input, pid = PTY.spawn docker_command
+      send_compose_yml input
+
+      Thread.new do
+        Process.wait pid
+      end
+    end
+
+    def send_compose_yml(input)
+      input.write compose_yml
+      input.write ""
+      input.flush
+
+      lines_read = 0
+      loop do
+        output.sysread(1) == "\n" && lines_read += 1
+        lines_read == compose_yml.lines.count && break
       end
     end
   end

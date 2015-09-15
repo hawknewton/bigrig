@@ -7,4 +7,4 @@ while ARGV[0] == '-P'
   profiles << ARGV.shift
 end
 
-Bigrig::ComposeWrapper.run profiles, ARGV
+Bigrig::ComposeWrapper.new(profiles, ARGV).run

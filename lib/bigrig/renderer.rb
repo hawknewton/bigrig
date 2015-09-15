@@ -13,7 +13,7 @@ module Bigrig
     end
 
     def method_missing(name, *args)
-      match = /(.+)_active\?$/.match(name)
+      match = /(.+)_profile_active\?$/.match(name)
       if match
         (profiles & [match[1]]).any?
       else

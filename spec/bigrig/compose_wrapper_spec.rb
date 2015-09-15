@@ -4,20 +4,19 @@ describe Bigrig::ComposeWrapper do
   let(:args) { [] }
   let(:profiles) { %w(qa l1) }
   let(:process_status) { double Process::Status, exitstatus: 123 }
-  let(:wait_thr) do
-    double Thread, :alive? => false, :value => process_status
-  end
-  let(:stdin) { double IO }
-  let(:stdout) { double IO }
-  let(:stderr) { double IO }
+
+  let(:input) { double IO }
+  let(:output) { double IO }
+  let(:pid) { 123 }
 
   before do
-    allow(Open3).to receive(:popen3).and_return [stdin, stdout, stderr, wait_thr]
+    allow(PTY).to receive(:spawn).and_return [output, input, pid]
+    allow(output).to receive(:sysread).with(1).and_return "\n"
+    allow(output).to receive(:sysread).with(1024).and_return nil
     allow(wrapper).to receive :exit
-    allow(stdin).to receive :write
-    allow(stdin).to receive :close
-    allow(stdout).to receive(:eof?).and_return true
-    allow(stderr).to receive(:eof?).and_return true
+    allow(input).to receive :write
+    allow(input).to receive :flush
+    allow(Process).to receive :wait
   end
 
   around do |example|
@@ -27,22 +26,17 @@ describe Bigrig::ComposeWrapper do
   end
 
   it 'invokes docker-compose' do
-    expect(Open3).to receive(:popen3)
+    expect(PTY).to receive(:spawn)
     subject
   end
 
-  it 'uses stdin for docker-compose.yml' do
-    expect(Open3).to receive(:popen3).with 'docker-compose -f - '
-    subject
-  end
-
-  it 'exits with the exit code of docker-compose' do
-    expect(wrapper).to receive(:exit).with 123
+  it 'uses input for docker-compose.yml' do
+    expect(PTY).to receive(:spawn).with 'docker-compose -f - '
     subject
   end
 
   it 'passes in the docker-compose.yml via stdin' do
-    expect(stdin).to receive(:write).with "machine1:\n  image: ubuntu\n"
+    expect(input).to receive(:write).with "machine1:\n  image: ubuntu\n"
     subject
   end
 
@@ -55,7 +49,7 @@ describe Bigrig::ComposeWrapper do
     let(:args) { %w(ready steady go) }
 
     it 'passes the arguments to docker-compose' do
-      expect(Open3).to receive(:popen3).with 'docker-compose -f - "ready" "steady" "go"'
+      expect(PTY).to receive(:spawn).with 'docker-compose -f - "ready" "steady" "go"'
 
       subject
     end
