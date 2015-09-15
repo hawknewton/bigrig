@@ -1,8 +1,0 @@
-{
-  "containers": {
-    "wait_for-test": {
-      "repo": "hawknewton/wait_for",
-      "path": "."
-    }
-  }
-}

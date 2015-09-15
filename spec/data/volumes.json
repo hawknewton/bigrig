@@ -1,9 +1,0 @@
-{
-  "containers": {
-    "volumes": {
-      "repo": "hawknewton/show-env",
-      "tag": "0.0.1",
-      "volumes": "/tmp/test:/test"
-    }
-  }
-}

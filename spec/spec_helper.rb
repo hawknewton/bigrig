@@ -1,6 +1,4 @@
 require 'bigrig'
-require 'rspec/its'
-require 'rspec/eventually'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
@@ -81,37 +79,8 @@ RSpec.configure do |config|
   #   Kernel.srand config.seed
 end
 
-def test_file(name)
-  File.expand_path "../data/#{name}", __FILE__
-end
-
-def capture_stdout(command)
-  pid, _stdin, stdout, _stderr = Open4.popen4 command
-  output = read_stdout stdout
-  [pid, output]
-end
-
-def drain_io(io)
-  Thread.new do
-    loop do
-      begin
-        puts io.read_nonblock 512_000
-      rescue IO::EAGAINWaitReadable # rubocop:disable Lint/HandleExceptions
-      end
-      sleep 0.1
-    end
+def in_data_dir(data_dir)
+  Dir.chdir(File.expand_path "../data/#{data_dir}", __FILE__) do
+    yield
   end
-end
-
-def read_stdout(stdout)
-  output = ''
-  5.times do
-    begin
-      output << stdout.read_nonblock(512_000)
-    rescue => e
-      e.is_a?(EOFError) && break # The things I do for method length...
-    end
-    sleep 1
-  end
-  output
 end

@@ -16,15 +16,5 @@ Gem::Specification.new do |s|
   s.executables << 'bigrig'
   s.add_development_dependency('rake')
   s.add_development_dependency('rspec')
-  s.add_development_dependency('rspec-its')
   s.add_development_dependency('rubocop', '~> 0.27.1')
-  s.add_development_dependency('vcr', '~> 2.9.3')
-  s.add_development_dependency('webmock', '~> 1.20.4')
-  s.add_development_dependency('popen4')
-  s.add_development_dependency('rspec-eventually')
-
-  s.add_runtime_dependency('gli', '2.12.2')
-  s.add_runtime_dependency('colorize', '0.7.5')
-  s.add_runtime_dependency('docker-api', '1.21.4')
-  s.add_runtime_dependency('filewatcher', '0.4.0')
 end
